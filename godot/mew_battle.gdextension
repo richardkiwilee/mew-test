@@ -1,0 +1,8 @@
+[configuration]
+
+entry_symbol = "mew_battle_init"
+compatibility_minimum = "4.6"
+
+[libraries]
+
+windows.x86_64 = "res://bin/mew_battle.dll"

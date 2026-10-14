@@ -1,0 +1,11 @@
+# build outputs
+cpp/build/
+cpp/src/generated/
+
+# godot
+godot/.godot/
+godot/bin/
+
+# misc
+*.user
+.vs/
