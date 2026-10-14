@@ -1,0 +1,506 @@
+'''Abilities''' are a major pillar of the combat system in Mewgenics. There are over 1000 abilities in the game<ref>[https://x.com/TylerGlaiel/status/1776394337481629950 Tyler's Twitter]</ref>.
+
+* Each main class has 50 main active abilities and 25 passives for a total of 75.
+* Collarless has 108 active and 64 passives for a total of 172.
+* Jester has just 4 actives and 2 passives, for a total of 6.
+
+Currently the wiki documents a total of {{#expr: {{#cargo_query:
+|tables=ActiveAbilities
+|fields=COUNT(*)=Total
+|where=Unused = 0
+|no html
+}}+{{#cargo_query:
+|tables=PassiveAbilities
+|fields=COUNT(*)=Total
+|where=Unused = 0
+|no html
+}}}} abilities<ref>These number's aren't definitive, as the game itself has many more abilities that are enemy specific and or copies of other abilities with a different name, and so there's no one definitive way to count.</ref> split over:
+* {{#cargo_query:
+|tables=ActiveAbilities
+|fields=COUNT(*)=Total
+|where=Unused = 0 AND BasicAttack = 0
+}} active abilities.
+* {{#expr: 12 * 25 + 66}} passive abilities
+* {{#cargo_query:
+|tables=ActiveAbilities
+|fields=COUNT(*)=Total
+|where=Unused = 0 AND BasicAttack = 1
+}} basic attacks.
+
+{{TOC limit|3}}
+
+== Summary ==
+Abilities fall into three categories:
+
+;{{anchor|Basic Attacks}} <!--Not spells-->
+::Simple actions that each cat has exactly one of at any given time. They cost no {{stat|Mana}} to use and can be buffed or replaced by a number of different effects. Can only be used once per turn normally, but can be refreshed in a number of ways. Each [[Class]] has their own pre-defined basic attack or list of basic attacks.
+
+;{{anchor|Active Abilities}}, <small style="font-weight:normal;">also known as</small> {{anchor|Spells}}
+:Actions that are actively used during the cat's turn. They cost 0 or more {{stat|Mana}} to use and can be used any number of times per turn (unless otherwise stated). A cat can learn up to 4 active abilities spells; attempting to learn a new one will prompt the player to replace one of their preexisting abilities with the new one.
+:;{{anchor|Starter Abilities}}
+::Upon beginning an [[Adventure]], each of the player's cats will randomly receive one active ability corresponding to their selected [[Class]], drawn from a pool of 10 "Starter Abilities". Exceptions to this are {{class|Collarless}} cats, which can start with any {{cl|Collarless}} spell, and {{class|Jester}}, which can start with any non-{{cl|Collarless}} spell.
+:;{{anchor|[[Bonus Abilities]]}}
+::Abilities that occupy a dedicated 5th "bonus" spell slot, granted by various effects. Some Bonus Abilities are unique and cannot be learned as regular spells. A cat or familiar can only have 1 Bonus Ability and they will overwrite each other contextually.
+:;{{anchor|[[Replacement Abilities]]}}
+::Abilities which replace a source-spell or a cat's basic attack that are usually granted by various effects. 
+:: For a full list of basic attack replacements and how they override each other, see: [[List of effects that replace basic attack]]
+:;{{anchor|Familiar Abilities}}
+::Abilities unique to certain controllable [[familiars]], such as the {{en|Druid's Crow|Druid's Crow's}} {{a|Aeroblast}}.
+
+;{{anchor|Passive Abilities}}
+:Passive effects that are or can always be in effect. A cat cannot learn more than 2 passive abilities and will be prompted to replace one when attempting to learn a 3rd. A cat will gain a random Passive ability corresponding to their Class after proceeding past the class selection screen, and unlike Active abilities, this is not limited to a small pool of starter abilities. 
+:;{{anchor|[[Disorders]]}} <!--Certain amount of Disorder info should be here-->
+::Function like Passive Abilities in that they apply a persistent passive effect, but almost universally have both positive and negative effects. They have their own 2 dedicated slots separately from passives. They are not obtained from level ups. For more information, view the dedicated page.
+
+=== Upgrading ===
+All regular active abilities and passive abilities have a upgraded version, denoted by a + at the end of their name.
+
+Upgrades range from increasing the effectiveness of the existing effect, lowering {{icon|Mana cost}} or entirely new effects.
+
+Active abilities can be upgraded when a cat reaches [[level]] 6 and passives when it reaches level 7 and 9.
+
+Certain rare event outcomes, items and abilities can also upgrade abilities, sometimes temporarily.
+
+<details>
+<!--PermanentUpgradeRandomActive-->
+<!--PermanentUpgradeRandomActiveOrPassive-->
+<!--UpgradeRandomAbility-->
+<!--upgrade_ability-->
+<!--upgrade_passive-->
+
+* {{event|Blood Stain (Future)}} <sup>Passive</sup>
+* {{event|Mysterious Cave (Glowing One)}} <sup>Active or Active and Passive</sup>
+* {{event|Mysterious Chamber}}
+
+* {{a|Ancestral Recall}} <sup>Temporary</sup>
+* {{i|Forbidden Pill}} <sup>Temporary</sup>
+* {{i|Steven (Consumable 1)}} <sup>Active or Passive</sup>
+* {{i|Jar of Chaos}}
+* {{i|The D6}}
+</details>
+
+=== Active Types ===
+Every Active Ability, including Basic Attacks, comes with an assigned "Active Type" or category, indicated by a small symbol on the top of their icon in the HUD.<br>
+This is mostly used to provide an idea of what type of ability they are and/or help the player keep their spell set diverse.  
+
+; '''{{ActiveType|Melee}}'''
+* Abilities that deal {{icon|Physical Damage}} that is tagged as melee damage are automatically this type.
+** Some unorthodox melee abilities are manually set to this type.
+* Often scale damage with {{math|\frac{ \str - 5 }{2} }}. 
+** Melee basic attacks often scale with full strength. {{math|\str - 5 }}
+* Melee basic attacks are affected by {{stat|reach}}.
+* Most melee abilities will make contact if used on a adjacent unit.
+* Most melee abilities collect attacked pickups.
+; '''{{ActiveType|Ranged}}'''
+* Abilities that deal {{icon|Physical Damage}} that is tagged as ranged damage are automatically this type.
+* Most fire projectile(s) that hit from a distance
+* Most scale their damage with {{math|\frac{ \dex - 5 }{2} }}. 
+* Most can be cast further away with increased {{stat|range}}.
+; '''{{ActiveType|Magic}}'''
+* Abilities that deal {{icon|Magic Damage}} are automatically this type.
+* Generally do not scale their damage with the user's stats.
+; '''{{ActiveType|Heal}}''' 
+* Abilities that {{icon|Heal}} are automatically this type.
+* Reviving and cleansing abilities are manually included.
+; '''{{ActiveType|Defense}}''' 
+* Abilities that are of defensive utility: some grant {{Icon|Shield}}, {{Icon|Holy Shield}}, or defensive [[Buffs]]; some make obstacles; and some push foes away.
+* This type is always manually set.
+; '''{{ActiveType|Movement}}'''
+* Abilities that generally move the caster.
+* Abilities that move the caster cannot be cast while the user is immobilized.
+* Often can move on-top of other units if the caster has {{st|Trample}}.
+; '''{{ActiveType|Buff}}''' 
+* Abilities that give [[buffs]] without falling under other categories.
+* Many abilities are manually set to this type.
+; '''{{ActiveType|Debuff}}''' 
+* Abilities that inflict [[debuffs]] without falling under other categories.
+* Many abilities are manually set to this type.
+; '''{{ActiveType|Spawn}}''' 
+* Abilities that spawn things: some summon [[familiars]], some make [[pickups]], some make obstacles.
+; '''{{ActiveType|Misc}}''' 
+* Abilities that generally don't fit into the other categories, but fit a special role or archetype for the [[Class]] that has them. 
+* Abilities that can inflict both buffs and debuffs fit under this type.
+* This type is always manually set.
+; '''{{ActiveType|Unknown}}''' 
+* Abilities that comprise everything else. They typically have somewhat-niche use cases, or are more complex than Misc abilities.
+* Default ability active-type, if it doesn't fit under anything else and doesn't have a set type.
+
+=== Targeting ===
+* All abilities have a targeting mode, being Tile, Direction or None.
+** This affects the way the ability is used by the player (for example, a tile-targeted ability needs to select a specific tile), but also many interactions that only work with a specific targeting mode.
+** Targeted abilities that are automatically used have the AI chooses the Tile/Direction.
+* All abilities have a range and an area they can affect around the target, with 0 being the user and extending from there to the entire board.
+** See [[Range and Area]] for more details.
+
+
+
+<div class= "mew-search-scope">{{Sticky Header|SearchBox = y | ExpandToggle = y | h = 2 | Header = Classes }}
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(max(320px, 25%), 1fr)); gap:1.25rem; align-items:stretch; width:100%;">
+
+{{Card/Class/Draft
+|Class=Collarless
+|Content=
+Since Collarless abilities are offered to all cats, they serve a variety of purposes.
+* A few Collarless abilities can be regarded as inferior to alternatives; for example, {{a|CPR}} has nearly the same effect as {{a|Awaken}}, but with reduced range, no {{el|Holy}} element, and increased mana cost. Others, like {{a|Brainstorm}} and {{p|Skill Share}} are rather unique. Leaving a cat Collarless serves to increase the probability of being offered them, as well as enable synergies with effects like {{i|Mind Stone}} and {{i|Skill Stone}}.
+* All abilities which cost coins instead of mana, like {{a|Gym Membership}} and {{a|Buy Catnip}}, are Collarless.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Melee Attack.svg|75px]]<br>
+'''[[Melee Attack]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Attack an adjacent unit.
+|-
+| style="text-align:center;" | [[File:ABILITY Short Shot.svg|75px]]<br>
+'''[[Short Shot]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Shoot a unit in your line of sight.
+|-
+| style="text-align:center;" | [[File:ABILITY Short Lobbed Shot.svg|75px]]<br>
+'''[[Short Lobbed Shot]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Lob a shot over units and obstacles.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Fighter
+|Content=
+Fighter abilities generally help to bring a cat into melee range, buff their damage, reward aggressive behavior, or increase their survivability.
+* A large number of Fighter abilities deal {{ActiveType|Melee}} damage which scales with {{Stat|STR}}, but require them to get in close quarters with enemies.
+* The {{Stat|INT}} penalty Fighters receive can make affording the mana for expensive spells difficult, but a handful of Fighter abilities either reward lower Intelligence directly or make other spells more affordable, e.g. {{a|Think Too Hard}} and {{p|Math?}}.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Melee Attack.svg|75px]]<br>
+'''[[Melee Attack]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Attack an adjacent unit.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Hunter
+|Content=
+Hunters rely on {{ActiveType|Ranged}} damage which scales with {{Stat|DEX}}. Their basic attack can hit targets at a distance but also has a minimum range. The penalties they receive to {{Stat|SPD}} and {{Stat|CON}} incentivize them to camp out away from enemies, and a number of Hunter abilities support this playstyle, including many ranged attacks.
+* The decreased damage scaling of {{ActiveType|Ranged}} damage compared to {{ActiveType|Melee}} damage is ameliorated by several abilities which grant a {{St|Bonus Attack}}, e.g. {{a|Arrowsmith}} and {{a|Craft Arrow}}.
+* Hunters also receive a bonus to {{Stat|LCK}}, which increases their chance of getting critical hits. Abilities like {{p|Bullseye}} and {{p|Luck Swing}} grant additional {{St|Crit Chance Up}}.
+* A variety of Hunter abilities spawn traps, familiars, or alter the physical environment, e.g. by creating {{tile|Bramble|Brambles}}, which help to control the approach of enemies or distract them.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Lobbed Shot.svg|75px]]<br>
+'''[[Lobbed Shot]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 4 \frac{(\dex - 5)}{2} }}</div>
+| Lob a shot over units and obstacles.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Mage
+|Content=
+Mage abilities are diverse, but more deal {{ActiveType|Magic}} damage than any other class.
+* Mage abilities cost less mana on average than either Psychic or Tinkerer abilities. Several help the caster and allies cast more spells by granting mana directly or reducing the cost.
+* Mage abilities target a variety of shapes and sizes, ranging from cones, e.g. {{a|Mega Blast}}, to X-shapes, e.g. {{a|Firebolt}}, to wide lines, e.g. {{a|Blizzard}}, to the whole map, e.g. {{a|Forbidden Fulmination}}.
+* Mages have many abilities with {{el|Fire}}, {{el|Ice}}, and {{el|Electric}} elements, and correspondingly many abilities which apply or interact with {{St|Burn}}, {{St|Freeze}}, {{St|Slow}}, and {{St|Stun}}.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Magic Dart.svg|75px]]<br>
+'''[[Magic Dart]]'''
+| <div style="padding:0.35em 0">{{Icon|Magic Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Shoot a charged projectile within your line of sight. This attack counts as both magical and physical.
+|-
+| style="text-align:center;" | [[File:ABILITY Magic Missile.svg|75px]]<br>
+'''[[Magic Missile]]'''
+| <div style="padding:0.35em 0">{{Icon|Magic Damage|nolabel=y}} {{math| 3 \frac{(\int - 5)}{2} }}</div>
+| Shoot an infinite-range projectile that cant miss.
+* Only available while having the passive {{p|Paw Missile}}.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Tank
+|Content=
+Many Tank abilities increase a cat's survivability, help them to take damage in place of allies, or reward them for doing so.
+* Tank abilities have the third lowest average mana cost of all classes, after Collarless and Thief.
+* Tank attacks often apply knockback or can be used to move enemies around.
+* Several confer status effects that encourage tanking damage, such as {{st|Thorns}} (as in {{a|Pincushion}}), and {{st|Brace}} (as in {{a|Steelskin}}).
+* Tanks also have a near monopoly on abilities which pertain to {{obj|Small Rock|Rocks}} or apply {{st|Petrify}}.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Push Attack.svg|75px]]<br>
+'''[[Push Attack]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Dash forward one space, then melee attack with knockback.
+|-
+| style="text-align:center;" | [[File:ABILITY Suplex.svg|75px]]<br>
+'''[[Suplex]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Grab a unit in front of you and slam it into the tile behind you.
+* Only available while having the passive {{p|Wrestlemaniac}}.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Cleric
+|Content=
+Nearly half of the healing abilities in the game are Cleric abilities. Alongside a litany of abilities which revive, grant {{st|Holy Shield}}, clear debuffs, and grant various stat ups, only a minority are not directly supportive in nature.
+* Out of the 8 abilities which grant {{st|The Alpha}}, 6 are Cleric abilities.
+* Because Clerics receive a penalty to {{Stat|SPD}} and sometimes have to rely on their short range basic attack to heal allies, several Cleric abilities function to bring them and their allies closer, e.g.{{a|Buddy Up}}, {{a|Call Over}}, {{a|Emergency}}, etc.
+* The relatively few offensive Cleric abilities inflict a variety of debuffs, including {{st|Charmed}}, {{st|Blind}}, and {{st|Weakness}}, as well as some unique ones: {{a|Heretic Mark}} is the only source of {{st|Ostracized}}, and {{a|Witch Hunt}} is the only source of {{st|Stat Bounty}}.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Melee Attack / Heal.svg|75px]]<br>
+'''[[Melee Attack / Heal]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Heal|nolabel=y}} {{math|\str}}</div>
+| Heals allied units but damages enemies.
+* {{element|Holy}}
+|-
+| [[File:ABILITY Ranged Attack / Heal.svg|75px]]<br>
+'''[[Ranged Attack / Heal]]'''
+| <div style="padding:0.35m 0">{{Icon|Physical Heal|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Heals allied units but damages enemies.
+* {{element|Holy}}
+* Only available while having the passive {{p|Ranged Medic}}.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Thief
+|Content=
+Thieves utilize both ranged and melee attacks and have very high mobility, which makes them particularly good at collecting pickups, killing birds, getting backstabs, and general positioning.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Nail Throw.svg|75px]]<br>
+'''[[Nail Throw]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Attack a unit in a straight line.
+|-
+| style="text-align:center;" | [[File:ABILITY Shank_(Active).svg|75px]]<br>
+'''[[Shank (Active)|Shank]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| An attack that hits 2 times from behind.
+* Only available while having the passive {{p|Shank}}.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Necromancer
+|Content=
+Necromancer is a high-health class that makes up for its lack of damage with their self-sustainability. With Necromancer on a team, allies are free to shuffle off the mortal coil; they continue to serve a purpose even postmortem.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Leech Shot.svg|75px]]<br>
+'''[[Leech Shot]]'''
+| <div style="padding:0.40em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 3 \frac{(\dex - 5)}{2} }}</div>
+| A lobbed attack that inflicts {{st|Leeches|Leech|#=+1}}.
+|-
+| style="text-align:center;" | [[File:ABILITY Haunt.svg|75px]]<br>
+'''[[Haunt]]'''
+| {{Icon|Magic Damage|nolabel=y}} 5
+| Damage any unit and inflict {{st|Fear}}.<br>{{flav|Castable while downed.}}
+* Only available by having the passive {{p|Torpor}} while downed.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Tinkerer
+|Content=
+Tinkerer brings an arsenal of robots and weapons to the battlefield, enabling several distinct fighting styles: dealing damage from a safe distance, piloting a giant mech, or jumping in the fight with giant explosions!
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Craft Weapon.svg|75px]]<br>
+'''[[Craft Weapon]]'''
+| N/A
+| Craft and equip a random temporary weapon.
+|-
+| style="text-align:center;" | [[File:ABILITY Throw Weapon.svg|75px]]<br>
+'''[[Throw Weapon]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{2} }}</div>
+| Throw your weapon at a unit.<br>{{flav|This breaks the weapon.}}
+|-
+| style="text-align:center;" | [[File:ABILITY Hone.svg|75px]]<br>
+'''[[Hone]]'''
+| N/A
+| Repair 1 use to your weapon and give it +1 damage for the rest of the battle.
+* Only available by having the passive {{p|Blacksmith}} while holding a weapon.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Butcher
+|Content=
+The Butcher is a class focused on primarily outputting damage and taking punishment. Its innate Meat Hook and unique ability to attack diagonally allows a team to have a great deal of control over positioning even during chapter one. The Butcher's abilities focus on generating food pickups, utilizing and consuming collectibles, and softening up its targets.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Cleave.svg|75px]]<br>
+'''[[Cleave (Basic Attack)|Cleave]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Attack a unit adjacent or diagonally with {{st|Cleave}}.
+|-
+| style="text-align:center;" | [[File:ABILITY Spin Cleave.svg|75px]]<br>
+'''[[Spin Cleave]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math|\str}}</div>
+| Attack everything around you with {{st|Cleave}}.
+* Only available while having the passive {{p|Spin to Win}}.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Druid
+|Content=
+Druid is a supportive class focused on providing versatile utility. While its signature crow familiar helps control the battlefield, Druid is free to either hole up in a corner and provide support and summons, or transform into one of its various game-plan-defining animal forms.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Sing.svg|75px]]<br>
+'''[[Sing]]'''
+| {{Icon|Heal|nolabel=y}} 1
+| Heal and give {{st|Damage Up|Damage Up (Temporary)|#=+1}} to units in a wide area.
+* {{element|Holy}} and {{element|Music}}
+|-
+| style="text-align:center;" | [[File:ABILITY Sing.svg|75px]]<br>
+'''[[Sing (Versatile)]]'''
+| {{Icon|Magic Heal|nolabel=y}} 1
+| Heals 1 {{icon|Heal|nolabel=y}} and applies +1 temporary {{st|Damage Up}} on allies<br>
+Deals 1 {{icon|Magic Damage}} and applies +1 temporary {{st|Damage Down}} on enemies
+
+* {{element|Holy}} and {{element|Music}}
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Psychic
+|Content=
+Psychic is all about manipulating the enemy! With positioning, movement, and powerful status effects, Psychics can easily control the battlefield. They can also deal massive damage utilising repeated casts of low cost spells.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Psychic Pull.svg|75px]]<br>
+'''[[Psychic Pull]]'''
+| {{Icon|Magic Damage|nolabel=y}} 2
+| Pull a unit toward you from anywhere dealing low damage.
+* {{element|Gravity}}
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Monk
+|Content=
+Monks are versatile fighters, able to transition between {{ActiveType|Melee}} and {{ActiveType|Ranged}} with abilities that reward a clever use of both. Monks typically benefit from not wearing armour to enables their most powerful abilities.
+<br>
+{{#uesc:<esc>
+{| class="wikitable sortable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! style="width:115px;" | Attack Effect
+! Description
+|-
+| style="text-align:center;" | [[File:ABILITY Melee Attack (Monk).svg|75px]]<br>
+'''[[Melee Attack (Monk)|Melee Attack]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 3 \frac{(\str - 5)}{2} }}</div>
+| Attack an adjacent unit.
+|-
+| style="text-align:center;" | [[File:ABILITY Lobbed Shot (Monk).svg|75px]]<br>
+'''[[Lobbed Shot (Monk)|Lobbed Shot]]'''
+| <div style="padding:0.35em 0">{{Icon|Physical Damage|nolabel=y}} {{math| 5 \frac{(\dex - 5)}{4} }}</div>
+| Lob a shot over units and obstacles.
+|}
+</esc>}}
+}}
+
+{{Card/Class/Draft
+|Class=Jester
+|Content=
+Random is the name of the game! Jester can use any attack, ability, and passive from other classes, as well as a few unique and powerful ones.
+<br>
+{{#uesc:<esc>
+{| class="wikitable" style="width:100%; margin:0;"
+! style="width:140px;" | Basic Attack
+! Description
+|-
+| style="text-align:center;" | '''Variable'''
+| Can have the basic attack of any other class, with the exception of {{class|Collarless}}, {{class|Monk}},{{class|Tinkerer}} and {{class|Druid}}.
+|}
+</esc>}}
+}}
+
+</div></div>
+
+<div class= "mew-search-scope">
+{{Sticky Header|SearchBox = y | h = 2 | Header = Active and Passive Abilities }}
+{{Shuffle Abilities v2}}
+</div>
+
+==References==
+<references/>
+
+[[Category:Abilities]]
+
+[[es:Habilidades]]

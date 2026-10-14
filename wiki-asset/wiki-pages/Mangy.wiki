@@ -1,0 +1,77 @@
+{{Enemy
+| ID = Mangy
+| Size = 1x1
+| Location = The Alley, The Desert, The Lab
+| Description = Its ranged attack may inflict Poison. Spawns maggots when damaged.
+| Health   = 7
+| Damage   = 5
+| Movement = 3
+| Luck     = 5
+| Types = Cat
+}}
+
+'''Mangy''' is a {{type|Cat}} [[enemy]] found primarily in {{ch|The Alley}}.
+
+== Behavior ==
+Ranged attacker that attempts to keep its distance while still keeping at least one of its enemies in range.
+
+Its basic attack, <code>PoisonShot</code>, is a ranged lobbed attack that has a 25% chance to inflict {{st|Poison|#=1}}, in range of 2-3 tiles. {{RangeIndicatorWrapper|{{RangeIndicator|min_range=2|max_range=3}}}}
+
+Summons a {{en|Maggot}} every time it is hit on an adjacent tile, save for the hit that kills it.
+=== Tips ===
+* Killing it with few attacks will reduce the amount of maggots it spawns.
+* Reducing its {{stat|Luck}} will reduce the chance of the poison applying.
+* Cannot attack units adjacent to it.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Mangy_Icon.svg|Turn Order Icon
+ENEMY_Mangy_Idle.gif|Idle
+ENEMY_Mangy_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Mangy_Icon_Champion.svg|Turn Order Icon
+ENEMY_Mangy_Idle_Champion.gif|Idle
+ENEMY_Mangy_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Mangy_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* They use the male4 [[voice]] for cats, voiced by Eryck Lindquist.
+* Mangies are part of a small set of enemies that appear in all 3 Acts.
+* Mangy is the base for 2 other enemies, being {{en|Mummified Mangy}} and {{en|Infested }}, whose internal names are <code>Mangy2</code> and <code>Mangy3</code> respectively.
+* Despite their name referencing {{wikipedia|mange}}, Mangies do not have the effects of {{p|Mange}}.
+
+== References ==
+<references/>
+== Other languages ==
+{{Other languages
+| en = Mangy
+| es = Sarni
+| fr = Croûton
+| de = Räudiger
+| it = Pulcioso
+| pt-br = Sarnento
+| ru = Чесотка
+| ko = 망지
+| ja = カユミー
+| zh-cn = 大癞
+}}
+
+{{Navbox Enemy}}
+[[es:Sarni]]
+
+[[Category:Cat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement keep distance]]
+[[Category:Units using Catgen]]

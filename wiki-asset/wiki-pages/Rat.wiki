@@ -1,0 +1,489 @@
+{{see also|:Category:Units by unit type}}
+
+'''Unit Types''' are hidden classifications of [[enemies]], [[objects]], and [[pickups]] found in combat.
+* They can be revealed in game using {{p|Study}}.
+* {{a|Marked|+}} affects a unit and all other units who share one of its types.
+
+Although some types have distinctive behavior (like the "Robots" interaction with the {{el|Electric}} [[element]]), most do not. Instead, these invisible categories get used by enemy AI logic or by abilities like {{p|Study}}.
+
+Many shared passive effects attributed to tags are not directly given the tag, which is why certain exceptions occur, such as Skeleton-Type units that are not undead.<ref>Internal passive names: <code>Undead</code>, <code>Robot</code>, <code>Plant</code>, <code>Angel</code></ref>
+
+Types are not exclusive, and some units possess multiple. For instance, Trash Bag is of two types: "Trash" and "Container."
+
+{| class="wikitable sortable" style="table-layout: fixed; width: 100%; max-width: 1100px; overflow-wrap: break-word;"
+|-
+! style="width: 15%;" | Name !! style="width: 40%;" | Behavior !! Examples !! Category
+|-
+! id="Alien" | Alien
+| 
+* Hostile towards all non-aliens during {{we|Alien Invasion}}.
+| {{en|Saucie}} <br> {{en|B-Prober}}
+| [[:Category:Alien type units]]
+|-
+! id="Angel" | Angel
+| 
+* Immune to {{el|Holy}}
+* Gains {{st|All Stats Up|#=+1}} when struck by {{el|Holy}} Element.
+| {{en|Cherubim}} <br> {{en|Seraphim}}
+| [[:Category:Angel type units]]
+|-
+! id="Animal" | Animal
+| 
+| {{en|Wooly Mammoth}} <br> {{en|Bear}}
+| [[:Category:Animal type units]]
+|-
+! id="Bird" | Bird
+| 
+* Turns into {{Pickup|Cooked Medium Food}} if downed by {{el|Fire}} or {{el|Electric}} damage.
+* Hostile towards all non-birds during {{we|Birdemic}}.
+| {{en|Chicken}} <br> {{en|Hummingbird}}
+| [[:Category:Bird type units]]
+|-
+! id="Blob" | Blob
+| 
+| {{en|Lumpy}} <br> {{en|Crater Creeper}}
+| [[:Category:Blob type units]]
+|-
+! id="Bomb" | Bomb
+| 
+* Explodes when hit with {{el|Fire}} damage, even if downed.
+<!-- * Used by the <code>spread_grenades</code> custom_additional_ai_weight. -->
+| {{obj|Rat Bomb}} <br> {{obj|Grenade}}
+| [[:Category:Bomb type units]]
+|-
+! id="Bug" | Bug
+| 
+* Flying {{type|Bug}} units are considered "flies".
+* Always crits against units with {{st|Rot}}.
+* Prioritises targeting units with {{st|Rot}}.
+* Immune to damage from {{weather|Fly Swarm}} weather.
+* Can't get caught in {{a|Web Trap|Web Traps}}.
+* Targeted by {{en|Frog|Frogs}} and uncontrolled {{en|Toad|Toads}}. <!-- The only units to use "view bugs as enemies" -->
+| {{en|Pooter}} <br> {{en|Spiderling}}
+| [[:Category:Bug type units]]
+|-
+! id="Candle" | Candle
+| 
+* Only unit is {{obj|Coven Candle}}.
+* "Put out" by the {{el|Wind}} and {{el|Water}} elements.
+* "Lit" by {{el|Fire}} elements.
+| {{obj|Coven Candle}}
+| [[:Category:Candle type units]]
+|-
+! id="Cat" | Cat
+| 
+* Counts as an "allied cat" if in the party for some interactions.
+* [[Catgen]] enemies in this category can be possessed by {{b|Dybbuk}}.
+| {{mb|Franklin}} <br> {{en|Kitten}}
+| [[:Category:Cat type units]]
+|-
+! id="Container" | Container
+| 
+* Instantly destroyed and spawn pickups when attacked with {{i|Crowbar}}.
+| {{en|Chum Bag}} <br> {{obj|Crate}}
+| [[:Category:Container type units]]
+|-
+! id="Cosmic" | Cosmic
+|
+| {{obj|Black Hole}} <br> {{obj|Neutron Star}}
+| [[:Category:Cosmic type units]]
+|-
+! id="Crow" | Crow
+|
+* Considered a [[Types#Bird|Bird]] <sub>(by hidden tag)</sub>
+| {{en|Druid's Crow}} <br> {{en|Draven's Crow}}
+| [[:Category:Crow type units]]
+|-
+! id="Decoy" | Decoy
+|
+* Only unit is {{obj|Decoy}}.
+| {{obj|Decoy}}
+| [[:Category:Decoy type units]]
+|-
+! id="Demon" | Demon
+|
+| {{en|Hot Poker}} <br> {{mb|Dust Devil}}
+| [[:Category:Demon type units]]
+|-
+! id="Dinosaur" | Dinosaur
+|
+| {{en|T-Rex}} <br> {{en|Raptor Kitten}}
+| [[:Category:Dinosaur type units]]
+|-
+! id="Dog" | Dog
+| 
+| {{en|Half-Dog}} <br> {{b|Chubs & Nubs}}
+| [[:Category:Dog type units]]
+|-
+! id="Elemental" | Elemental
+|
+| {{mb|Flushmaster}} <br> {{mb|Zapphauser}}
+| [[:Category:Elemental type units]]
+|-
+! id="Fetus" | Fetus
+| 
+| {{en|Der Fötus}} <br> {{en|Brain Drain}}
+| [[:Category:Fetus type units]]
+|-
+! id="Fish" | Fish
+| 
+| {{en|Daddy Shark}} <br> {{en|Baby Shark}}
+| [[:Category:Fish type units]]
+|-
+! id="Food" | Food
+|
+| {{obj|Food}} <br> {{obj|Medium Food}}
+| [[:Category:Food type units]]
+|-
+! id="Ghost" | Ghost
+| 
+* All {{type|Ghost}} units, except {{en|Wisp}}, share the "Undead" Passive:
+** Takes damage from {{el|Holy}} element healing.
+** Receives {{st|Fear}} when hit by {{i|The Bible}}
+* Hostile towards all non-ghosts during {{we|Haunted Night}}.
+|  {{en|Wisp}} <br> {{en|Spookie}}
+| [[:Category:Ghost type units]]
+|-
+! id="Humanoid" | Humanoid
+| 
+* {{set|Human Flesh}} increases crit chance against these units.
+| {{en|Half-Human λ}} <br> {{en|Tracy}}
+| [[:Category:Humanoid type units]]
+|-
+! id="Kaiju" | Kaiju
+|
+| {{b|Pyrophina}} <br> {{b|Zaratana}} 
+| [[:Category:Kaiju type units]]
+|-
+! id="Money" | Money
+| 
+* Sought by {{mb|Dack}}.
+| {{obj|Coin}} 
+| [[:Category:Money type units]]
+|-
+! id="Mount" | Mount
+|
+* Only unit is {{en|Mech Suit}}.
+| {{en|Mech Suit}}
+| [[:Category:Mount type units]]
+|-
+! id="Pickup" | Pickup
+|
+| {{obj|Blessing}} <br> {{obj|Antidote}}
+| [[:Category:Pickup type units]]
+|-
+! id="Pill" | Pill
+|
+| {{obj|Tar Pill}} <br> {{obj|Lava Pill}}
+| [[:Category:Pill type units]]
+|-
+! id="Plant" | Plant
+|
+<!--Most plants have a plant passive that is actually what does all of it.
+Peashy does not, despite being plant-type-->
+* Immune to {{el|Grass}} damage.
+* Applies {{el|Grass}} to tiles they're on, leaving a trail of {{tile|Grass|grass tiles}}.
+* {{el|Water}} damage will {{icon|Heal}} instead of dealing damage.
+* '''Immune''' to {{st|Poison}}.
+* '''Immune''' to {{tile|Creep}} & {{tile|Bramble}}.
+* Gains {{st|Burn|#=+3}} when hit by {{el|Fire}} damage.
+
+<sub>(Despite being a plant-type, {{en|Peashy}} does not have the plant passive effects)</sub>
+| 
+{{en|Birthwort}}<br>
+{{a|Form of the Tree}}
+| [[:Category:Plant type units]]
+|-
+! id="Poop" | Poop
+| 
+* Triggers {{d|Scatological}} disorder.
+| {{mb|Flushmaster}} <br> {{en|Pile}}
+| [[:Category:Poop type units]]
+|-
+! id="Rat" | Rat
+| 
+* {{st|Charmed}} by the basic attack of cats with {{D|Toxoplasmosis}}.
+| {{b|Radical Rat}} <br> {{en|Lumpy}}
+| [[:Category:Rat type units]]
+|-
+! id="Robot" | Robot
+|
+* Immune to {{el|Electric}} damage.
+* Gains {{st|Energized}} when affected by {{el|Electric}}.
+* Electrically conductive like {{st|Metal}}.
+* Hostile towards all non-robots during {{we|Robot Uprising}}.
+<sub>{{en|Rover}} lacks the "Robot" passive, despite being robot-type.</sub><br>
+<sub>{{en|Katzebot}}, has the "Robot" passive, but isn't robot-type.</sub>
+| {{en|Security Bot}} <br> {{en|Robo-Cat}}
+| [[:Category:Robot type units]]
+|-
+! id="Rock" | Rock
+|
+{{Main|Rocks (Unit Type)}}
+* Can be consumed by {{a|Eat Rock}}
+* {{en|Amoeba|Amoebas}} can equip these.
+* Levitated by {{a|Rock Song}}.
+| {{en|Pet Rock}} <br> {{p|Rock Aspect}}
+| [[:Category:Rock type units]]
+|-
+! id="Siren" | Siren
+| 
+* Only unit is {{en|Siren}}. Effect unknown.
+| {{en|Siren}}
+| [[:Category:Siren type units]]
+|-
+! id="Skeleton" | Skeleton
+| 
+<!--
+Most skeletons are not undead, only 4 of the many units share the status immunities
+* Some {{type|Skeleton}} units share the undead passive.
+* Some share a immunity to {{st|Poison}} and {{st|Bleed}}-->
+| {{en|Skeleton Cat}} <br> {{en|Bone Worm}}
+| [[:Category:Skeleton type units]]
+|-
+! id="Squirrel" | Squirrel
+|
+| {{en|Squirrel}} <br> {{a|Form of the Squirrel}}
+| [[:Category:Squirrel type units]]
+|-
+! id="Trash" | Trash
+|
+| {{obj|Junk}} <br> {{en|Chum Bag}}
+| [[:Category:Trash type units]]
+|-
+! id="Tumor" | Tumor
+|
+|{{en|Tumor Cat}} <br> {{en|Tall Tumor}}
+| [[:Category:Tumor type units]]
+|-
+! id="Undead" | Undead
+| 
+* Only unit is {{en|Host}}. 
+* Effect is unknown. Doesn't share properties shared by {{Type|Zombie}}, {{Type|Skeleton}}, {{Type|Ghost}} or the "Undead" Passive. 
+| {{en|Host}}
+| [[:Category:Undead type units]]
+|-
+! id="Worm" | Worm
+| 
+* Always crits against units with {{st|Rot}}.
+* Prioritises targeting units with {{st|Rot}}.
+| {{en|Burfer Maggot}} <br> {{mb|Mama Maggot}}
+| [[:Category:Worm type units]]
+|-
+! id="Zombie" | Zombie
+| 
+* Drops {{obj|Poisoned Food}} when {{st|Cleave|Cleaved}}.
+* All Zombie type units share the "Undead" Passive:
+** Takes damage from {{el|Holy}} element healing.
+** Receives {{st|Fear}} when hit by {{i|The Bible}}
+| {{en|Zombie Cat}} <br> {{en|Shambler}}
+| [[:Category:Zombie type units]]
+|-
+! id="Bishop Hat" | Bishop Hat
+| 
+* Can be picked up by {{en|Cultist Lackey}} to upgrade into {{en|Cultist Bishop}}.
+| {{en|Bishop Hat}}
+|
+|-
+! id="God" | God
+|
+* Only unit is {{b|The Creator}}.
+| {{b|The Creator}}
+|
+|-
+! id="Golem" | Golem
+| 
+* Only unit is [[unused content]].
+| {{en|Golem}}
+|
+|-
+! id="Spear" | Spear
+|
+* Only unit is {{obj|Spear}}.
+| {{obj|Spear}}
+|
+|}
+
+== Hidden Types ==
+Some types are hidden (<code>HiddenTag</code>) and don't show up when using {{p|Study}}, but will impact enemy behaviours and spread {{a|Marked|+}}.
+* Most of these don't have an official name in the text files.
+<!-- Empty behaviour indicates nothing hardcoded (excluding possibly gon) -->
+{| class="wikitable sortable" style="table-layout: fixed; width: 100%; max-width: 1100px; overflow-wrap: break-word;"
+|-
+! Name !! Behavior !! Examples !! Category
+|- id="angeljunk"
+! angeljunk
+|
+| {{en|Cherub}} bodies in {{b|The Creator}} phase 3.
+| 
+|- id="bird"
+! bird
+|
+| {{en|Dove}}<br> {{en|Druid's Crow}}
+| [[:category:bird type units]]
+|- id="bonusbird" 
+! bonusbird
+| 
+| {{en|Dove}} 
+| [[:Category:Bonus Birds]]
+|- id = "the_coven"
+! the_coven
+|
+| {{b|The Coven}}
+|
+|- id="bloateye"
+! bloateye
+|
+| {{obj|Peeper}}
+|
+|- id = "cavefamily"
+! cavefamily
+|
+| {{mb|Frod Rocksnow}}<br>{{mb|Wolma Rocksnow}}<br> {{mb|Poobles Rocksnow}}
+|
+|- id="container"
+! container
+|
+| {{en|Chum Bag}}
+|
+|- id="collective"
+! collective
+|
+| {{en|The Collective}}
+|
+|- id="dc_cat"
+! dc_cat
+|
+| {{mb|Draven}}
+|
+|- id="dc_crow"
+! dc_crow
+|
+| {{en|Draven's Crow}}
+|
+|- id="dinofamily"
+! dinofamily
+|
+| {{mb|Pachysaurus ♀}}<br>{{mb|Pachysaurus ♂}}
+|
+|- id="bungawarrior"
+! bungawarrior
+|
+| {{en|Bunga's Champion}}
+|
+|- id="poison_cloud_immune"
+! poison_cloud_immune
+|
+| {{en|Gasper}}
+|
+|- id="hitler_clone"
+! hitler_clone
+|
+| {{en|Führerfötus}}
+|
+|- id="husk"
+! husk
+|
+| {{en|Husk}}
+|
+|- id="finalboss_clonecat"
+! finalboss_clonecat
+|
+| Good cats during {{b|The Creator}} phase 1
+|
+|- id="grub_familiar"
+! grub_familiar
+|
+| {{i|Head Grub}}<br>{{i|Neck Grub}}<br>{{i|Face Grub}}<br> spawned familiar
+|
+|- id = "moonhead"
+! moonhead
+|
+* Used for:
+** ScaldingOrbMoonBossOneShot passive.
+** custom_additional_ai_weight moonhead_punchself.
+| {{b|The Man in the Moon}}
+|
+|- moonboss
+! moonboss
+|
+* Used for:
+** ScaldingOrbMoonBossOneShot passive.
+** MoonHeadFinisherEnabler passive.
+| {{b|The Man in the Moon}}<br>{{b|Moon Hand}}
+|
+|- id="moonhand"
+! moonhand
+|
+| {{b|Moon Hand}}
+|
+|- id="megadino"
+! megadino
+|
+| {{b|Dreadnoughtus}} <br> {{b|Dreadnoughtus (Leg)}}
+|
+|- id="megadinoleg"
+! megadinoleg
+|
+Used for 
+* MegaDinoDropController passive.
+* ReturnDinoLegs status.
+* DinoLegAnimation status.
+| {{b|Dreadnoughtus (Leg)}}
+|
+|- id="themother"
+! themother
+| 
+* Used for TriggerMotherGrow status.
+| {{b|The Mother}}<br>{{b|The Mother (Tumor)}}<br>{{b|The Mother (Spike)}}
+|
+|- id="themotherspike"
+! themotherspike
+|
+| {{b|The Mother (Spike)}}
+|
+|- id="sp_pill_normal"
+!  sp_pill_normal
+|
+| {{obj|Creep Pill}}
+|
+|- id="sp_pill_fire"
+! sp_pill_fire
+|
+| {{obj|Lava Pill}}
+|
+|- id="sp_pill_tar"
+! sp_pill_tar
+|
+| {{obj|Tar Pill}}
+|
+|- id="sprout"
+! sprout
+|
+* Grants extra movement range to {{en|Carnibulb}}.
+| {{en|Sprout}}
+|
+|- id="riftheadguardian"
+! riftheadguardian
+|
+| {{b|Organ Grinder}}<br>{{b|Steven}} (all sizes)
+|
+|- id="terminator_mini"
+! terminator_mini
+|
+| Robo-cats during {{b|Hitler III}}
+|
+|- id="zaratana"
+! zaratana
+|
+| {{b|Zaratana}} (all 3 forms)
+|
+|}
+
+== Trivia ==
+* Unit-Types are referred to as <code>tag</code> in the code, with <code>type</code> being used for other purposes.
+
+== References ==
+{{reflist}}
+
+[[Category:Mechanics]]

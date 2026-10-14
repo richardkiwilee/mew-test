@@ -1,0 +1,88 @@
+{{Infobox/Status
+| Type = Keyword
+| ID = Knockback
+}}
+
+'''Knockback''' is a [[Keyword]].
+
+== Effects ==
+* Units hit with knockback will be moved back in a straight line a number of tiles equal to the amount of knockback.
+* If a unit is knocked back towards the user with {{icon|Physical Damage}}, that damage is considered a backstab. <!--- Could use more testing --->
+
+=== Knockback Damage ===
+* Units that are knocked back into each other both receive Knockback Damage.
+** The default damage is 1.
+*** Some effects increase this, and some attacks override it with a specific higher amount.
+** This damage is increased by {{st|Bruise}}, but cannot crit randomly or with {{st|Marked}}.
+** The damage is indicated by the {{icon|Knockback Damage}} symbol.
+* Knockback damage from being knocked into the boards edge will count as the unit dealing damage to itself.
+
+=== Vertical Knockback ===
+* Units hit with vertical knockback will get lobbed vertically into the air, making them fly over tiles.
+* When a lobbed unit lands on another unit, both of them receive 5 damage.
+** This damage is affected by {{st|Bonus Knockback Damage}} increases, like from {{p|Heavy Handed}}. 
+* Some vertical knockback sources include: {{a|Uppercut}}, {{i|Shovel}}, {{i|Spring Board}}.
+* Vertical knockback is inconsistently referred to in-game as: Lob, Knocking Units into the air, Knock Up.
+
+=== Chain Knockback ===
+Units hit by Chain Knockback will transfer all remaining knockback to another unit, if they are knocked into one.
+
+=== Interactions ===
+<!--
+Should things that add knockback to basic/anything be added?
+Should knockback damage be seperated?
+How separated should chain knockback be?
+-->
+<div style="column-count:2;>
+* {{a|Thicken}}
+** {{st|Bonus Knockback}}
+** {{st|Bonus Knockback Damage}}
+* {{p|Beckon}}
+* {{p|Chain Knockback}}
+* {{p|Drag}}
+* {{p|Heavy Handed}}
+* {{p|Home Run}}
+* {{p|Psy Smack}}
+* {{p|Shoving Match}} <!--?-->
+* {{i|Fish Hook}}	
+* {{i|Miner Pack}}
+* {{i|Steven's Gobbler}}
+* {{i|Tank's Helmet}}
+* {{i|Tank's Pads}}
+* {{i|Tank's Tattoo}}
+* {{set|Tank}}
+* {{mut|ears.753}}
+* {{mut|eyes.318}}
+</div>
+
+=== {{anchor|Knockback immunity|Immunity}} ===
+Certain units are immune to knockback. 
+
+This also makes them immune to being displaced in general, making them immune to {{st|Trample}}, and unable to be moved by abilities that would Throw or Swap them.
+
+;Sources of Knockback Immunity
+* {{a|Anchor|+}}
+* {{a|Form of the Tree}}
+* {{p|Mountain Form}}
+* {{p|Unstoppable}}
+* {{i|Zaratana's Turd}}
+* {{set|Brick}}
+* {{mut|legs.302}}
+
+
+;Units that are knockback immune.
+* {{mb|Bumblefoot}}
+* {{b|Dreadnoughtus}} (Head)
+* {{b|Johnny}}
+* {{b|Man In The Moon}}
+* {{mb|Mangler's Monster}}
+* {{b|Soahc}}
+* {{b|The Coven}}
+* {{b|The Creator}}
+* {{b|The Mother}}
+== Sources ==
+{{main|List of Knockback effects}}
+
+== Trivia ==
+
+{{Navbox/Keyword}}

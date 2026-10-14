@@ -5,6 +5,8 @@ cpp/src/generated/
 # godot
 godot/.godot/
 godot/bin/
+godot/assets/sprites/   # wiki-asset 的转换产物（tools/convert_sprites.py 可重新生成）
+godot/assets/icons/     # 同上
 
 # misc
 *.user

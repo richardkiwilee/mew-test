@@ -536,21 +536,21 @@ void register_builtin_content(DefinitionCatalog& catalog) {
     catalog.register_unit_def(make_def(unit_ids::kBat, "蝙蝠",
         {4, 6, 2, 1, 1, 6, 2}, Team::ENEMY, 4, true, 0, false));
 
-    // 暴徒：高血近战。CON 8 → HP 32；SPD 2 → 先攻 4；STR 8 → 攻 3
-    catalog.register_unit_def(make_def(unit_ids::kThug, "暴徒",
+    // 大块头：高血近战。CON 8 → HP 32；SPD 2 → 先攻 4；STR 8 → 攻 3（wiki: Lumpy 精灵）
+    catalog.register_unit_def(make_def(unit_ids::kThug, "大块头",
         {8, 3, 8, 1, 1, 2, 1}, Team::ENEMY, 4, true, 0, false));
 
-    // 火妖：远程火球。SPD 6 → 先攻 12；CHA 3 → 法力 3；INT 5 → 回蓝 5
+    // 唤猫者：远程施法。SPD 6 → 先攻 12；CHA 3 → 法力 3；INT 5 → 回蓝 5（wiki: Cat Caller 精灵）
     {
-        UnitDef def = make_def(unit_ids::kImp, "火妖",
+        UnitDef def = make_def(unit_ids::kImp, "唤猫者",
             {3, 3, 2, 5, 3, 6, 2}, Team::ENEMY, 4, true, 0, false);
         def.ability_ids.push_back(ability_ids::kFireball);
         catalog.register_unit_def(std::move(def));
     }
 
-    // 喷毒者：远程毒液。CHA 4 → 法力 4；SPD 3 → 先攻 6
+    // 玻璃喷吐者：远程毒液。CHA 4 → 法力 4；SPD 3 → 先攻 6（wiki: Glass Spitter 精灵）
     {
-        UnitDef def = make_def(unit_ids::kSpitter, "喷毒者",
+        UnitDef def = make_def(unit_ids::kSpitter, "玻璃喷吐者",
             {4, 5, 3, 3, 4, 3, 1}, Team::ENEMY, 4, true, 0, false);
         def.ability_ids.push_back(ability_ids::kPoisonSpit);
         catalog.register_unit_def(std::move(def));

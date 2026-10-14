@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Natural texture.115.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_23398ebcde9d-4f35-4668-bd3f-204f273bb2af">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_23398ebcde9d-4f35-4668-bd3f-204f273bb2af)"
+     id="g4"
+     transform="translate(75,75)">
+    <g
+       id="g3">
+      <g
+         id="DefineShape_2448">
+        <path
+           d="M 122.9,-107.6 V 107.6 H -122.45 V -107.6 H 122.9"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+        <path
+           d="m 25.7,-34.45 1.5,0.2 0.75,0.05 0.7,0.05 q 1.5,0.15 2.3,1.7 0.6,1.05 0.7,2.85 0.1,2.95 -1.6,8.45 l -4.3,13.8 -2.65,6.05 Q 21.45,2 20.25,3.25 17.9,5.55 15.4,5.1 13.9,4.85 12.7,3.6 11.6,2.45 11.15,0.85 q -0.65,-2.4 0.1,-6.25 2,-11.15 8,-21.05 2.15,-3.55 4.6,-6.65 1.05,-1.25 1.85,-1.35 M -25.05,15.1 Q -29.45,11.4 -30.6,4.15 -31.05,1.5 -31.1,-2.1 v -0.35 l -0.5,0.95 q -1.3,2.45 -2.9,3.3 -1.75,0.85 -3.85,0.05 -1.95,-0.8 -3.15,-2.55 -1.6,-2.45 -1.8,-7.8 -0.35,-13.5 3.6,-26.55 2.05,-6.95 5,-11.6 3.8,-6 8.9,-8.75 1.95,-1.05 3.7,-1.3 2.15,-0.3 3.65,0.7 1.2,0.8 1.95,2.4 l 2.05,-2.1 q 3.25,-3 6.35,-3.95 4.05,-1.35 7.35,0.35 2.45,1.3 3.75,4.15 1.2,2.6 1.1,5.65 -0.05,1.9 -0.65,4.05 l 0.8,-0.5 q 2.2,-1.1 2.8,-1.75 l 0.6,-0.75 0.7,-0.8 q 1.1,-0.9 3.45,-0.6 2.3,0.2 3.6,1.15 2.1,1.65 2.1,5.9 0.05,7.35 -3.8,17.15 l -3.5,8.15 -3.35,8.2 -2.2,5.8 Q 3.2,-0.35 1.2,1.45 q -1.95,1.75 -4.45,2.1 -2.7,0.4 -4.6,-1.1 -1.55,-1.25 -2.2,-3.7 -0.45,-1.65 -0.55,-4.4 l -0.95,5.3 q -1.3,7.75 -2.2,11.45 -0.9,3.6 -2.4,4.95 -1.75,1.5 -4.45,1.1 -2.45,-0.35 -4.45,-2.05"
+           fill="#b9ae93"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3" />
+      </g>
+    </g>
+  </g>
+</svg>

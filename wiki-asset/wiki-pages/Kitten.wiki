@@ -1,0 +1,79 @@
+{{Infobox/Enemy
+| ID = Kitten
+| Size = 1x1
+| Location = The Alley, The Junkyard, The Sewers, The Lab
+| Description = Runs away when damaged.
+| AttackStyle = Melee attack
+| Health = 5
+| Damage = 3
+| Movement = 4
+| Luck = 5
+| Types = Cat
+}}
+
+'''Kitten''' is an [[enemy]]. It is a juvenile cat, and serves as a weak, early game enemy mainly found in [[Act 1]].
+
+{{mb|Maisie}} starts the fight with 5 of them summoned. 
+
+Can be acquired as a [[familiar]] through {{Event|Stray Cat!}} or {{i|Ball of Yarn}}.
+
+== Behavior ==
+Melee attacker, will walk to its enemies and stay close to them.
+
+Uses standard {{a|Melee Attack}} as its basic attack.
+
+When hit, runs away as far as it can from its enemies.
+
+=== Tips ===
+* Try to kill it in one hit, as having it constantly running away can drag out a battle.
+* Alternatively this running away behavior can be exploited by longer-range classes to protect allies that it may attack by moving it out of range.
+* {{i|Blackjack}} activates whenever it tries to attack a cat holding the weapon, making it run away without the cat getting hit.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Kitten_Icon.svg|Turn Order Icon
+ENEMY_Kitten_Idle.gif|Idle
+ENEMY_Kitten_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Kitten_Icon_Champion.svg|Turn Order Icon
+ENEMY_Kitten_Idle_Champion.gif|Idle
+ENEMY_Kitten_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Kitten_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* They use a 2.0 pitch female2 [[voice]] for cats.
+* Kittens run away from damage like cats with the {{d|Anxiety}} disorder.
+
+== Other languages ==
+{{Other languages
+| en = Kitten
+| es = Gatito
+| fr = Chaton
+| de = Kätzchen
+| it = Gattino
+| pt-br = Gatinho
+| ru = Котёнок
+| ko = 새끼 고양이
+| ja = 子ネコ
+| zh-cn = 小猫
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Cat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement stay close]][[Category:Units using Catgen]]
+
+[[es:Gatito]]

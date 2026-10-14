@@ -1,0 +1,213 @@
+{{For|keywords such as {{st|Reload}} and {{st|Holy Shield}}|Keywords}}
+{{For|elements such as {{el|Fire}}|Elements}}
+
+In Mewgenics, units can suffer a variety of different '''Status Effects'''. These can be positive buff, negative debuffs or neutral.
+
+Stat Up and Stat Down buffs are actually the same buff, simply having a different visual depending on if the unit has a positive or negative amount.
+* As an example: {{st|All Stats Down|#=2}} + {{st|All Stats Up|#=+2}} would result in 0, and no status effect remaining.
+** The unit cannot be cleansed afterwards to get back the +2 All Stats Up, because they don't have it anymore.
+* But temporary and regular ones are 2 seperate buffs, and will not directly deduce each other.
+** {{st|Damage Down|#=Temporary 2}} + {{st|Damage Up|#=2}}, the damage down can be cleansed because it is a seperate status effect.
+* Effects that last while a condition is active, such as {{d|Depression}}, will not subtract from either version. <!--Aura stuff-->
+** {{st|All Stats Up|#=+2}} shows 0 while next to a cat with Depression, but will return after it moves.
+<!--secret 4th thing brittle stats-->
+
+Some status effects cannot be stacked by being applied multiple times. In cases where a higher amount would be applied, it will apply it.
+* {{st|Stun|#=1}} on a unit with {{st|Stun|#=1}} = {{st|Stun|#=1}}
+* {{st|Stun|#=2}} on a unit with {{st|Stun|#=1}} = {{st|Stun|#=2}}
+
+Downed units have almost all their status effects removed. 
+* Some remain as indicators and some are simply inactive, but most are cleared.
+
+Passive effects which give status effects do not reapply them if revived mid battle.
+<!--
+Stun
+Freeze
+Bloodzerked
+Stealth
+Stealthuntilbasicattack
+Eventbounty
+Bound
+Zombie
+Alphacat
+Permanentmadness
+Wet
+Soullink
+Petrify
+Statbounty
+Emptymind
+-->
+<!--Doomed, and only Doomed has the opposite of this explain it there I guess-->
+<!--
+If new status effects are added or the wiki is missing any, 
+please add them with their unaltered in-game description to [[Module:Status_effects/data]] 
+-->
+== Buffs ==
+Buffs can be removed by [[List_of_effects_that_remove_status_effects#Buffs|purging]] effects, of which there are few.
+
+{{Status Effects Table|Buff}}
+
+== Debuffs ==
+Debuffs can be removed by [[List_of_effects_that_remove_status_effects#Debuffs|cleansing]] effects.
+
+{{Status Effects Table|Debuff}}
+
+== Neutral ==
+Neutral Status Effects cannot be removed by cleansing effects.
+
+{{Status Effects Table|Neutral}}
+
+* All Elite Buffs and enemy specific buffs below are also neutral.
+
+== Elite Effects ==
+{{main|Elites}}
+These are unique effects exclusive to {{icon|Elite|link=y}} enemies that change their color and give them unique properties that make them more challenging to fight. They are technically separate from other Status Effects, meaning they cannot be removed. 
+* Enemies that are spawned by {{icon|Elite}} enemies generally inherit their summoners Elite effects.
+* Various enemies are "blacklisted" from spawning with certain Elite effects, often to prevent unfair scenarios with nigh-unkillable enemies or because it would break the enemy's design. For example, an {{icon|Elite}} {{en|Love Bot}} cannot gain {{st|Elite Buff: Mad}} since it would have no allies to support and heal. 
+** All [[familiars]] are banned from getting {{st|Elite Buff: Mad}} to stop them from hurting their allies.
+* Elite buffs which give status effects can effectively be nullified by having those status effects removed with something like {{a|Bloodletting}}, such as {{st|Elite Buff: Damaging}} or {{st|Elite Buff: Speedy}}.
+* Some Elite buffs have slightly different effects depending on if they are on a standard enemy or a miniboss/boss.
+
+{{:StatusEffects/Elite}}
+
+== Enemy Specific ==
+
+=== Ammo ===
+Used by {{b|Zodiac}} and a couple of other enemies to show how many rounds are left in their guns.
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Icon !! Name !! Behavior
+|- id="Ammo"
+| [[File:STATUS Ammo Icon.svg|80x80px|center]]
+| [[Ammo]]
+| ''{stacks} shots left.''<br>Cannot shoot if no ammo left. Will reload on their turn if out of ammo.
+|}
+
+=== Event ===
+Status effect indicator used by {{en|Bounty Hunter (Event Enemy)}} during the [[Bounty Hunting]] [[Weather#Bounty Hunting|Weather]] event.
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Icon !! Name !! Behavior
+|- id="Bounty (Event)"
+| [[File:STATUS Bounty (Event) Icon.svg|80x80px|center]]
+| [[Bounty (Event)]]
+| ''Hunted by the bounty hunter.''<br>A random unit each battle has a bounty. The Bounty Hunter prioritizes the marked unit. When the marked unit is defeated, the Bounty Hunter escapes the battle with the corpse of the marked unit.
+|}
+
+=== Tormentor Candles ===
+Buffs the {{b|Tormentor}} recieves upon being summoned, based on the remaining candles in the {{b|The Coven}} phase of the fight.
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Icon !! Name !! Behavior
+|- id="Lucifer Rune"
+| [[File:STATUS Lucifer Rune Icon.svg|80x80px|center]]
+| Lucifer Rune
+| ''Imbues its owner with an extra turn and the power to Bite''<br>
+|- id="Brimstone Rune"
+| [[File:STATUS Brimstone Rune Icon.svg|80x80px|center]]
+| Brimstone Rune
+| ''Imbues its owner's basic attack with +2 Damage and +2 Burn''<br>
+|- id="Pentagram Rune"
+| [[File:STATUS Pentagram Rune Icon.svg|80x80px|center]]
+| Pentagram Rune
+| ''Imbues its owner with an extra turn and the power to Summon''<br>
+|- id="Hexagram Rune"
+| [[File:STATUS Hexagram Rune Icon.svg|80x80px|center]]
+| Hexagram Rune
+| ''Imbues its owner with +1 Movement Range and +3 Trample Damage''<br>
+|- id="Chaos Rune"
+| [[File:STATUS Chaos Rune Icon.svg|80x80px|center]]
+| Chaos Rune
+| ''Imbues its owner with the ability to repel attackers.''<br>
+|}
+
+=== Child Countdowns ===
+Buffs that {{b|The Child}} cycles between, which count down from 7 upon being damaged.
+
+They repeat this cycle: Red -> Blue -> Yellow.<br>'''!''' will be display before the last hit.
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Icon !! Name !! Behavior
+|- id="The Child's Flame (Red)"
+| [[File:STATUS Child's Flame (Red) Icon.svg|80x80px|center]]
+| The Child's Flame (Red)
+| ''Counts down every time it gets hit. At 0, unleash the holy beams.''<br>Readies a holy beam attack on attackers, and unleashes it upon hitting 0.
+|- id="The Child's Flame (Blue)"
+| [[File:STATUS Child's Flame (Blue) Icon.svg|80x80px|center]]
+| The Child's Flame (Blue)
+| ''Counts down every time it gets hit. At 0, releases a pulse.''<br>
+Tramples 1 tile towards attackers, unleashes a pulse knocking away all units upon hitting 0.
+|- id="The Child's Flame (Yellow)"
+| [[File:STATUS Child's Flame (Yellow) Icon.svg|80x80px|center]]
+| The Child's Flame (Yellow)
+| ''Counts down every time it gets hit. At 0, unleash a wrath of holy light.''<br>Unleashes a holy beam attack on all tiles within line of sight upon hitting 0.
+|}
+
+=== Fernsehbot ===
+Keywords showing what the {{en|Fernsehbot}} commands.
+
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Icon !! Name !! Behavior
+|- id="STOP"
+| [[File:STATUS STOP Icon.svg|80x80px|center]]
+| STOP
+| ''Basic movement of its enemies is disabled.''
+|- id="OBEY"
+| [[File:STATUS STOP Icon.svg|80x80px|center]]
+| OBEY
+| ''Basic attacks of its enemies are disabled.''
+|- id="DUMB"
+| [[File:STATUS STOP Icon.svg|80x80px|center]]
+| DUMB
+| ''Spells of its enemies are disabled.''
+|- id="DIE"
+| [[File:STATUS DIE Icon.svg|80x80px|center]]
+| DIE
+| ''It is too late. Win now or die.''<br><br>Applies {{st|Doomed|%=1 to a random enemy}}.
+|}
+
+== Trivia ==
+Several status effects appear to be based on similar status effects from other Rpgs. These include:
+=== Pokémon ===
+* {{st|Burn}}: The victim takes damage each turn, though the timing of the damage in ''Pokémon'' is more similar to {{St|Bleed}} (at the end of a round of turns). Burn in ''Mewgenics'' does ''not'' decrease the afflicted unit's physical attack power, unlike in ''Pokémon''.
+* {{st|Freeze}}: The victim is frozen and can't perform actions until it thaws over time. Damaging a frozen target with {{el|Fire}} damage thaws them early. Cannot be frozen when there is {{st|Heat Wave|harsh sunlight}} present. The invulnerability while frozen is also in older ''[[bulba:Pokemon Mystery Dungeon series|Pokemon Mystery Dungeon]]'' games.
+* {{st|Poison}}: The victim takes damage each turn, though the timing of the damage in ''Pokémon'' is more similar to {{St|Bleed}} (at the end of a round of turns).
+* {{st|Sleep}}: The victim is asleep and cannot perform actions, will wake up after a period of time.
+** {{st|Drowsy}}: The victim falls asleep at the end of a turn.
+* {{st|Confusion}}: The victim has a random chance to cancel an attack and instead hit themselves.
+* {{st|Leeches}}: Resembles [[bulba:Seeding|Leech Seed]]. The victim loses health at the end of a turn, and the one who inflicted that status heals for that amount.
+* {{st|Flying}}: Similar to the passive effects of [[bulba:Flying (type)|Flying type]] Pokémon, such as immunity to effects on the ground.
+
+=== Magic: The Gathering ===
+* {{st|Lifesteal}}: Resembles the "lifelink" keyword. Dealing damage heals the attacker an amount equal to the damage dealt.
+* {{st|Trample}}: Shares a name with the "trample" keyword but is otherwise mechanically very different. Still carries the flavor of a large creature stomping past/ignoring a smaller creature (while crushing the smaller creature in the process).
+
+=== Dungeons & Dragons ===
+* {{st|Blind}}: The victim cannot see, and is more likely to fail at attacking.
+* {{st|Charmed}}: The victim becomes friendly to the one that charmed it.
+* {{st|Exhaustion}}: A special debuff that increases in severity as it accumulates and is usually acquired by spending too long engaging in heavy activity without a chance for a reprieve.
+* {{st|Fear}}: Resembles the "frightened" condition in that the victim no longer attempts to move closer to the source of its fear.
+* {{st|Free Spell}}: Resembles a spell scroll, used to cast a spell without expending a spell slot.
+* {{st|Grappled}}: The victim is {{st|Immobile|Immobilized}} until the grappler is dealt with. 
+* {{st|Immobile}}: Resembles the "restrained" condition in that the victim can still fight, but cannot move.
+* {{st|Petrify}}: The victim is transformed into a solid inanimate substance, such as a rock. They are incapacitated, unable to move, act, or defend themselves, but have increased resistance to all sources of damage.
+* {{st|Stealth}}: Resembles the "invisible" condition. The unit is harder to attack.
+* {{st|Stun}}: Resembles the "incapacitated" condition in that the victim cannot perform actions or reactions.
+
+=== Other inspirations ===
+* {{st|Doomed}}: Shares almost the same name as the [https://finalfantasy.fandom.com/wiki/Doom_(status) Doom] status from the Final Fantasy series. At the end of each turn, a timer counts down; when it reaches zero, the victim falls.
+* The icons for {{st|Initiative Up}} and {{st|Initiative Down}} are based on the fable [[wikipedia:The Tortoise and the Hare|The Tortoise and the Hare]].
+
+== Version History ==
+{{VersionHistory|
+;{{Version|v1.1.21198 beta}}
+* All [[familiars]] are banned from getting {{st|Elite Buff: Mad}} to stop them from hurting their allies.
+
+;{{Version|v1.0.20738 (Beta)}}
+* Fixed {{st|Freeze}} not protecting corpses from damage
+}}
+
+[[Category:Mechanics]]
+
+[[es:Efectos de estado]]

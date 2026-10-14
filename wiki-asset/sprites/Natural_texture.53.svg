@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Natural texture.53.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_2339b3862c06-1662-48ed-b865-fc65fcb2f2d5">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_2339b3862c06-1662-48ed-b865-fc65fcb2f2d5)"
+     id="g4"
+     transform="translate(75,75)">
+    <g
+       id="g3">
+      <g
+         id="DefineShape_2389">
+        <path
+           d="M 122.9,-107.6 V 107.6 H -122.45 V -107.6 H 122.9"
+           fill="#98947f"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+        <path
+           d="M -30.05,16.75 Q -33.65,15 -36.5,11.65 -39.15,8.4 -42.05,1.5 -44.8,-5 -45.45,-8.95 q -0.65,-4.1 -0.15,-10.6 1,-12.3 4.45,-24.5 1.75,-6.2 4.05,-11.45 6.35,-14.1 19.3,-23.7 12.9,-9.55 28.2,-11.5 7.25,-0.95 11.9,0.75 5.95,2.2 11.05,9.55 5.15,7.45 6.3,14.95 0.6,4.2 -0.1,8.1 -0.7,4.25 -2.85,7.55 -2,3.1 -7,7.4 -5.55,4.75 -7.4,7.1 -3.75,4.7 -5.7,12.25 -0.95,3.6 -2.5,13.6 -1.25,8.2 -3.3,13.4 -2.85,7.1 -7.75,10.9 -9.2,7.2 -26.5,3.85 -4.2,-0.9 -6.6,-1.95"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3" />
+      </g>
+    </g>
+  </g>
+</svg>

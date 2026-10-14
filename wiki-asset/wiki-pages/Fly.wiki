@@ -1,0 +1,84 @@
+{{Infobox/Enemy
+| ID = Fly
+| Size = 1x1
+| Description = Melee Attacker. Flying.
+| Location = The Alley, The Junkyard, The Boneyard, The Desert, The Rift
+| Health   = 1
+| Damage   = 2
+| Movement = 4
+| Luck     = 5
+| Range    = 1
+| Champion_Health   = 5
+| Champion_Damage   = 3
+| Champion_Movement = 5
+| Types = Bug
+}}
+
+'''Flies''' are a {{type|Bug}} [[enemy]] that can be found in many [[Chapters]].
+
+== Behavior ==
+Melee attacker that tries to get closer to its enemies. Moves in a simple way, meaning it will not account for hazards (such as {{tile|Fire}}).
+
+Has permament {{st|Flying}}.
+
+=== Tips ===
+* Due to their low damage, one can be somewhat safely kept alive towards the end of combat to farm [[Trash Bag|trash bags]] or gather [[pickups]].
+* As 1-hp enemies, they can easily be taken out with a cat with {{p|Tower Defense}}.
+
+== Notes ==
+* Does not have a back to activate backstab effects.
+* Does not leave a corpse.
+
+== Gallery ==
+<!-- no low health -->
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Fly_Icon.svg|Turn Order Icon
+ENEMY_Fly_Idle.gif|Idle
+ENEMY_Fly_Death.gif|Death
+ENEMY_Fly_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Fly_Icon_Champion.svg|Turn Order Icon
+ENEMY_Fly_Idle_Champion.gif|Idle
+ENEMY_Fly_Death_Champion.gif|Death
+ENEMY_Fly_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Fly_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* Flies bear a similar appearance to the {{tboi|Fly|Flies}} found in ''The Binding of Isaac''.
+* Fly is the earliest encounterable enemy that is also present in {{ch|The Rift}}.
+
+== Other languages ==
+{{Other languages
+| en = Fly
+| es = Mosca
+| fr = Mouche
+| de = Fliege
+| it = Mosca
+| pt-br = Mosca
+| ru = Муха
+| ko = 파리
+| ja = ハエ
+| zh-cn = 苍蝇
+}}
+
+{{Navbox/Enemy|uni}}
+
+[[Category:Bug type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement stay close]]
+[[Category:Flying units]]
+[[Category:Units that can't be backstabbed]]
+
+[[es:Mosca]]

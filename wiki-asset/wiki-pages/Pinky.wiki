@@ -1,0 +1,86 @@
+{{Enemy
+| ID = Pinky
+| Size = 1x1
+| Location = The Alley, The Sewers, The Lab
+| Description = Melee attacker. Moves randomly.
+| AttackStyle = Melee attack
+| Health   = 1
+| Damage   = 2
+| Movement = 2
+| Luck     = 5
+| Types = Rat
+}}
+
+'''Pinky''' is a small enemy primarily found in {{ch|The Alley}}. 
+
+== Behavior ==
+* Moves to random tiles every turn.
+* Attacks an enemy, if it moves next to one.
+=== Tips ===
+
+== Summoning ==
+Can be summoned as a familiar through several means:
+* Items:
+** {{i|Rat Hat}}
+** {{i|Rat Mask}}
+** {{i|Rat Necklace}}
+* Events:
+** {{event|Fetus}}, Good rare outcome of the Charm option.
+** {{event|Mouse nest}}, Good common outcome of the Charm option.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Pinky_Icon.svg|Turn Order Icon
+ENEMY_Pinky_Idle.gif|Idle
+ENEMY_Pinky_Low_Health.gif|Low Health
+ENEMY_Pinky_Death.gif|Death
+ENEMY_Pinky_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Pinky_Icon_Champion.svg|Turn Order Icon
+ENEMY_Pinky_Idle_Champion.gif|Idle
+ENEMY_Pinky_Low_Health_Champion.gif|Low Health
+ENEMY_Pinky_Death_Champion.gif|Death
+ENEMY_Pinky_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Pinky_level_editor.png|Level Editor Sprite
+Rat King_Intro_Art.png|{{mb|Rat King|Rat King’s}} Intro Art, featuring a Pinky.
+</gallery>
+</tabber>
+
+== Trivia ==
+* Colloquially, a [https://en.wiktionary.org/wiki/pinky pinky] is a newborn rat or mouse.
+* If a Pinky corpse is spawned via the {{event|Mouse Nest}}, it will have the unique description "This poor little guy didn't stand a chance!".
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Pinky
+| es = Rosita
+| fr = Bébé rat
+| de = Pinky
+| it = Topo Pinky
+| pt-br = Mindinho
+| ru = Крысёнок
+| ko = 핑키
+| ja = ピンキー
+| zh-cn = 老鼠​崽子
+}}
+
+{{Navbox/Enemy}}
+[[es:Rosita]]
+
+[[Category:Rat type units]]
+[[Category:Brain PatternBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement random]]
+[[Category:Small Enemies]]

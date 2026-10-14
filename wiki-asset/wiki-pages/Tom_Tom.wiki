@@ -1,0 +1,87 @@
+{{Infobox/Enemy
+| ID = TomTom
+| Size = 1x1
+| Location = The Path, The Alley, The Desert, The Lab
+| Description = It's slow, but has a wide melee attack.
+| Health   = 15
+| Damage   = 6
+| Movement = 2
+| Luck     = 5
+| Types = Cat
+}}
+
+'''Tom Toms''' are basic enemies, found in the first chapter of every Act. They are big, slow enemies that attack all 3 tiles in the direction they are facing.
+
+Can be summoned as a familiar through {{a|Call of the Wild}}.
+
+== Behavior ==
+* Has a movement radius of 2 in each orthogonal direction, or 1 for moving diagonally.
+* Attacks with a wide melee attack that hits 1 tile in front of it, as well as the 2 diagonal tiles in the same direction, dealing {{icon|physical damage|#=6}}.
+:{{RangeIndicatorWrapper|name=wide|{{RangeIndicator
+|is_aoe = true
+| target_mode = direction
+| aoe_mode = custom
+| custom_aoe = [1 -1] [1 0] [1 1]
+| unit_size = 1x1
+| show_unit = true
+}} }}
+
+=== Turn Order ===
+* Takes it's main turn with {{stat|Speed|1}}.
+
+=== Tips ===
+* They can use their attack to knock rocks diagonally if the opportunity presents itself.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Tom Tom_Icon.svg|Turn Order Icon
+ENEMY_Tom Tom_Idle.gif|Idle
+ENEMY_Tom Tom_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Tom Tom_Icon_Champion.svg|Turn Order Icon
+ENEMY_Tom Tom_Idle_Champion.gif|Idle
+ENEMY_Tom Tom_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Tomtom_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* The name "Tom Tom" seems to be derived from "{{wikipedia|Tomcat}}," which is a slang term for a sexually mature male cat that has not yet been neutered.
+** Tomcat could also refer to the slang term of the same name, used to describe a man who is sexually promiscuous or a womanizer.
+* They use a .5 pitch male1 [[voice]] for cats, voiced by Jon Evans of Ridiculon.
+* Tom Toms are the only Cat-type enemy that is able to be spawned from {{class|Hunter}} abilities. They will be tinted green if they are spawned from any action on the cat’s side.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Tom Tom
+| es = Tom Tom
+| fr = Tom Tom
+| de = Tom Tom
+| it = Tom Tom
+| pt-br = Tom Tom
+| ru = Громила
+| ko = 톰 톰
+| ja = トムトム
+| zh-cn = 浪浪
+}}
+
+{{Navbox/Enemy}}
+[[es:Tom Tom]]
+
+[[Category:Cat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement stay close]]
+[[Category:Units using Catgen]]

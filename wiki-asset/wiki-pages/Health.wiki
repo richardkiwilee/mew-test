@@ -1,0 +1,82 @@
+{{Navbox/Stats}}
+{{stat|Health}} is the amount of damage a unit can survive before being downed.
+
+=== Max Health ===
+{{#section-h:Constitution|Max Health}}
+
+=== Post-Combat Health Regen ===
+{{#section-h:Constitution|Post-Combat Health Regen}}
+
+=== Health Regen ===
+{{stat|Health Regen}} is the amount of {{stat|health}} a unit heals at the end of each of their turns.
+
+This healing counts as the unit healing themselves and will be boosted by any effects that increase the amount of healing that unit has.
+
+Units do not have innate health regen and largely comes from the {{st|Health Regen}} status effect, but has some other sources:
+<details>
+<summary>Other sources of Health Regen</summary>
+* {{st|Health Regen (Diminishing)}}
+* {{p|Good Vibrations}}
+* {{p|Thrill of the Hunt|+}}
+* {{set|Medical}}
+* {{tile|Flower}}
+* {{tile|Tall Flower}}
+* {{we|Blessed Day}}
+</details>
+
+=== Notes ===
+* {{stat|Shield}} will be damaged before {{stat|Health}}.
+* {{stat|Holy Shield}} will be damaged before {{stat|Shield}}.
+** Certain damage sources ignore both types of Shield.
+** A normal unit will die when running out of Health, regardless if they have Shield.
+
+* Certain units have set 0 max health, surviving only with {{stat|Shield}}.
+** Any attack that ignores Shield will kill them immedietdly.
+
+* {{en|Übercat}} has uncapped health.
+
+== Downed ==
+When a unit runs out of {{stat|health}}, they are downed.
+
+Downed units do not take turns.
+
+A downed unit's body will use {{stat|Corpse Health}}.
+
+Being downed removes the vast majority of status effects from that unit.
+
+Most passive and item effects are disabled while downed.
+
+=== Corpse Health ===
+{{stat|Corpse Health}} is the amount of hits a unit's corpse can survive before being destroyed permanently.
+
+
+Each damaging attack reduces Corpse Health by 1, regardless of amount of damage.
+* If a corpse takes damage with knockback, it colliding into something will not damage it again. 
+** Having something collide into it will still damage it however.
+
+Units who have more than 1 Corpse Health can have their Corpse Health increased by healing their corpse.
+* Each instance of {{icon|Heal|healing}} or added {{icon|Shield}} or {{icon|Holy Shield}} increases their Corpse Health by 1, regardless of amount of healing.
+
+
+Player Cats have a base value of 3, while enemies can range from 0 to 5.
+* Cats can have it affected by various items, passives, etc: See [[list of effects that modify corpse health]].
+
+
+Corpse Health cannot be decreased until the unit's death animation is over.
+
+
+Cats who innately have 100+ Corpse Health, can take infinite hits while downed, and revive from '''any''' healing.
+
+=== Not leaving a body ===
+Units who have 0 Corpse Health, do not leave a body.
+* During their death animation, they are still considered as having a corpse however.
+* This is most small units.
+
+Non-Player Cat units will not leave a corpse, or play their death animation, if dealing damage equal to or higher than their current health + max health.
+* As an example: 30 Damage to a 15 HP Tom Tom, or 16 damage to a 1 HP Tom Tom.
+<!--30 damage against 15 hp tomtom, he explodes.-->
+* Enemies with 0 max health are an exception to this. <!--, as otherwise it would always happen.-->
+
+A unit with {{st|Infested}} does not leave a body.
+
+If either {{i|Throbbing Gristle}} or {{i|Steven's Gristle}} are equipped by a unit, no unit leaves a body.

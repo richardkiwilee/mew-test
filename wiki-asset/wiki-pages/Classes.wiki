@@ -1,0 +1,136 @@
+'''Classes''' are an integral property of adventuring [[cats]], which apply [[stat]] modifiers and determine which abilities are offered from post combat rewards. Newborn cats start out {{Class|Collarless}}, but may become a different class by assigning the corresponding collar (if it is unlocked) when beginning a new adventure. If no collar is assigned, the cat will receive no stat modifiers and will only be offered Collarless abilities which are offered to all cats.
+
+Initially, only five classes are available: {{Class|Collarless}}, {{ClassIcon|Fighter}}, {{ClassIcon|Hunter}}, {{ClassIcon|Mage}}, and {{ClassIcon|Tank}}. Additional classes are unlocked by beating areas for the first time and then talking to {{NPC|Butch}}, who will award that area's corresponding collar.
+
+
+{{dLC|1|The first DLC will add four additional classes.}}
+== Classes ==
+{{Classes Table}}
+
+== Unlocks ==
+{{Template:Unlocks/Class}}
+
+== Trivia ==
+* The [[Minibosses]] for every [[Act|Act's]] first [[Chapter]] are all cats that represent one of the classes. Generally, these minibosses are based on the classes that were unlocked in the previous Act, though there are some exceptions.
+** {{mb|Magnus}} represents the {{Class|Fighter}} 
+** {{mb|Fenrir}} represents the {{Class|Hunter}} 
+** {{mb|Maisie}} represents the {{Class|Tank}} 
+** {{mb|Lucy}} represents the {{Class|Mage}} 
+** {{mb|Marshmallow}} represents the {{Class|Cleric}} 
+** {{mb|Dack}} represents the {{Class|Thief}} 
+** {{mb|Morana}} represents the {{Class|Necromancer}} 
+** {{mb|Gein}} represents the {{Class|Butcher}} (unlocked by completing {{chapter|Core}} instead of an Act 1 chapter)
+** {{mb|Alice}} represents the {{Class|Psychic}} 
+** {{mb|Draven}} represents the {{Class|Druid}} 
+** {{mb|Franklin}} represents the {{Class|Tinkerer}} 
+** {{mb|Chan Hung}} represents the {{Class|Monk}} (unlocked by completing {{ch|The Lab}} instead of an Act 2 chapter)
+** {{mb|Arthur}} represents the {{Class|Jester}} (unlocked after completing {{chapter|Rift}}, can appear in any Act)
+** {{b|Pebbles}} represents the {{Class|Collarless}} class despite being considered a Boss and not a Mini-Boss.
+* {{en|Spun Cat}} has themed variants for every class except for {{cl|Collarless}} and {{cl|Jester}}.
+* Most of the classes in ''Mewgenics'' are either directly comparable or strikingly similar to the various classes from ''Dungeons & Dragons''.<ref>[https://www.dndbeyond.com/classes?srsltid=AfmBOoozEmn3R3UZW0EGYs7F91XNC0-rw_TV0fztzM7cdB-Vta_7Y7jA D&D Class list]</ref>
+** Direct analogues include:
+***{{cl|Fighter}}
+***{{cl|Cleric}}
+***{{cl|Druid}}
+***{{cl|Monk}}
+**Different in name, but very similar in function/themeing/playstyle:
+*** {{class|Mage}}: Wizard
+*** {{class|Hunter}}: Ranger
+*** {{class|Thief}}: Rogue
+*** {{cl|Necromancer}}: A subclass of Wizard
+*** {{class|Tinkerer}}: Artificer
+*** {{class|Druid}}: Bard, in addition to Druid
+*** {{class|Psychic}}: Mystic
+*The {{class|Collarless}} class is a portmanteau of "collar" and "colorless," the latter being a reference to the colorless mana type in ''Magic: The Gathering.''<ref>https://mtg.wiki/page/Colorless</ref>
+* [[Tyler]] and [[Edmund]] split the responsibilities of designing the classes, with each taking the lead role and the other taking on a supporting role during the design.<ref name="edmunddesign">[https://youtu.be/SuJIx4ZcZ9E?t=1870 Edmund on sharing the design of the game]</ref> Tyler was the primary designer for {{cl|Tinkerer}}, {{class|Druid}}, {{class|Psychic}}, and {{class|Butcher}}.<ref>[https://x.com/i/status/2026794470164078781 Tyler's Twitter]</ref> While Edmund was the primary designer for {{cl|Necromancer}}.<ref name="edmunddesign" />
+
+== Color Palettes ==
+The color palettes used by each class.
+
+{| class="wikitable mw-collapsible" style="text-align:center"
+|+
+|-
+! Class 
+! Primary Color 
+! Shade 
+! Shade 
+! Iris Color
+|- style="height:36px;
+| {{cl|Fighter}} 
+| {{Color box|#B17373}}
+| {{Color box|#9F6565}}
+| {{Color box|#8D5959}}
+| {{Color box|#E88C8C}}
+|- style="height:36px;
+| {{cl|Hunter}} 
+| {{Color box|#425D3D}} 
+| {{Color box|#375133}} 
+| {{Color box|#2F432B}} 
+| {{Color box|#9CCB8D}}
+|- style="height:36px;
+| {{cl|Mage}} 
+| {{Color box|#787899}} 
+| {{Color box|#9493B8}} 
+| {{Color box|#CAC8DA}}
+| {{Color box|#AFAFE6}}
+|- style="height:36px;
+| {{cl|Tank}} 
+| {{Color box|#857348}} 
+| {{Color box|#645431}} 
+| {{Color box|#53472B}} 
+| {{Color box|#ECECEC}}
+|-
+| {{cl|Cleric}} 
+| {{Color box|#FDFDFD}} 
+| {{Color box|#F6F4F4}} 
+| {{Color box|#F2EFEF}} 
+| {{Color box|#ECECEC}} 
+|- style="height:36px;
+| {{cl|Thief}} 
+| {{Color box|#FFFBB5}} 
+| {{Color box|#EBE7A3}} 
+| {{Color box|#D8D5A0}} 
+| {{Color box|#FFFBB5}} 
+|- style="height:36px;
+| {{cl|Necromancer}} 
+| {{Color box|#131313}} 
+| {{Color box|#1B1B1B}} 
+| {{Color box|#212121}} 
+| {{Color box|#723B3C}} 
+|- style="height:36px;
+| {{cl|Tinkerer}} 
+| {{Color box|#B5EADC}} 
+| {{Color box|#97DFCB}} 
+| {{Color box|#79CEB7}} 
+| {{Color box|#7CD6B5}} 
+|- style="height:36px;
+| {{cl|Butcher}} 
+| {{Color box|#AC4457}} 
+| {{Color box|#8F3747}} 
+| {{Color box|#7C2F3C}} 
+| {{Color box|#B6576B}} 
+|- style="height:36px;
+| {{cl|Druid}} 
+| {{Color box|#5B4237}} 
+| {{Color box|#4D362D}} 
+| {{Color box|#3A2922}}
+| {{Color box|#A0C197}}
+|- style="height:36px;
+| {{cl|Psychic}} 
+| {{Color box|#645379}} 
+| {{Color box|#4E415F}} 
+| {{Color box|#40354E}} 
+| {{Color box|#997DBB}} 
+|- style="height:36px;
+| {{cl|Monk}} 
+| {{Color box|#787878}} 
+| {{Color box|#3B3B3B}} 
+| {{Color box|#A2A2A2}}
+| {{Color box|#DCDCDC}}
+|-
+|}
+
+==References==
+[[Category:Classes]]
+
+[[es:Clases]]

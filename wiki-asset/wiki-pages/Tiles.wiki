@@ -1,0 +1,410 @@
+{{For|information regarding '''Traps''' such as {{tile|Bear}}|Traps}}
+The battlefield in Mewgenics is made up of a 10×10 grid of '''Tiles''' for the player's party and their enemies to move and fight upon. Tiles can affect the units that stand on/move through them in a variety of ways, both good and bad, and as such are often crucial for defining the shape and flow of the game's many battles. 
+
+They can either appear naturally as part of the pre-defined layouts for each battle, or they can be dynamically created/altered by both the player's party and their enemies through various abilities and/or the [[Elements]] system.
+
+For all the ways tiles can be manipulated, see: [[List of tile change effects]].
+
+Unless indicated otherwise, {{St|Flying}} units are generally exempt from the effects of standing on tiles.
+
+__toc__
+
+== Empty ==
+The default tile type. Has no intrinsic properties in and of itself.
+
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects
+|- id="Empty Tile"
+! Empty Tile
+| [[File:Empty Tile Icon.svg|120px|center]]
+|
+* Can be replaced by any other tile.
+| ''N/A''
+|}
+
+== Grass ==
+Grass is one of the most common tiles types, first encountered in the {{ch|The Alley}}. 
+
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects
+|- id="Grass Tile"
+! Grass Tile {{anchor|Grass Tiles|}}
+| [[File:Grass Tile Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Water}}, will grow into a {{tile|Tall Grass}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Ice Shards}}. 
+| ''N/A''
+|- id="Tall Grass Tile"
+! Tall Grass Tile {{anchor|Tall Grass Tiles|}}
+| [[File:Tall Grass Tile Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Wind}} or {{Element|Gravity}}, will turn into a {{tile|Grass}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Big Ice Shards}}.
+* Will combine with {{tile|Flower|Flowers}}, turning into a {{tile|Tall Flower}}.
+|
+* Units standing in Tall Grass have {{stat|Dodge Chance|#=+50%}}.
+* Can affect {{St|Flying}} units.
+|}
+
+== Flower ==
+Flower tiles are rarely found naturally outside of {{ch|The Rift}}, and are most often created by passive skills like {{p|Flower Power}}, spells such as {{a|Flower Feet}}, or items such as {{i|Flower Mix}}.
+
+* Will usually spawn in encounters with {{Mb|Arthur}}.
+
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects
+|- id="Flower Tile"
+! Flower Tile {{anchor|Flower Tiles|}}
+| [[File:Flower Tile Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Water}}, will grow into a {{tile|Tall Flower}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Ice Shards}}. 
+|
+* Units standing on flowers gain {{stat|Health Regen|+2}} and {{stat|Mana Regen|+2}}.
+|- id="Tall Flower Tile"
+! Tall Flower Tile {{anchor|Tall Flower Tiles|}}
+| [[File:Tall Flower Tile Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Wind}} or {{Element|Gravity}}, will turn into a {{tile|Flower}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Big Ice Shards}}.
+|
+* Units standing in Tall Flowers gain {{stat|Health Regen|+3}}, {{stat|Mana Regen|+3}}, and {{stat|Dodge Chance|50%}} <!--Not Statuses--> 
+* Can affect {{St|Flying}} units.
+* Counts as {{tile|Tall Grass}} for some item and ability effects such as {{i|Survivalist's Gaiter}}.
+|}
+
+== Bramble ==
+Bramble tiles are most often found in the {{Chapter|The Crater}}. However, they can also be created by various spells (mostly {{element|Grass}} spells), such as {{a|Bramble Burst}} or {{a|Bramble Shot}}.
+
+{| class="wikitable" style= "width: 100%" 
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects
+|- id="Bramble Tile"
+! Bramble Tile {{anchor|Bramble Tiles|}}
+| [[File:Bramble Tile Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Water}}, will grow into a {{tile|Thick Bramble}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Ice Shards}}. 
+|
+* Units take 2 damage each time they enter a Bramble tile.
+* Moving through Brambles costs 2 movement.
+|- id="Thick Bramble Tile"
+! Thick Bramble Tile {{anchor|Thick Bramble Tiles|}}
+| [[File:Thick_Bramble_Tile_Icon.svg|120x120px|center]]
+|
+* Is a {{el|Grass}} element tile.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Fire}}.
+* When affected by {{Element|Ice}}, will turn into a {{tile|Big Ice Shards}}.
+|
+* Units take 4 damage upon entering a Thick Bramble tile.
+* Moving through Thick Brambles costs 3 movement.
+|}
+
+== Water ==
+Water is a somewhat-prevalent tile type, most commonly found in the {{chapter|The Sewers}}. 
+
+Creep is found in large amounts in {{chapter|The Junkyard}}, and occasionaly in other chapters.
+
+* {{tile|Supercooled Water}} can only exist during {{we|Snow}} or {{we|Blizzard}} weather. It can naturally spawn in the {{chapter|Ice Age}}.
+* In {{ch|Throbbing Domain}} and {{ch|The End}}, water has a bloody-red coloration instead.
+
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Water Tile"
+! Water Tile{{anchor|Water Tiles|}}
+| [[File:TILE Water Icon.svg|120x120px|center]]
+|
+* Is a {{el|Water}} element tile.
+* When affected by {{Element|Ice}}, will turn into an {{tile|Ice}}.
+* When affected by {{Element|Wind}}, will turn into a {{tile|Water Current}}.
+** The direction of the current matches the direction of the wind that created it.
+* Conducts {{Element|Electric|Electricity}}.
+|
+* Makes units in it {{st|Wet}}.
+* Costs 2 movement to walk through.
+|- id="Water Current Tile"
+! Water Current Tile {{anchor|Water Current Tiles|}}
+| [[File:TILE Water Curren Icon.svg|120x120px|center]]
+|
+* Is a {{el|Water}} element tile.
+* When affected by {{Element|Ice}}, will turn into an {{tile|Ice}}.
+* Conducts {{Element|Electric|Electricity}}.
+|
+* Makes units in it {{st|Wet}}.
+* Costs 2 movement to walk through.
+* Units standing in it at the end of the round will be pushed in the direction of the current, into adjacent [[liquid tile|liquid tiles]] (will not be pushed outside).
+|- id="Supercooled Water Tile"
+! Supercooled Water Tile {{anchor|Supercooled Water Tiles|}}
+| [[File:TILE Supercooled Water Icon.svg|120x120px|center]]
+|
+* Is a {{el|Water}} element tile.
+* Becomes a normal {{tile|Water}} if not in an {{el|Ice}} environment.
+* When affected by {{el|Ice}}, {{el|Wind}} or when a unit makes contact, will turn into an {{tile|Ice}}.
+* Conducts {{Element|Electric|Electricity}}.
+|
+* {{st|Freeze|Freezes}} units that walk through it.
+* Costs 2 movement to walk through.
+|}
+
+== Creep ==
+Creep is found in large amounts in {{chapter|The Junkyard}}, and occasionally in other chapters.
+* Although it isn't technically Water tile, some enemies and abilities will consider it as such due to its innate {{el|Water}} element.
+
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Creep Tile"
+! Creep Tile {{anchor|Creep Tiles|}}
+| [[File:TILE Creep Icon.svg|120x120px|center]]
+|
+* Is a {{el|Water}} element tile.
+* Conducts {{Element|Electric|Electricity}}.
+|
+* Makes units in it {{st|Wet}}.
+* Units take 1 damage either when first entering creep or starting their turn in creep.
+** Walking between adjacent Creep will not inflict damage again.
+* Costs 2 movement to walk through.
+|}
+
+== Dirt ==
+Dirt is an uncommon tile type that rarely spawns naturally. 
+* '''All''' {{element|Earth}}-element effects create Dirt on the tiles they target, replacing any non earth-element tile in the process. 
+* {{mb|Mama Maggot}} always starts on a 2-by-2 square of Dirt tiles, while {{mb|Rat King}} always starts in a Dirt area.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Dirt Tile"
+! Dirt Tile {{anchor|Dirt Tiles|}}
+| [[File:TILE Dirt Icon.svg|120x120px|center]]
+|
+* Is an {{el|Earth}} element tile.
+* When affected by {{element|Wind}}, gives units standing on it {{st|Blind|#=1}}, then disappears.
+|
+|}
+
+== Road ==
+Road is a rare tile type almost exclusively found in the {{chapter|The Desert}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Road Tile"
+! Road Tile {{anchor|Road Tiles|}}
+| [[File:Road Tile Icon.svg|120x120px|center]]
+|
+|
+* Costs 0.5 Movement to walk through.
+|}
+
+== Ice ==
+Ice Tiles spawn naturally in the {{ch|Ice Age}}.
+* Can be created through interactions with the {{element|Ice}} element. 
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Ice Tile"
+! Ice Tile {{anchor|Ice Tiles|}}
+| [[File:TILE Ice Icon.svg|120x120px|center]]
+|
+* Has the {{el|Ice}} element.
+* When affected by {{Element|Fire}}, will turn into a {{tile|Water}}.
+|
+* Units that receive physical attacks on this tile will slide in the opposite direction until they either collide with something (dealing contact damage) or run out of ice tiles.
+* Removes {{st|Wet}} from units that step on this.
+* Units on this tile that are affected by non-persistent {{el|Water}} will {{st|Freeze}}.
+|- id="Ice Shards Tile"
+! Ice Shards Tile {{anchor|Ice Shards Tiles|}}
+| [[File:TILE Ice Shards Icon.svg|120x120px|center]]
+|
+* Has the {{el|Ice}} element.
+* When affected by {{element|Fire}}, will turn into a {{tile|Water}}.
+|
+* Units walking through this take 1 Damage.
+* Removes {{st|Wet}} from units that step on this.
+* Units on this tile that are affected by non-persistent {{el|Water}} will {{st|Freeze}}.
+|- id="Big Ice Shards Tile"
+! Big Ice Shards Tile {{anchor|Big Ice Shards Tiles|}}
+| [[File:TILE Big Ice Shards Icon.svg|120x120px|center]]
+|
+* Has the {{el|Ice}} element.
+* When affected by {{element|Fire}}, will turn into a {{tile|Water}}.
+|
+* Units walking through this take 2 Damage.
+* Removes {{st|Wet}} from units that step on this.
+* Units on this tile that are affected by non-persistent {{el|Water}} will {{st|Freeze}}.
+|}
+* {{bug|Ice tile will convert effects that cause negative knockback into 1 positive, impacting abilities that push back the caster such as {{a|Rebound}}, pushing the caster forward instead.}}
+
+== Fire ==
+Fire tiles are not ''naturally'' common, but can be easily created by using {{element|Fire}}-element damage or abilities on {{element|Grass}}-themed tiles (such as {{tile|Grass|Grass}}, {{tile|Flower|Flowers}}, and {{tile|Bramble|Brambles}}). 
+* Can spawn naturally in some battles in {{chapter|The Core}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Fire Tile"
+! Fire Tile {{anchor|Fire Tiles|}}
+| [[File:Fire Tile Icon.svg|120x120px|center]]
+|
+* Has the {{el|Fire}} element.
+* When affected by {{Element|Water}}, will be extinguished, reverting to an {{tile|Empty}}.
+* When affected by {{Element|Wind}}, will spread to an adjacent tile in the direction the wind came from, and will have its self-extinguishing timer reset.
+|
+* Will inflict {{St|Burn|#=1}} on anything that walks through it.
+* Will inflict {{st|Burn|#=2}} on anything that starts their turn on this tile.
+* Can affect {{St|Flying}} units in it's large and medium intensity.
+* Shrinks in size after each round, disappearing after 3 rounds.
+* Will spread and ignite adjacent flammable tiles at the end of each round.
+|}
+
+== Stalagmite ==
+Exclusively found in the {{chapter|The Caves}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Stalagmite Tile"
+! Stalagmite Tile {{anchor|Stalagmite Tiles|}}
+| [[File:Stalagmite Tile Icon.svg|120x120px|center]]
+|
+* Cannot be overwritten by {{el|Earth}}-element abilities creating dirt.
+* Applying {{el|Earth}} element immediately drops a stalactite.
+* {{en|Mega Fetus}} counterattack guarantees stalactites to fall on hit tiles, with a 50% chance on ajacent tiles.
+|
+* Chance for a stalactite to fall on this at the end of the round, dealing damage to units it lands on.
+** Deals 4 environmental damage. <!--Not Phys/Mag. Undodgeable-->
+** {{stat|Luck}} decrease the chance.
+|}
+
+== Glass ==
+Glass Tiles, also known as '''glass shards''', are most commonly found in the {{chapter|The Junkyard}}.
+* Regular Glass can be created by various enemies and glass-themed items/abilities, like {{i|Bag o' Glass}} or {{a|Shards}}.
+* Floating Glass is typically the result of {{element|Gravity}} magic, such as {{a|Shatter the Sky}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Glass Tile"
+! Glass Tile {{anchor|Glass Tiles|}}
+| [[File:Glass Tile Icon.svg|120x120px|center]]
+|
+* When attacked by {{icon|physical damage}}, breaks and inflicts {{St|Bleed|#=1}} to the unit on the tile.
+|
+* Units walking through this take 1 damage.
+|- id="Floating Glass Tile"
+! Floating Glass Tile {{anchor|Floating Glass Tiles|}}
+| [[File:Floating Glass Tile Icon.svg|120x120px|center]]
+|
+* When attacked by {{icon|physical damage}}, breaks and inflicts {{St|Bleed|#=1}} to the unit on the tile.
+* When affected by {{Element|Gravity}}, will turn into a {{tile|Glass}}.
+|
+* Units walking through this take 2 damage and gain {{St|Bleed|#=+1}}, then tile becomes a regular {{tile|Glass}}.
+** Units moving ''involuntarily'' through this (i.e. those affected by Knockback) have their movement halted.
+** Can damage {{st|Flying}} units.
+|}
+
+== Toxic Waste ==
+A fairly rare tile type only found in the {{chapter|The Bunker}}.
+* Can be created by {{i|Mini Nuke}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Toxic Waste"
+! Toxic Waste {{anchor|Toxic Waste Tiles|}}{{anchor|Toxic Waste Tile|}}<br><code>ToxicTile</code>
+| [[File:TILE Toxic Waste Icon.svg|120x120px|center]]
+|
+* Applies {{el|Mutate}} element to units that step in it, evolving certain units ({{en|Maggot}} / {{en|Cultist Lackey}} / {{en|Cultist Zealot}}.
+|
+* Units who enter it or start their their turn in it gain 2 random stat increases or decreases for the duration of the battle.
+** Each of the 2 stat changes is a {{stat|Luck}} roll of 50% to be a stat increase.
+|}
+
+== Lava ==
+Most commonly found in {{chapter|The Core}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Lava Tile"
+! Lava Tile {{anchor|Lava Tiles|}}
+| [[File:TILE Lava Icon.svg|120x120px|center]]
+|
+* Has the {{el|Fire}} element.
+* Cannot be overwritten by {{el|Earth}}-element abilities creating dirt.
+* When affected by {{el|Water}} or {{el|Ice}}, it will become a {{tile|Basalt}}.
+** Also changes when next to a {{tile|Water}}.
+* When affected by {{Element|Wind}}, will spread {{tile|Fire}} to flammable and empty tiles in the direction the wind blows.
+|
+* Costs 2 movement to walk through.
+* Will inflict {{St|Burn|#=4}} on anything that walks through it.
+* Will inflict {{st|Burn|#=4}} on anything that starts their turn on this tile. 
+* Will ignite adjacent flammable tiles at the end of each round.
+|}
+
+== Tar ==
+Most commonly found in {{chapter|The Jurassic}}.
+* Can be created by {{en|Tar Baby}}
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Tar Tile"
+! Tar Tile {{anchor|Tar Tiles|}}<br><code>OilTile</code>
+| [[File:TILE Tar Icon.svg|120x120px|center]]
+|Will turn into a {{tile|Fire|Fire Tile}} when exposed to {{el|Fire}}.
+| 
+* Costs 2 movement to walk through.
+* Inflicts units that walk through it with {{St|Tarred}}.
+* Units hit with [[Knockback]] will slide until they hit an object or reach the edge of the tiles. 
+|}
+
+== Basalt ==
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Basalt Tile"
+! Basalt Tile {{anchor|Basalt Tiles|}}<br><code>RockTile</code>
+| [[File:Basalt Tile Icon.svg|120x120px|center]]
+|
+* Cannot be overwritten by {{el|Earth}}-element abilities creating dirt.
+* Formed when {{tile|Lava}} is affected by {{el|Water}} or when lava is next to a {{tile|Water}}.
+|
+* Costs 2 movement to walk through.
+|}
+
+== Glitch ==
+A rare tile exclusive to {{ch|The Rift}}.
+* Created during the {{b|Chaos!}} fight on the same tile a {{b|Small Steven}} was killed.
+* Can be created by {{en|Chaos Stacy}}.
+{| class="wikitable" style= "width: 100%"
+! style= "width: 100px" | Name !! style= "width: 130px" | Image !! style= "width: 420px" | Interactions !! Effects 
+|- id="Glitch Tile"
+! Glitch Tile {{anchor|Glitch Tiles|}}
+| [[File:TILE Glitch Icon Blank.png|120x120px|center|class=glitch-tile-icon]]
+|
+Will stay active above some of the other tiles like water.
+|
+* Inflicts cats with {{st|Scrambled|#=1}}.
+* Inflict non-cats with {{St|Confusion}}.
+* Can affect {{St|Flying}} units.
+|}
+
+== Notes ==
+* ''Most'' tiles will not affect corpses.
+** {{Bug|{{tile|Stalagmite}} visually damages corpses, but will not actually decrease {{stat|Corpse Health}}.}}
+* Some tiles are considered "{{Anchor|liquids}}" for enemy AI and various ability interactions (such as {{en|Fetus}}):
+# Water (all types)
+# Creep
+# Lava
+# Tar
+# Toxic Waste
+<!-- Used in Fetuses AI and mentioned in Spewer description -->
+
+== Version History ==
+{{VersionHistory|
+;{{Version|v1.0.20689}}
+* "Tall" tiles now go semi-transparent when in tactical view
+
+;{{Version|v1.0.20738}}
+* Flying units now view Fire Tiles as a hazard
+
+;{{Version|v1.0.20860}}
+* Capped the maximum amount of animation slowdown a tile can impact on a walk cycle to 10 instead of 9999
+
+;{{Version|v1.1.21016 beta}}
+* Shadow tiles replaced with glitch tiles from the one level in the Rift, making them unused.
+}}
+
+[[Category: Tiles]]

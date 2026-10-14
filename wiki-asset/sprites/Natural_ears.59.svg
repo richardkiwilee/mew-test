@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="31.24091"
+   height="71.840485"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Natural ears.59.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_7385afa3d675-4b9b-4c14-9fbc-abcec5eb25f6">
+    <path
+       d="M 5.2,8.2 Q 6.75,6.8 7.25,4.5 7.75,2.4 7.25,0.15 6.9,-1.7 5.85,-3.95 l -2,-3.9 -3.55,-7.35 -12.6,-27.25 q -0.25,8.8 0.75,20 0.75,8.2 1.75,13.45 1.35,7.25 3.8,12.85 1.7,3.7 3.55,4.95 1.7,1.15 3.9,1 2.2,-0.2 3.75,-1.6 m 7.5,-9.75 q 0.9,3.6 0.15,7.25 -0.85,3.75 -3.3,6.4 -2.5,2.75 -6.25,3.6 -3.85,0.9 -7.1,-0.6 -4.9,-2.25 -8.1,-9.7 -2.75,-6.35 -4.1,-14.75 -0.95,-5.75 -1.55,-15.35 l -0.5,-13.5 q 0.05,-7.4 0.95,-13.45 0.25,-1.65 0.85,-2.7 0.8,-1.4 2.05,-1.45 1.9,-0.1 3.4,3.15 13.6,30.1 20.85,44.8 2,3.9 2.65,6.3"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+    <path
+       d="M 5.2,8.2 Q 3.65,9.6 1.45,9.8 -0.75,9.95 -2.45,8.8 -4.3,7.55 -6,3.85 -8.45,-1.75 -9.8,-9 q -1,-5.25 -1.75,-13.45 -1,-11.2 -0.75,-20 l 12.6,27.25 3.55,7.35 2,3.9 q 1.05,2.25 1.4,4.1 0.5,2.25 0,4.35 -0.5,2.3 -2.05,3.7"
+       fill="#66ff00"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path2" />
+  </clipPath>
+  <g
+     clip-path="url(#_7385afa3d675-4b9b-4c14-9fbc-abcec5eb25f6)"
+     id="g5"
+     transform="translate(18.05,55.802985)">
+    <g
+       transform="translate(-3.85,8.25)"
+       id="g4">
+      <g
+         transform="matrix(1.7837677,0,0,1.802124,-100.05,-97.45)"
+         id="g3">
+        <g
+           id="DefineShape_593">
+          <path
+             d="M 0,0 H 112.15 V 108.15 H 0 V 0"
+             fill="#b9ae93"
+             fill-rule="evenodd"
+             stroke="none"
+             id="path3" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g6"
+     transform="translate(18.05,55.802985)">
+    <g
+       id="DefineShape_7386">
+      <path
+         d="m 12.7,-1.55 q 0.9,3.6 0.15,7.25 -0.85,3.75 -3.3,6.4 -2.5,2.75 -6.25,3.6 -3.85,0.9 -7.1,-0.6 -4.9,-2.25 -8.1,-9.7 -2.75,-6.35 -4.1,-14.75 -0.95,-5.75 -1.55,-15.35 l -0.5,-13.5 q 0.05,-7.4 0.95,-13.45 0.25,-1.65 0.85,-2.7 0.8,-1.4 2.05,-1.45 1.9,-0.1 3.4,3.15 13.6,30.1 20.85,44.8 2,3.9 2.65,6.3 M 5.2,8.2 Q 6.75,6.8 7.25,4.5 7.75,2.4 7.25,0.15 6.9,-1.7 5.85,-3.95 l -2,-3.9 -3.55,-7.35 -12.6,-27.25 q -0.25,8.8 0.75,20 0.75,8.2 1.75,13.45 1.35,7.25 3.8,12.85 1.7,3.7 3.55,4.95 1.7,1.15 3.9,1 2.2,-0.2 3.75,-1.6"
+         fill="#000000"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path5" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Natural texture.205.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_2339562d4934-1df5-4fe4-a551-76a6b13fd722">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_2339562d4934-1df5-4fe4-a551-76a6b13fd722)"
+     id="g3"
+     transform="translate(75,75)">
+    <g
+       transform="matrix(2.1876984,0,0,1.9898224,-122.45,-107.6)"
+       id="g2">
+      <g
+         id="DefineShape_593">
+        <path
+           d="M 0,0 H 112.15 V 108.15 H 0 V 0"
+           fill="#b9ae93"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+      </g>
+    </g>
+  </g>
+  <g
+     clip-path="url(#_2339562d4934-1df5-4fe4-a551-76a6b13fd722)"
+     id="g5"
+     transform="translate(75,75)">
+    <g
+       id="g4">
+      <g
+         id="DefineShape_2522">
+        <path
+           d="M -41.55,10.05 Q -31.95,6.5 -21.5,5.4 -11.25,4.35 -0.9,5.65 7.05,6.7 12.75,9.1 q 7.15,3.05 11.15,8.35 1.85,2.55 2.45,4.85 0.6,2.25 0.1,4.8 -0.65,3.5 -3.1,6.7 -2.2,2.85 -5.5,5 -2.8,1.8 -6.65,3.3 -2.45,0.95 -7.1,2.35 l -7.2,2.25 -6.7,2 q -18.3,5.2 -32.55,3.35 -12.55,-1.65 -19.4,-8.4 -2.85,-2.75 -3.7,-5.6 -1.3,-4.3 1.05,-9.55 1.3,-2.75 3.1,-5.15 6.3,-8.3 19.75,-13.3"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+Keyords are words and short phrases with a specified meaning used widely in Mewgenics. 
+
+They can have a wide range of uses, for example all [[Status Effects]] are considered keywords.
+
+== Keywords ==
+These have an icon and an apropriate tooltip describing what they are.
+
+{{Shuffle Keywords}}
+
+== Non-Icon Properties ==
+These are not tracked and explained as Keywords by the game, however are still recurrent properties that have a specific meaning the player is expected to know.
+
+=== Alternative Movement Actions ===
+Movement actions which are not the default "Move". 
+* Cats can have their movement actions replaced by certain effects. 
+** [[List of effects that replace movement action]]
+* Some enemies innately have a different movement action.
+; {{anchor|Jump}}
+; {{anchor|Teleport}}
+; {{anchor|Dig}}
+; {{anchor|Shadowstep}}
+: Unit moves from one tile to another directly, ignoring tile effects and units in the way.
+: {{st|Trample}} allows to jump/teleport/dig on-to other units that can be displaced.
+: Difference between them is just visual and sounds.
+
+
+; Jump (Damaging)
+: Some sources of Jump innately deal {{icon|Physical damage}}, often not differentiated in descriptions.
+:: They can innately be used to jump on to other units.
+::: This includes units immune to being displaced.
+:: Their damage overrides {{st|Trample}} damage, just dealing the Jumps damage.
+:: Jumping on a unit that can be displaced, displaces them
+::: Otherwise, displaces the user.
+:: Activates both units on-contact effects.
+
+
+; {{anchor|Dash Attack}}
+: Unit moves as far as possible in one cardinal direction, until it collides with another unit, dealing damage to it.
+:: Activates victims on-contact effects.
+:: {{st|Trample}} will have no effect.
+
+=== Phrases ===
+{{for|Knockback, Knockback Damage, Contact and Backstab|Damage Mechanics}}
+{| class="wikitable sortable" style="table-layout: fixed; overflow-wrap: break-word;"
+|-
+! Name !! Behavior !! Sources
+|- id="Undead"
+! Undead 
+| 
+Units which are undead: 
+* Take damage of equal amount and type, when receiving {{el|Holy}} {{icon|Healing}}.
+** Most healing is {{icon|Magic}}.
+** Non-Holy healing works as normal.
+* Receive {{st|Fear}} instead of cleansing when hit by {{i|The Bible}}.
+| 
+{{type|Zombie}}<br>
+{{type|Ghost}}<br>
+{{en|Skeleton Cat}}<br>
+{{st|Zombie}}<br> <!--Does get cleansed by bible which is odd-->
+{{i|Mark of the Beast}}<br>
+|- id="Levitating Rock"
+! id="Levitating" | Levitating Rock
+| 
+{{type|Rock}} start levitating after certain effects.
+: Will stop Levitating if damaged.
+: Downed Rocks cannot levitate.
+
+Levitating rocks will automatically fling themselves toward units which end their movement perpendicularly to the rock, and are considered an enemy by the caster.
+: Both units take {{icon|Knockback damage}}.
+: Without a caster, any unit will be targeted.
+: Will stop Levitating after being triggered.
+: 
+| 
+{{a|Rock Song}}<br>
+{{mb|Rocky Bobo}}<br> 
+{{b|Zaratana}}<br>
+{{we|Geomagnetic Storm}}<br>
+|-
+|- id="Refresh"
+! Refresh
+| 
+Basic attacks, movement actions, weapons and trinket actions can be refreshed.<br>
+Refreshing a units action means giving it 1 action point for that action, if it had 0 remaining.
+
+Refreshing an action when it is not out of uses will not add an additional use to be used later in that turn, effectively doing nothing.
+
+<!--Says reload in game when it procs-->
+{{st|Bonus Attack}} / {{st|Bonus Move}} count as action points, preventing the action from being refreshed until they've used up the respective status effect.
+
+Refreshing a weapon or trinket with a once per battle restriction allows it to be used once again.
+| 
+; Basic Attack
+: [[List of effects that give additional basic attacks#Effects that refresh Basic Attack action|Effects that refresh Basic Attack action]]
+; Movement
+: [[List of effects that give additional movement actions#Effects that refresh movement action|Effects that refresh movement action]]
+; Weapons
+: [[List of effects that give additional weapon actions|Effects that refresh weapon action|Effects that refresh weapon action]]
+|-
+|}
+[[Category:Mechanics]]

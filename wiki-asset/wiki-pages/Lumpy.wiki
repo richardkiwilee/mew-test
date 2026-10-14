@@ -1,0 +1,85 @@
+{{Infobox/Enemy
+| ID = Lumpy
+| Size = 1x1
+| Location = The Alley, The Junkyard, The Lab
+| Description = Its ranged attack creates Creep. Spawns Creep when damaged.
+| Health   = 9
+| Damage   = 5
+| Movement = 3
+| Luck     = 5
+| Types = Rat, Blob
+}}
+
+'''Lumpy''' is a {{type|Bolb|Blob}} and {{type|Rat}} enemy found primarily in {{ch|The Junkyard}}.
+
+== Behavior ==
+Ranged attacker, keeps distance from its enemies.
+
+Is likely to take its turn late in the round (5 [[initiative]]).
+
+Its basic attack (<code>CreepRanged</code>) a lobbed attack in [[range and Area|range]] 3 that deals {{icon|Physical Damage|#=5}} and spawns a {{tile|Creep}} on the target.
+:{{RangeIndicatorWrapper|name=ranged
+|:{{RangeIndicator|min_range=1|max_range=3}}}}
+
+When it takes damage, spawns creep on an adjacent tile, away from the direction it was attacked.
+* If hit with a non-directional attack, does not spawn creep.
+Does not take damage from creep tiles.
+
+=== Tips ===
+* Their low range and movement means they'll typically take a couple of rounds to become a threat, unless the player moves units into their range.
+* They're often found in creep ponds, making them easy targets of {{el|Electric}} chain damage and {{st|Freeze}} from {{el|Ice}}, but at the same time, harder to {{st|Burn}} with {{el|Fire}}.
+* Melee units are likely to have a harder time reaching them effectively because of terrain and slowing creep tiles. It's more proactive to let them come into range instead of giving chase in slowing and damaging creep, especially if they're not the bigger threat.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Lumpy_Icon.svg|Turn Order Icon
+ENEMY_Lumpy_Idle.gif|Idle
+ENEMY_Lumpy_Low_Health.gif|Low Health
+ENEMY_Lumpy_Death.gif|Death
+ENEMY_Lumpy_Attack.gif|Attack
+ENEMY_Lumpy_Creep.gif|Spawn creep
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Lumpy_Icon_Champion.svg|Turn Order Icon
+ENEMY_Lumpy_Idle_Champion.gif|Idle
+ENEMY_Lumpy_Low_Health_Champion.gif|Low Health
+ENEMY_Lumpy_Death_Champion.gif|Death
+ENEMY_Lumpy_Attack_Champion.gif|Attack
+ENEMY_Lumpy_Creep_Champion.gif|Spawn creep
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Lumpy_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* {{en|Lil' Rat|Lil' Rats}} have a chance to become a Lumpy if affected by {{el|Mutate}} element sources like {{tile|Toxic Waste}}.
+
+== Other languages ==
+{{Other languages
+| en = Lumpy
+| es = Amorfo
+| fr = Ratatouille
+| de = Schleimi
+| it = Amorfo
+| pt-br = Protuberante
+| ru = Комочек
+| ko = 울퉁불퉁이
+| ja = ゴッツマウス
+| zh-cn = 肿​包
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Rat type units]][[Category:Blob type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement keep distance]]
+
+[[es:Amorfo]]

@@ -11,6 +11,13 @@ const STAT_NAMES := ["力量", "敏捷", "体质", "智力", "魅力", "速度",
 const CAT_NAMES := ["煤球", "雪球", "琥珀", "奶糖", "斑斑", "虎子", "豆豆", "年糕",
 	"芝麻", "橘子", "米粒", "布丁", "汤圆", "花卷", "饼干", "可乐"]
 const ABILITY_POOL := [201, 202, 203, 205]   # 火球/治疗/电击/烈焰扫荡
+# 猫职业（wiki CLASS_* 动画素材的 13 个职业；随机分配并作为棋盘精灵）
+const CLASSES := [
+	["butcher", "屠夫"], ["cleric", "牧师"], ["collarless", "无项圈"], ["druid", "德鲁伊"],
+	["fighter", "战士"], ["hunter", "猎人"], ["jester", "小丑"], ["mage", "法师"],
+	["monk", "武僧"], ["necromancer", "死灵"], ["psychic", "通灵"], ["tank", "坦克"],
+	["thief", "盗贼"],
+]
 const EQUIPMENTS := [  # id → 名称
 	[110, "幸运护符(+3幸运)"], [111, "力量腰带(+2力量)"], [112, "疾风之靴(+2速度)"],
 	[113, "学者之帽(+2智力)"], [114, "生命护符(+2体质)"],
@@ -104,8 +111,15 @@ func _make_cat_card(index: int) -> Control:
 	name_label.name = "name"
 	vbox.add_child(name_label)
 
-	var stats_label := _label("", 14, Color(0.85, 0.85, 0.9))
+	var class_label := _label("", 13, Color(0.75, 0.85, 1.0))
+	class_label.name = "class"
+	vbox.add_child(class_label)
+
+	var stats_label := RichTextLabel.new()
+	stats_label.bbcode_enabled = true
+	stats_label.fit_content = true
 	stats_label.name = "stats"
+	stats_label.add_theme_font_size_override("normal_font_size", 14)
 	vbox.add_child(stats_label)
 
 	vbox.add_child(_label("被动", 14, Color(0.65, 0.65, 0.7)))
@@ -149,8 +163,10 @@ func _reroll_cat(index: int) -> void:
 		if apool.is_empty():
 			break
 		abilities.append(apool.pop_at(_rng.randi_range(0, apool.size() - 1)))
+	var cls: Array = CLASSES[_rng.randi_range(0, CLASSES.size() - 1)]
 	var cat := {
 		"name": CAT_NAMES[_rng.randi_range(0, CAT_NAMES.size() - 1)],
+		"class": cls[0], "class_name": cls[1],
 		"stats": stats, "passives": passives, "abilities": abilities, "equip": 0,
 	}
 	if _cats.size() <= index:
@@ -165,10 +181,17 @@ func _update_card_display(index: int) -> void:
 	var vbox := panel.get_child(0) as VBoxContainer
 	var cat: Dictionary = _cats[index]
 	(vbox.get_node("name") as Label).text = cat["name"]
+	(vbox.get_node("class") as Label).text = "职业：%s" % cat["class_name"]
 	var stats_text := ""
 	for i in 7:
-		stats_text += "%s%d  " % [STAT_NAMES[i], cat["stats"][i]]
-	(vbox.get_node("stats") as Label).text = stats_text
+		var v: int = cat["stats"][i]
+		var color := "#cccccc"
+		if v >= 6:
+			color = "#7fd87f"
+		elif v <= 4:
+			color = "#e88a7a"
+		stats_text += "[color=%s]%s %d[/color]  " % [color, STAT_NAMES[i], v]
+	(vbox.get_node("stats") as RichTextLabel).text = stats_text
 	(vbox.get_node("passives") as Label).text = _names_of(cat["passives"], _passive_pool)
 	(vbox.get_node("abilities") as Label).text = _names_of(cat["abilities"], _ability_pool)
 	_card_equip[index].select(0)
@@ -195,7 +218,8 @@ func _on_start() -> void:
 		if cat["equip"] != 0:
 			passives.append(cat["equip"])
 		configs.append({
-			"name": cat["name"], "stats": cat["stats"],
+			"name": cat["name"], "class": cat["class"], "class_name": cat["class_name"],
+			"stats": cat["stats"],
 			"passives": passives, "abilities": cat["abilities"],
 		})
 	visible = false

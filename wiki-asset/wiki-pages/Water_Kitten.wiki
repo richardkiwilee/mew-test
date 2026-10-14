@@ -1,0 +1,80 @@
+{{Infobox/Enemy
+| ID = WaterKitten
+| Size = 1x1
+| Location = The Sewers, The Alley
+| Description = Moves away when damaged.<br>May be hiding in water...
+| Health   = 5
+| Shield = 1
+| Damage   = 3
+| Movement = 4
+| Luck     = 5
+| Types = Cat
+}}
+
+'''Water Kitten''' is a {{type|Cat}} [[enemy]] found in {{ch|The Sewers}}, though it may also very rarely be encountered in {{ch|The Alley}}.
+
+== Behavior ==
+Some Water Kittens may spawn in a level hidden from view, and will pop out once a unit walks adjacent to them.
+
+It is a Melee attacker that will attempt to close the distance to its enemies.
+
+=== Notes ===
+* Will leave {{tile|Water|Water Tiles}} in its path.
+* Can walk through water unimpeded.
+* When damaged, it will run away from the source.
+
+=== Tips ===
+* Hiding Water Kittens do not have a turn order, and combat can end early without them appearing.
+* Certain effects such as {{p|Omniscience}} and {{mut|ears.316}} will cause the hiding Water Kittens to have their locations marked at combat start with exclamation marks.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Water Kitten_Icon.svg|Turn Order Icon
+ENEMY_Water Kitten_Idle.gif|Idle
+ENEMY_Water Kitten_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Water Kitten_Icon_Champion.svg|Turn Order Icon
+ENEMY_Water Kitten_Idle_Champion.gif|Idle
+ENEMY_Water Kitten_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Waterkitten_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* Water kittens are equipped with two unique [[Enemy Items|Items]] that give them the Banana peel hat and slime neckpiece.
+** Their unique items are visually similar to the {{i|Sludge Hat}} and {{i|Sludge Necklace}}.
+* Their hiding mechanic is implemented via a unique [[Trap]] that cannot be spawned by the player.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Water Kitten
+| es = Gatito acuático
+| fr = Chaton aquatique
+| de = Wasserkätzchen
+| it = Gattino Acquatico
+| pt-br = Gatinho de Água
+| ru = Водный котёнок
+| ko = 새끼 물고양이
+| ja = ミズネコ
+| zh-cn = 水​小​猫
+}}
+
+{{Navbox Enemy}}
+
+[[Category:Cat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement stay close]]
+[[Category:Units using Catgen]]

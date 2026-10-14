@@ -1,0 +1,335 @@
+A fight in Mewgenics is called a battle or combat. Battles are a main feature of the gameplay and the main challenge the player faces during an [[Adventure]]. They can be encountered as part of a dedicated node or as a result of [[Events]], or as a house fight.
+
+{{TOC limit|3}}
+
+== Structure ==
+=== Board ===
+[[File:Five Layers.png|250px|thumb|Example of all 5 layers being occupied]]
+The battle takes place on a board, made of a 10x10 square grid of [[tiles]].
+
+Each unit will spawn on a specific tile (or set of tiles, for large enemies and objects) according to the predetermined [[level data]].
+* The player's cats have 4 possible tiles they can stand on, and get assigned between them randomly.
+* There's a base 20% chance for a [[bonus bird]] to appear, increasing with the party's cumulative {{stat|luck}} and effects like {{i|Bird Feed}}.
+
+Each tile has 5 {{anchor|layers}}:
+# Units - ([[Cats]], [[Enemies]], [[Objects]])
+# Gas   - ({{object|Gas Cloud}})
+# Pickups - (such as {{object|Coin}})
+# Traps - (such as {{tile|Bear}})
+# Tile-Type - (such as {{tile|Creep}})
+* Static objects take up the first 4 layers, but can share a tile with tile-types.
+{{clear}}
+
+=== Characters ===
+As mentioned above, each tile can be occupied by several entities (known as "characters" in the game's code).
+
+Each character has its own [[Stats]], an [[AI]] with various properties, and [[abilities]] that define what they can do during the battle.
+
+When a character's {{stat|Health}} is reduced to 0, it will die (sometimes called "downed" when related to the player's cats) and leave a corpse. Under most circumstances, when that corpse is destroyed that character is permanently lost.
+* Many characters have their {{stat|Corpse Health}} set to 0, resulting in their corpse being automatically destroyed when they are killed.
+* See {{stat|Health}} for more information regarding healing and death.
+
+== Rounds ==
+[[File:Turn_Order_Example.png|350px|right|border]]
+The battle is comprised of '''Rounds''', and each unit will take at least one '''Turn''' in each round. Rounds will usually start from 1, and have no hard upper limit.
+
+Turns are taken in order of the units' '''Initiative'''.
+* Initiative is calculated using the unit's {{stat|Speed}} stat times two, in most cases.
+** Exact formula: <code>Initiative = Base_initiative + {{math|2\times\spd}} </code>
+** Some bosses and enemies have set initiative, usually to guarantee they will go at the start or the end of the round (for example, {{en|Sprout}} has -999 initiative).
+* If multiple units have the same initiative, the turn order between them is determined randomly.
+* Turn order is dynamic, and can change mid-round based on speed modifiers and extra turns gained.
+* Most {{icon|objects|link=y}} don't take turns.
+
+Enemies differentiate between a main turn, and bonus turns.
+* Bonus turns will be a > shape in the turn order.
+* Bonus turns are dispersed evenly through the round, regardless of their Initiative.
+* Some enemies may only perform certain actions on their main turn.
+
+=== Turn ===
+By default, each unit has a [[movement action]] and a [[basic attack]] it can use once per turn.
+* Most [[Weapons]] also have one use per turn.
+
+At the start of the turn, the unit will:
+* Refresh its movement action.
+* Refresh its basic attack action.
+* Refresh Weapon action.
+* Refresh Trinket/Consumable action.
+* Have "at the start of turn" effects apply to it.
+
+During the turn, actions will be taken according to player's decisions or the unit's [[AI]].
+
+At the end of turn, the unit will:
+* Gain {{stat|Mana}} equal to its {{stat|Mana Regen}}.
+* Gain {{stat|Health}} equal to its {{stat|Health Regen}}.
+* Have "at the end of turn" effects apply to it.
+
+=== Exhaustion ===
+* Exhaustion sets in at round 10.
+** For {{stat|Old}} cats, it sets in at round 5 instead.
+** For cats with {{d|Insomnia}}, it sets in at round 3 instead.
+
+* Once exhaustion sets in for a cat, the cat gains 1 {{st|Exhaustion}} per turn.
+** Non-player-cat familiars do not gain Exhaustion. <!--Ugly wording but Mini-Me & Flesh Golem gain but Not Catgen & Crow-->
+* {{st|Exhaustion}} will:
+** Deal unblockable damage by 1 per stack.
+** Reduce all {{stat|Health}} and {{stat|Mana}} gained by the cat by 1 per stack.
+** Disable post-battle healing. <!--Not health regen tho-->
+* During [[Bosses#Final Bosses|chapter 4 bosses]] and [[house bosses]], cats gain {{st|Adrenaline|%=3}}.
+** {{st|Adrenaline}} will keep Exhaustion at 0, lose 1 Adrenaline per turn.
+** Adrenaline also grants 25% [[Crit Chance]] and 25% [[Block Chance]]. <!--Non stacking-->
+
+=== Ambush ===
+Ambushes allow either the player or enemy faction to act during round 0.
+* They are a possible outcome of [[events]], but can also occur with {{i|Survivalist Hat}} or {{i|Air Horn}} equipped.
+** Events cannot trigger ambushes during [[Bosses|boss fights]]. If an event resulting in an ambush happens before a boss fight, the ambush effect will be delayed until the first fight of the next chapter (if any). The event's other effects will still be applied to the boss fight normally.
+* If both the player and enemy faction would ambush, they cancel each other and the battle starts on round 1 as normal.
+
+== Factions ==
+All units in the battle are separated into factions, which determine who they view as a foe and who they view as a friend.
+* Units that spawn from items/abilities will usually inherit their faction from their summoner.
+* Some effects can change a unit's faction dynamically (like the {{i|Persuasion Device}}), while others can make a unit act as if they are part of a different faction without permanently changing it:
+** {{st|Madness}}
+** {{st|Charmed}} / {{st|Possessed}} / {{st|Probed}} / {{st|Zombie}}
+
+=== Allies ===
+[[File:UI Allied Unit Icon.svg|right|border|100px]] [[File:UI Allied Cat Icon.svg|right|border|100px]]
+The player's cats and all units allied to them.
+
+They will avoid dealing damage to other allied units and use supportive abilities on them, while attempting to damage enemy units when able.
+
+[[Catgen]] units will appear as a green cat icon, and other allied units as a green smiley face.
+
+Unlike every other faction, they consider bonus birds as their enemies.
+{{clear}}
+
+=== Enemies ===
+[[File:UI Enemy Unit Icon.svg|right|border|100px]][[File:UI Boss Unit Icon.svg|right|border|100px]]
+Enemies will generally seek to harm allied units and are normally required to be defeated to end combat.
+
+Appear as a red skull in tactical view, with [[bosses]] having a red skull with horns.
+
+{| class="wikitable" style="table-layout: fixed; width: 100%; max-width: 900px; overflow-wrap: break-word;"
+|-
+! style="width: 18%;" | Name !! Behavior !! Examples
+|-
+| Solitary Enemy
+|
+Hostile towards enemies, allies and each other.<br>
+<small>(Continues to ignore Birds and Objects)</small>
+| 
+{{st|Madness}}<br>
+{{d|Schizophrenia}}<br>
+{{d|Sleep Paralysis}}
+|-
+| Faction Uprising
+| 
+Certain [[weather]] effects change the faction of of certain enemies based on [[types]].
+
+This results in them being hostile towards enemies and allies units not of that type, and vice-versa.<br>
+<small>(Continues to ignore Birds and Objects)</small>
+
+If multiple of these weather events occur at the same time, all affected types will share the faction and not be hostile towards one another.
+|  
+{{we|Birdemic}}<br>
+{{we|Alien Invasion}}<br>
+{{we|Robot Uprising}}<br>
+{{we|Haunted Night}}
+|-
+| Third Party
+|
+Rarely used additional enemy team.
+: Allied to other third party units.
+: Hostile toward regular enemies and vice versa.
+: Hostile to allies and vice versa.
+| 
+{{we|Restless Dead}} / {{en|Zombie Kitten}}<br>
+{{we|Training Day}} / {{obj|Punching Bag}}<br>
+{{we|Tornadoes}} / {{obj|Twister}}
+|-
+|}
+{{clear}}
+
+==== Ice Age Factions ====
+Some enemies in the {{ch|Ice Age}} have separate factions, defining their behavior to one another:
+
+{| class="wikitable" style="table-layout: fixed; width: 100%; max-width: 900px; overflow-wrap: break-word;"
+|-
+! style="width: 18%;" | Name !! Behavior !! Examples
+|-
+| Cavemen
+|  
+Hostile toward sabertooths & mammoths.<!--Not cat type-->
+| {{en|Caveman Man}} <br> {{en|Caveman Chief}}
+|-
+| Sabertooths
+|
+Hostile toward cavemen. <!--Not priority it seems, just hostile.-->
+| {{en|Sabertooth Cat}} <br> {{en|Wereman}}
+|-
+| Mammoths
+| Hunted by cavemen, but not hostile toward them.
+| {{en|Wooly Mammoth}} <br> {{en|Mammoth Kitten}}
+|-
+|}
+
+<!--
+Third party, technically. if really wanted to be accurate
+-->
+
+=== Neutral ===
+[[File:UI Third Party Icon.svg|right|border|100px]]
+Units in this faction will generally be non-hostile to other factions, and are not required to be killed to finish the combat.
+
+It is comprised mainly of the [[Bonus Birds]] but also some event spawns.
+
+Will appear as a grey face icon in tactical view.
+
+{| class="wikitable" style="table-layout: fixed; width: 100%; max-width: 900px; overflow-wrap: break-word;"
+|-
+! style="width: 18%;" | Name !! Behavior !! Examples
+|-
+| Birds
+|  
+Ignores other factions<br>Hunted by allies<br>Ignored by enemies and all other factions
+| {{en|Black Bird}} <br> {{en|Chicken}}
+|-
+| None
+|
+Ignores other factions<br>Ignored by other factions<br>Specific ai behavior may overwrite this.
+| {{en|Mech Suit}} <br> {{en|Frog}}
+|-
+|}
+
+=== Notes ===
+[[File:UI Objects Icon.svg|right|border|100px]]
+All non-static [[objects]] appear as a grey geometric icon in tactical view, ''regardless of faction''.
+
+The full alliance chart for all factions is as follows:<ref>Information taken from datamining [[Version History#v1.0.20763|Desktop v1.0.20763]], function <tt>FUN_140024500</tt>.</ref>
+{| class="wikitable sortable"
+|-
+! Viewer \ Target !! none !! allies !! enemies !! solitary enemies !! inanimate enemies !! allies to all !! third party !! birds !! cavemen !! sabertooths !! mammoths !! kaiju1 !! kaiju2 !! Faction Uprising
+|-
+! scope="row" | none 
+|| neutral || neutral || neutral || neutral || neutral || ally || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral
+|-
+! scope="row" | allies 
+|| neutral || ally || enemy || enemy || enemy || ally || enemy || enemy || enemy || enemy || enemy || enemy || enemy || enemy
+|-
+! scope="row" | enemies 
+|| neutral || enemy || ally || enemy || neutral || ally || enemy || neutral || ally || ally || ally || enemy || enemy || enemy
+|-
+! scope="row" | solitary enemies 
+|| neutral || enemy || enemy || enemy || neutral || ally || enemy || neutral || enemy || enemy || enemy || neutral || neutral || enemy
+|-
+! scope="row" | inanimate enemies 
+|| neutral || enemy || enemy || enemy || enemy || ally || enemy || neutral || enemy || enemy || enemy || neutral || neutral || enemy
+|-
+! scope="row" | allies to all 
+|| ally || ally || ally || ally || ally || ally || ally || neutral || ally || ally || ally || neutral || neutral || ally
+|-
+! scope="row" | third party 
+|| neutral || enemy || enemy || enemy || neutral || ally || ally || neutral || enemy || enemy || enemy || neutral || neutral || enemy
+|-
+! scope="row" | birds 
+|| neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral
+|-
+! scope="row" | cavemen 
+|| neutral || enemy || ally || enemy || neutral || ally || enemy || neutral || ally || enemy || enemy || enemy || enemy || enemy
+|-
+! scope="row" | sabertooths 
+|| neutral || enemy || ally || enemy || neutral || ally || enemy || neutral || enemy || ally || ally || enemy || enemy || enemy
+|-
+! scope="row" | mammoths 
+|| neutral || enemy || ally || enemy || neutral || ally || enemy || neutral || neutral || ally || ally || enemy || enemy || enemy
+|-
+! scope="row" | kaiju1 
+|| neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || ally || enemy || neutral
+|-
+! scope="row" | kaiju2 
+|| neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || neutral || enemy || ally || neutral
+|-
+! scope="row" | Faction Uprising 
+|| neutral || enemy || enemy || enemy || neutral || ally || enemy || neutral || enemy || enemy || enemy || enemy || enemy || ally
+|}
+
+== End of Battle ==
+A battle can only end in Victory or defeat of the party.
+=== Defeat ===
+The party will be defeated once all player cats in the party are downed.
+* Permanent cats gained by events, above the party limit of 4, do not prevent defeat.
+
+After being defeated, all items, food and coins the party were carrying will be lost and none of the cats return [[home]].
+* Depending on progress with {{NPC|Organ Grinder}} some of the loot can be retrieved.
+
+=== Victory ===
+Once all required enemies are killed or run away, a victory will be declared.
+
+All downed party cats are revived, and healed according to their {{stat|Health}}. All status effects are removed, including shields.
+
+After the battle, Rewards will be given to the player in the form of: 
+* {{icon|Food}}
+* {{icon|Coins}}
+* Chance for an [[Item_Pools/Weights#Combat_Rewards-0|item]]. Rarity depends on what type of combat it was.
+* Chance for a [[Item Pools/General#Consumables-0|consumable]].
+
+The rewards are determined by the number of turns, difficulty of the battle, the location of it, the amount of enemies that fled, and the average {{stat|luck}} of the remaining player cats. <!-- not necessarily allied -->
+* See [[Battle Nodes]] for a detailed breakdown.
+<!-- This is just the `characters` with `is_player_cat true`. Feel free to relocate -->
+* Most ''copies'' of player cats also count, such as {{p|Mini-Me}}, {{a|Flesh Golem}}, and {{i|Soul Jar}} shades. The exceptions are:
+** Copies that mimic a cat's basic attack, e.g. {{p|After Image}}.
+** Copies made by {{en|Conjoined Husk}}.
+** Good Cats summoned by [[The Creator|The Final Boss]].
+
+== Gallery ==
+<tabber>
+Turn order backgrounds=
+<gallery perrow=6 widths=120 heights=120>
+File:UI Turn (Small Ally) Icon.svg|Small Ally 
+File:UI Turn (Ally) Icon.svg|Ally
+File:UI Turn (Small Enemy) Icon.svg|Small Enemy
+File:UI Turn (Enemy) Icon.svg|Enemy<br>Main Turn
+File:UI Turn (Boss) Icon.svg|Boss<br>Main Turn
+File:UI Turn (Bonus) Icon.svg|Enemy Bonus Turn
+</gallery>
+|-|
+Tactical view units=
+<gallery perrow=5 widths=120 heights=120>
+File:UI Small Allied Unit Icon.svg| Small Ally
+File:UI Allied Unit Icon.svg| Ally
+File:UI Allied Cat Icon.svg| Ally Cat
+File:UI Allied Unit Downed Icon.svg| Downed Ally
+File:UI Allied Cat Downed Icon.svg| Downed Ally Cat
+
+File:UI Small Enemy Unit Icon.svg| Small Enemy
+File:UI Enemy Unit Icon.svg| Enemy
+File:UI Boss Unit Icon.svg| Enemy Boss
+File:UI Enemy Unit Dead Icon.svg| Downed Enemy
+File:UI Boss Unit Dead Icon.svg| Downed Enemy Boss
+
+
+File:UI Neutral Unit Icon.svg| Neutral unit
+File:UI Object Icon.svg| Object
+File:UI Static Object Icon.svg| Static Object
+
+
+
+</gallery>
+|-|
+<!--
+Splashes=
+<gallery perrow=6 widths=150 heights=150>
+File:Battle Start
+File:Victory
+File:Defeat
+File:Ambushing
+File:Ambushed
+</gallery>
+|-|
+-->
+</tabber>
+
+== References ==
+<references/>
+
+[[Category:Mewgenics]]

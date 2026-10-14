@@ -1,0 +1,108 @@
+{{For|the {{class|Hunter}} passive ability|Traps (Ability)}}
+'''Traps''' are placed on a tile, occupying a unique [[Battle#Board|layer]], and inflict a specific effect on another unit that stands on that tile. They are invisible to enemies after they are placed, but can be detected by units that can see hidden things.
+
+All traps (aside from Water Kitten Trap) have the following properties:
+* Can be triggered by hitting them with physical attacks and projectiles. 
+* Cats with {{Mut|legs.900}} will not trigger them.
+* Trap damage is increased against units with {{st|Bruise}}, but will not crit {{st|Marked}} units.
+
+== Traps ==
+=== Bear Trap ===
+{{anchor|Bear|}}
+[[File:TRAP_Bear Trap.png|100x100px|right]] 
+
+''Damages and immobilizes what it catches. Interrupts movement.''
+
+Deals 5 {{icon|Physical Damage|physical damage}} and {{st|Immobile|#=1}}.
+
+;Spawn methods:
+* {{p|Traps}}
+* {{a|Bear Trap}}
+* {{i|Bear Traps}}
+* {{weather|Hunting Season}}
+* {{a|Hedge In}}
+* {{a|Tactical Retreat}}
+* {{a|Vivisect}}
+{{clear}}
+----
+
+=== Web Trap ===
+{{anchor|Web|}} 
+[[File:TRAP_Web.png|100x100px|right]] 
+
+Interrupts movement and inflicts {{st|Webbed|#=1}} 
+
+Spawn methods:
+* Spawns naturally in the {{chapter|Caves}}
+* {{a|Web Trap}}
+* {{b|Spinnerette}}
+* {{en|Spider Kitten}}
+;Interactions<nowiki>:</nowiki>
+* When affected by {{Element|Fire}}, it becomes a {{tile|Fire}}. 
+* Removed by {{Element|Wind}}.
+* Aren't triggered by {{type|Bug}} units.
+{{clear}}
+----
+
+=== Egg Sack Trap ===
+{{Anchor|Egg Sack|}} 
+[[File:TRAP_Egg Sack.png|100x100px|right]]  
+
+Inflicts {{st|Infested|#=4}} and damage when upgraded.
+
+Spawned by {{a|Egg Sac Trap}}.
+{{clear}}
+----
+
+=== Charm Trap ===
+{{Anchor|Charm|}} 
+[[File:TRAP_Charm.png|100x100px|right]] 
+
+Inflicts {{st|Charmed|#=1}}.
+
+Spawned by {{a|Charm Trap}}.
+{{clear}}
+----
+
+=== Spike Trap ===
+{{Anchor|Spike|}} 
+[[File:TRAP_Spike.png|100x100px|right]] 
+
+Deals {{Icon|Physical Damage|#= 8 or 13}} 
+
+{{a|Spike Trap}} 
+{{clear}}
+----
+
+=== Land Mine ===
+{{Anchor|Land Mine Trap|}} [[File:TRAP_Land_Mine.png|100x100px|right]] 
+
+Explodes when walked over, dealing 5 {{Icon|Physical Damage}}.
+
+Spawned by {{we|Minesweeper}} weather.
+{{clear}}
+----
+
+=== Water Kitten Trap ===
+Unlike all other traps, these trigger by units standing adjacent to them instead of standing on them, and can't be avoided.
+
+Show as a generic warning tile {{RangeIndicator
+|is_aoe=true
+|max_range=0
+|is_warn=true
+}}
+
+Spawn {{en|Water Kitten}} when a friendly unit stands adjacent to them. 
+* Not triggered by small units, objects, nor units labeled as objects such as {{en|Phantom Mask}}.
+
+Spawn naturally in the {{ch|Sewers}}.
+
+== Trivia ==
+* Despite having "Trap" in its name, {{obj|Harpoon Trap}} is just an Object with the {{p|Harpooner}} passive.
+
+== Version History ==
+{{VersionHistory|;{{Version|v1.0.20738 (Beta)}}
+* Traps can now be triggered with physical attacks/abilities
+}}
+
+[[Category: Traps]]

@@ -1,0 +1,80 @@
+{{Enemy
+| ID = Pooter
+| Size = 1x1
+| Location = The Alley
+| Description = Ranged Attacker. Flying.
+| Health   = 6
+| Damage   = 5
+| Movement = 2
+| Luck     = 5
+| Types = Bug
+}}
+
+The '''Pooter''' is an enemy found in {{ch|The Alley}}. Can also be summoned as a familiar through {{a|Spawn Pooter Friend}} and {{i|Botfly Larva}}.
+
+== Behavior ==
+Ranges attacker that will prioritize staying at a distance to use its Lobbed basic attack that deals {{icon|Physical Damage|#=5}} in range 3.
+
+Has permanent {{st|Flying}}.
+
+=== Tips ===
+* If one of the player's cats has {{p|Lord of the Flies}}, this this unit will spawn {{St|Charmed}}.
+* They only have a range of 3 tiles, which is shorter than most ranged attacks.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Pooter_Icon.svg|Turn Order Icon
+ENEMY_Pooter_Idle.gif|Idle
+ENEMY_Pooter_Low_Health.gif|Low Health
+ENEMY_Pooter_Death.gif|Death
+ENEMY_Pooter_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Pooter_Icon_Champion.svg|Turn Order Icon
+ENEMY_Pooter_Idle_Champion.gif|Idle
+ENEMY_Pooter_Low_Health_Champion.gif|Low Health
+ENEMY_Pooter_Death_Champion.gif|Death
+ENEMY_Pooter_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Pooter_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* Pooters' name and behavior come from the enemies [[tboi:Pooter|with the same name]] from ''The Binding of Isaac: Rebirth''.
+** Pooters in that game had ''two'' compound eyes, however, while Pooters in this one have only one. 
+*** [[Edmund McMillen]] stated that this difference in appearance stems from the original design being Issac's interpretation of them in his imagination, whereas the Mewgenics iteration is the "real" version. <ref>https://x.com/edmundmcmillen/status/2012782780216999984</ref>
+* The parasite {{i|Botfly Larva}} spawns 2 Pooters upon the cat wearing the item's death. This might imply that Pooters are intended to be [[wikipedia:Botfly|Botflies]], as some kinds of Botfly larvae burst out of their host at maturity.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Pooter
+| es = Moscón
+| fr = Mouche cracheuse
+| de = Pupser
+| it = Puzzone
+| pt-br = Pooter
+| ru = Морилка
+| ko = 푸터
+| ja = プーター
+| zh-cn = 狙击​蝇
+}}
+
+{{Navbox/Enemy|uni}}
+[[es:Moscón]]
+
+[[Category:Flying units]]
+[[Category:Bug type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement keep distance]]

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="27.197222"
+   height="16.662857"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="Natural eyes.162.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <g
+     id="g3"
+     transform="translate(14.125,9.45)">
+    <g
+       id="DefineShape_2020">
+      <path
+         d="m 9.4,-7.4 q 2.45,1.3 3.2,3.75 l 0.45,3.15 Q 13.15,1.25 12.8,2.3 12.15,4.4 9.85,5.6 8.25,6.45 5.5,6.8 -0.6,7.65 -6.5,6.75 l -3.6,-0.8 Q -13.3,5 -13.95,2.8 q -0.35,-1.1 0,-2.45 0.45,-1.8 2.05,-3.65 2.3,-2.75 5.6,-4.35 3.3,-1.6 6.85,-1.8 l 2.5,0.1 2.45,0.75 2,0.55 1.9,0.65 M 7.1,-3.8 6.05,-4.4 4.95,-4.75 4.3,-4.9 4.5,-4.6 q 0.75,1.1 0.45,2.25 l -0.1,0.4 3.9,1.15 L 9,-0.7 8.55,-2.5 7.1,-3.8 M -5.85,2.6 q 5.7,0.9 11.2,0.1 L 7.05,2.4 Q 4.85,1.2 1.5,0.95 l -5.95,0.15 -4.5,0.6 q 1.15,0.65 3.1,0.9 m 2.45,-6.85 q -3.1,1.3 -4.8,3.45 l 3.4,-1.1 1.5,-0.2 v -0.1 l 0.2,-1.55 0.3,-0.7 -0.6,0.2"
+         fill="#000000"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path1" />
+      <path
+         d="M 7.1,-3.8 8.55,-2.5 9,-0.7 8.75,-0.8 4.85,-1.95 4.95,-2.35 Q 5.25,-3.5 4.5,-4.6 l -0.2,-0.3 0.65,0.15 1.1,0.35 1.05,0.6 m -10.5,-0.45 0.6,-0.2 -0.3,0.7 -0.2,1.55 v 0.1 l -1.5,0.2 -3.4,1.1 q 1.7,-2.15 4.8,-3.45"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path2" />
+      <path
+         d="M -5.85,2.6 Q -7.8,2.35 -8.95,1.7 L -4.45,1.1 1.5,0.95 Q 4.85,1.2 7.05,2.4 l -1.7,0.3 q -5.5,0.8 -11.2,-0.1"
+         fill="#000000"
+         fill-opacity="0.498039"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path3" />
+    </g>
+  </g>
+</svg>

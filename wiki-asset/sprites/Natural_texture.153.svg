@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Natural texture.153.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_2339d5003871-381c-460f-b75d-b209d53db95f">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_2339d5003871-381c-460f-b75d-b209d53db95f)"
+     id="g3"
+     transform="translate(75,75)">
+    <g
+       transform="matrix(2.1876984,0,0,1.9898224,-122.45,-107.6)"
+       id="g2">
+      <g
+         id="DefineShape_589">
+        <path
+           d="M 0,0 H 112.15 V 108.15 H 0 V 0"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+      </g>
+    </g>
+  </g>
+  <g
+     clip-path="url(#_2339d5003871-381c-460f-b75d-b209d53db95f)"
+     id="g5"
+     transform="translate(75,75)">
+    <g
+       id="g4">
+      <g
+         id="DefineShape_2483">
+        <path
+           d="m 31.75,-28.6 q -1.75,7 -3.65,13.05 -2.3,7.45 -4.6,11.05 -1.85,3 -4,4.4 Q 16.65,1.75 13.75,0.85 10.8,-0.1 9.45,-3.7 8.6,-6 8.6,-10.15 8.55,-15.2 9.65,-32.5 q 0.9,-13.8 0,-22.2 -2.15,1 -3.35,3.75 -0.85,1.9 -1.45,5.25 l -5.1,29.25 q -0.5,2.95 -0.95,4.6 -0.7,2.5 -1.85,4.25 -1.3,2.05 -3.4,3.15 -2.25,1.2 -4.45,0.7 -2.45,-0.6 -4.25,-2.95 -2.05,-2.65 -2.75,-6.75 -0.45,-2.65 -0.5,-7.55 -0.15,-16.9 -0.95,-32.55 -0.1,-1.55 -0.5,-2.25 l -0.9,-0.75 q -0.6,-0.25 -1.05,0 l -5.05,28.3 q -1.1,6.1 -1.95,9.15 -1.35,5 -3.45,8.55 -1.65,2.9 -3.95,4.6 -2.65,1.95 -5.45,1.75 -2.8,-0.25 -5.4,-2.7 -4.05,-3.8 -5.45,-10.6 -0.8,-3.95 -0.8,-12.05 l 0.05,-5.1 q 0.05,-11.55 0.5,-17.6 0.7,-9.75 2.75,-17.25 2.45,-9 7.25,-16.05 5.25,-7.75 12.5,-11.95 7.95,-4.55 18.2,-4.8 9.3,-0.25 18.95,3 5.8,1.9 10,4.55 7.35,4.7 12.15,13.05 4.45,7.8 5.85,17.2 1.2,8.3 0.15,18.05 -0.8,7.8 -3.3,17.85"
+           fill="url(#gradient0)"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3"
+           style="fill:url(#gradient0)" />
+      </g>
+      <defs
+         id="defs4">
+        <linearGradient
+           gradientTransform="matrix(0,0.0674,-1,0,-50.6,-50.6)"
+           gradientUnits="userSpaceOnUse"
+           id="gradient0"
+           spreadMethod="pad"
+           x1="-819.20001"
+           x2="819.20001">
+          <stop
+             offset="0.0"
+             stop-color="#98947f"
+             id="stop3" />
+          <stop
+             offset="1.0"
+             stop-color="#98947f"
+             stop-opacity="0.0"
+             id="stop4" />
+        </linearGradient>
+      </defs>
+    </g>
+  </g>
+</svg>

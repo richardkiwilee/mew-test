@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   ffdec:objectType="frame"
+   height="9.7328949"
+   width="10.838235"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ffdec="https://www.free-decompiler.com/flash">
+  <g
+     transform="translate(5.6382353,5.1)"
+     id="g1">
+    <use
+       ffdec:characterId="5498"
+       height="9.8999996"
+       width="10.85"
+       xlink:href="#shape0"
+       id="use1" />
+  </g>
+  <defs
+     id="defs1">
+    <g
+       id="shape0">
+      <path
+         d="M 4,2.5 Q 2.45,4.35 0.1,4.6 -2.3,4.85 -4.05,3.2 q -1,-0.9 -1.4,-2.2 -0.4,-1.35 0.05,-2.55 0.45,-1.2 1.5,-2.1 1.1,-1 2.6,-1.4 L 1.55,-5.1 q 1.5,0.4 2.5,1.6 1.1,1.25 1.15,2.7 Q 5.2,1 4,2.5"
+         fill="#000000"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path1" />
+    </g>
+  </defs>
+</svg>

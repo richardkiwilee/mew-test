@@ -309,6 +309,14 @@ godot::Array BattleController::ability_pool() const {
         d["cost"] = def->mana_cost;
         d["min_range"] = def->min_range;
         d["max_range"] = def->max_range;
+        d["radius"] = def->radius;
+        switch (def->target_policy) {
+            case AbilityTargetPolicy::EnemyUnit: d["target"] = "enemy"; break;
+            case AbilityTargetPolicy::AllyUnit:  d["target"] = "ally"; break;
+            case AbilityTargetPolicy::AnyUnit:   d["target"] = "any"; break;
+            case AbilityTargetPolicy::EmptyTile: d["target"] = "tile"; break;
+            case AbilityTargetPolicy::Self:      d["target"] = "self"; break;
+        }
         out.append(d);
     }
     return out;

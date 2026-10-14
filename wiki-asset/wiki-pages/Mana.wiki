@@ -1,0 +1,32 @@
+{{Navbox/Stats}}
+{{stat|Mana}} is a resource used by cats and very few other units to cast [[spells]].
+
+Only player cats, {{en|Druid's Crow}} and the {{en|Mech Suit}} use mana and can interact with it.
+
+=== Starting Mana ===
+{{#section-h:Charisma|Starting Mana}}
+=== Mana Regen ===
+{{#section-h:Intelligence|Mana Regen}}
+=== Max Mana ===
+{{#section-h:Charisma|Max Mana}}
+
+== Notes ==
+* All units technically have mana, and have it visible if they are an allied familiar, but it cannot be interacted with in any way.
+
+== Lists and interactions ==
+* [[List of effects that give mana]]
+* [[List of effects that reduce mana cost]]
+* [[List of effects that increase mana regen]]
+* Effects that benefit from being at full mana.
+** {{a|Gravity Blast}}
+** {{a|Increase Gravity}}
+** {{a|Path of the Psychic}}
+** {{p|Enlightened}}
+** {{p|Full Power}}
+** {{p|Mad Visage}}
+** {{p|Overflow}}
+** {{i|Car Battery}}
+* Effects that activate on excess mana:
+** {{p|Braingeyser}}
+** {{p|Power Up}}
+** {{set|Psychic}}

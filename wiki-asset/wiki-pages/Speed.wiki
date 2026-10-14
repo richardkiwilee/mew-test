@@ -1,0 +1,64 @@
+{{Navbox/Stats}}
+'''{{icon|Speed}}''' affects turn order and movement range.
+
+=== Movement Range ===
+{{stat|Movement Range}} is the range in tiles that a unit can move.
+
+Every 2 points of speed away from 5 increases/decreases the units movement range by 1 tile.
+* Movement Range cannot go below 1.
+
+The base movement range for cats is 4.<br>
+For non cat enemies it is set manually.
+
+The {{st|Slow}} status effect is the most common effect to change a unit's movement range without affecting their Speed, limiting it to just 2 tiles.
+<details>
+<summary>Other things that affect Movement Range</summary>
+* {{st|Movement Up}}
+* {{st|Movement Down}}
+* {{p|Agile}}: +2
+** {{p|Agile|+}}: +4
+* {{p|Overflow|+}}: +20, while at full mana.
+* {{mut|legs.331}}: +1
+* {{d|Paraplegic}}: Limits to a maximum of 1.
+* {{i|Feebis}}: Limits to a maximum of 1.
+</details>
+
+=== Turn Order ===
+Main turn order is determined by ''Iniative'', a hidden stat that is usually equal to {{icon|Speed}} times 2.
+
+Most enemies take their main turn with {{stat|spd|5}}, but some have set base iniatives to always go early, late, or very late.
+* Any additional turns enemies have are ''dispersed'' throughout the round and largely ignore Speed calculations.
+
+If 2 units have the same Speed/Iniative, which unit goes first is randomly decided at the start of the battle, with that RNG persisting throughout.
+
+Extra Turns always happen as soon or as late as possible, depending on the source.
+
+=== Calculator ===
+<div style="display:inline-block; border:1px solid; padding:7px; border-radius:8px; margin:5px;">
+{| style="border:none; background:transparent; text-align:left;"
+|-
+| {{icon|spd}}
+| {{calculator|id=spd|size=3|default=5 }}
+|-
+| {{stat|Movement Range}}
+| {{calculator|id=moveRange|type=plain|formula=max(1,4+trunc((spd-5)/2))|default=4|style=min-width:3ch;display:inline-block}}
+|}
+</div>
+=== Other uses ===
+* {{a|Flip Flop}}
+* {{a|Plant Your Feet}}
+
+== Effects that affect Speed ==
+=== Classes ===
+{{Classes Stats Table|Speed}}
+=== Effects ===
+* {{st|All Stats Up}}
+* {{st|All Stats Down}}
+* {{st|Speed Up}}
+* {{st|Speed Down}}
+* {{st|Tarred}}
+* {{st|Weakness}}
+* {{st|Broken Leg}}
+
+=== Sources ===
+{{Stat Sources|Speed}}

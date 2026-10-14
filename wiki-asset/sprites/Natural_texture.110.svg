@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="Natural texture.110.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_23399252703b-13e7-4869-ba6f-e22f93cf8c32">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_23399252703b-13e7-4869-ba6f-e22f93cf8c32)"
+     id="g4"
+     transform="translate(75,75)">
+    <g
+       id="g3">
+      <g
+         id="DefineShape_2443">
+        <path
+           d="M 122.9,-107.6 V 107.6 H -122.45 V -107.6 H 122.9"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+        <path
+           d="m -75.2,3.65 q -4.7,-2.05 -8.95,-5.45 -3.65,-2.9 -6.95,-6.95 -8.15,-9.8 -11.75,-22.35 -3.65,-12.6 -2,-25.25 0.7,-4.85 1.85,-7.9 1.3,-3.55 4.2,-7.8 10.65,-16.15 25.15,-21.75 l 5.3,-1.75 5.3,-1.7 9.25,-3.45 q 15.05,-4.6 35.25,2.95 18.7,7 29.5,19.15 3.75,4.25 5.6,8.05 1.55,3.1 3.3,9.05 1.3,4.6 1.2,7.05 -0.05,1.75 -1.2,5.75 l -2.6,8 q -1.6,4.45 -3.45,7.7 -4.8,8.65 -14.45,15.55 -3.5,2.55 -6.5,3.5 -2.3,0.7 -5.25,0.7 l -5.4,-0.35 q -2.7,-0.3 -4.05,0 -1.85,0.5 -3.6,2.35 l -2.9,3.5 q -8.1,10 -25.8,13.45 L -63,6.6 Q -69.1,6.45 -75.2,3.65"
+           fill="#b9ae93"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3" />
+      </g>
+    </g>
+  </g>
+</svg>

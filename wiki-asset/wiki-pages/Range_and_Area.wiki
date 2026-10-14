@@ -1,0 +1,260 @@
+'''Range and Area''' are mechanics related to where an effect can hit and what area it hits respectively. Both are handled similarly by the game's code and thus brought here together.
+* Note, range here is similar but distinct from {{stat|Range}} as the latter only affects [[basic attacks]].
+** {{stat|Reach}} is also similar but limited to melee basic attacks.
+* Movement abilities extend with the user's {{stat|spd}}, not extra range or area.
+
+== Overview ==
+* In the game's code, every action has a defined range from 0 to 20, 0 being the tile the user is standing on and 20 being the same as unlimited range (being that the game board is 10x10).
+* Area (<code>aoe</code>) is the same, except that the center isn't necessarily the tile the user is found on.
+* Range and area can be calculated based on different algorithms, producing different shapes (see Shapes for details). These algorithms will determine oh the shape grows and shrinks with increased range/area.
+* There are some additional limitations that can be imposes on the range and area, reducing where it can and cannot hit.
+
+== Shapes ==
+* Called <code>mode</code> in the game's code.
+* Currently there are 12 shapes implemented in the game's code. 
+* For the sake of simplicity the following list is presented using range, but applies just the same to area.
+
+=== Standard ===
+Area with a radious calculated with {{Wikipedia|Manhattan Distance}}, resulting in a "diamond" shape.
+* This is by far the most common shape used in the game, and for example always used in movement distance calculation.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=standard|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=standard|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=standard|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with standard shape]].
+
+=== Circle ===
+Area with a radius calculated with {{Wikipedia|Euclidean Distance}},  from the edge of the tile, resulting in a circular shape.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=circle|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=circle|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=circle|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with circle shape]].
+
+=== Square ===
+Area of a square with <math>range*2+1</math> long edge.
+* This is limited to squares with an odd size, meaning that even (e.g: 2x2) squares are implemented using custom shape.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=square|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=square|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=square|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with square shape]].
+
+=== Line ===
+Straight line of tiles in range.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=line|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=line|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=line|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with line shape]].
+
+=== Straight-shot ===
+{{anchor|straightshot|}}
+
+Straight line of tiles in range, stops at the first unit hit (unless it can passes through units).
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=straightshot|target_mode=direction|min_range=1|max_range=1|no_cat=y}}
+|
+{{RangeIndicator|aoe_mode=straightshot|target_mode=direction|min_range=1|max_range=2|no_cat=y}}
+|
+{{RangeIndicator|aoe_mode=straightshot|target_mode=direction|min_range=1|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with straightshot shape]].
+
+=== Cross ===
+Four lines in the Cardinal directions, starting from a central tile.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=cross|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=cross|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=cross|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with cross shape]].
+
+=== Diagonal Cross ===
+Four diagonal lines, starting from a central tile.
+* Referred to as <code>diagcross</code> on the game's code.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=diagcross|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=diagcross|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=diagcross|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with diagcross shape]].
+
+=== 8 Cross ===
+Eight lines going in Cardinal and diagonal lines, starting from a central tile.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=8cross|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=8cross|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=8cross|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with 8cross shape]].
+
+=== Perpendicular Line ===
+A line perpendicular to a central tile.
+* Referred to as <code>perpline</code> on the game's code.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=perpline|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=perpline|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=perpline|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with perpline shape]].
+
+=== Cone ===
+An area growing by 1 tile to each side for each distance in a specific direction.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+| Range = 1 ||Range = 2 || Range = 3
+|-
+|{{RangeIndicator|aoe_mode=cone|max_range=1|no_cat=y}}
+|{{RangeIndicator|aoe_mode=cone|max_range=2|no_cat=y}}
+|{{RangeIndicator|aoe_mode=cone|max_range=3|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with cone shape]].
+<!-- narrowcone and widecone are in the code, exclusive to enemy abilities so I haven't implemented them yet-->
+=== All ===
+Hits all 10x10 tiles, regardless of range or area.
+* Many abilities that hit all the board actually use different shapes with range = 20.
+* Visualisation:
+{| class="wikitable" style="text-align: center;"
+|-
+|{{RangeIndicator|aoe_mode=all|no_cat=y}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with all shape]].
+
+=== Custom ===
+Use to make any shape that doesn't fit into the other shapes. It can have symmetry and the area can be treated as a "pattern" to be duplicated at a distance.
+* Examples:
+{| class="wikitable" style="text-align: center;"
+|-
+| {{a|Slap}} || {{a|Wind Slash|+}} ||{{b|Crater Maker}}'s puke wave
+|-
+| {{RangeIndicator
+| is_aoe = false
+| target_mode = direction
+| aoe_mode = custom
+| min_range = 1
+| max_range = 1
+| aoe_excludes_self = False
+| custom_aoe =  [1, 1], [1, -1] 
+| aoe_symmetry = none
+| no_cat = true
+}}
+| {{RangeIndicator
+| is_aoe = false
+| target_mode = direction
+| aoe_mode = custom
+| min_range = 1
+| max_range = 10
+| aoe_excludes_self = False
+| custom_aoe = [1, 1], [2, 1], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 1], [10, 1], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [1,-1], [2,-1], [3,-1], [4,-1], [5,-1], [6,-1], [7,-1], [8,-1], [9,-1], [10,-1]
+| aoe_symmetry = none
+| no_cat = true
+}}
+|{{RangeIndicator
+| target_mode = none
+| aoe_mode = custom
+| aoe_symmetry = eight_way
+| custom_aoe = [2 2] [2 2] [3 3] [4 4] [5 5] [6 6] [7 7] [8 8] [9 9] [1 2] [2 3] [3 4] [4 5] [5 6] [6 7] [7 8] [8 9] 
+| is_aoe = true
+| is_warn = true
+| no_cat = true
+}}
+|}
+* For a full list of effects with this shape see: [[: Category: Effects with custom shape]].
+
+== Targeting ==
+Each effect has a specific targeting mode that defines which tiles can be chosen when it is cast.
+=== Tile ===
+The user can choose a specific tile to be the target. 
+
+This is by far the most common targeting mode.
+* See: [[:category:tile targeting effects]]
+=== Direction ===
+Limits to the 4 cardinal directions.
+
+Used with Line, Cone and Straightshot shapes.
+* See: [[:category:direction targeting effects]]
+
+=== Direction8 ===
+Limits to cardinal and diagonal directions.
+* See: [[:category:direction8 targeting effects]]
+=== Random ===
+A random tile in range is chosen.
+* See: [[:category:random tile targeting effects]]
+=== None ===
+No targeting.
+
+Commonly used for abilities that hit all tiles around the caster and self-buffs.
+* These effects won't trigger by effects that require targeting a specific tile, like {{a|Sentry Mode}}.
+* See: [[:category:none targeting effects]]
+
+== Limitations ==
+Several variables can limit the range or area of effects:
+
+=== Line of Sight ===
+Any (non-pickup) unit on the map will block the range in a cone growing from the unit.
+* It is calculated by "stretching" vectors from the user and limiting them when intersecting with the tile a unit is occupying.
+<!-- there's no way to make this dynamically atm, I'll add a specific example later -->
+
+=== First Target Hit ===
+The effect will stop one it connects with the nearest target.
+* This is only applicable to linear effects like {{i|Meat Hook}}'s pull.
+
+=== Character specific ===
+Some areas will only include tiles that are occupied by a specific group of characters, such as units, allies or a specific unit. Others can include all tiles except for ones occupied by a specific group (most commonly allies or the caster itself).
+* Some Effects aren't limited by range/area, but only apply to specific characters in the area of effect. This, generally means that they are hit and can trigger on-hit effects even if the effect would do nothing to them.
+Examples: 
+* {{a|Switch}}: Can only target units.
+* {{a|Adoubment}}: If an {{st|The Alpha}} is present, can only target it.
+
+== User Interface ==
+* Range is generally indicated by orange squares ({{RangeIndicator|aoe_mode=test|custom_aoe=1;|no_cat=y}}) when selecting an ability.
+
+* Area is generally indicated with white squares ({{RangeIndicator|is_aoe=true|max_range=0|no_cat=y}}) after an ability is selected 
+** Some enemies will indicate their attacks before they they execute them with white squares with an exclamation mark ({{RangeIndicator|is_aoe=true|max_range=0|is_warn=true|no_cat=y}})
+* Movement range is indicated by the regular orange markers when the player is using it, and can be seen with blue squares when right-clicking another unit.
+* The area a unit can possibly hit with their basic attack is shown with red squares when right-clicking them.
+* Note: both of these areas don't account for movement resulting from abilities.
+
+[[Category:Mechanics]]

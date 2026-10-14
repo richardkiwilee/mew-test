@@ -1,0 +1,83 @@
+{{infobox/Enemy
+| ID = Rat
+| Size = 1x1
+| Location = The Path, The Alley, The Lab
+| Description = Dashes in a straight line.
+| Health   = 5
+| Damage   = 4
+| Movement = 1
+| Luck     = 5
+| Types = Rat
+}}
+
+'''Lil' Rat''' is an enemy found in {{Chapter|The Alley}}. It is a basic rat.
+
+Can be summoned as [[familiar]] through {{d|Toxoplasmosis}} or {{Set|Rat}}.
+
+== Behavior ==
+Attacks enemies by dashing in a cardinal direction (10 tile range). Will not dash if it cannot hit an enemy with the attack.
+
+=== Tips ===
+* Due to their very slow speed, '''Lil' Rats''' will likely be the last units to act in the round.
+
+== Notes ==
+* When exposed to {{el|Mutate|radiation}}, can mutate into:
+** {{en|Lumpy}}
+** {{en|Leaper}}
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Lil' Rat_Icon.svg|Turn Order Icon
+ENEMY_Lil' Rat_Idle.gif|Idle
+ENEMY_Lil' Rat_Death.gif|Death
+ENEMY_Lil' Rat_Attack.gif|Attack
+ENEMY_Lil'_Rat_Stunned.gif|Stunned
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Lil' Rat_Icon_Champion.svg|Turn Order Icon
+ENEMY_Lil' Rat_Idle_Champion.gif|Idle
+ENEMY_Lil' Rat_Death_Champion.gif|Death
+ENEMY_Lil' Rat_Attack_Champion.gif|Attack
+ENEMY_Lil'_Rat_Stunned_Champion.gif|Stunned
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Rat_level_editor.png|Level Editor Sprite
+Lil' Rat_Placeholder.png| Lil' Rat as placeholder in the animations for [[small size]] unit.
+</gallery>
+</tabber>
+
+== Trivia ==
+* Lil' Rats were one of the very first enemies created, even appearing in the very early stages of development when the team was still experimenting with the game's playstyle<ref>https://x.com/TylerGlaiel/status/1172215055401644032</ref>.
+* The Lil' Rat and the {{en|Half-Rat}} are the only units that don't rely on the [[Catgen]] animation system to have an animation for being stunned.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Lil' Rat
+| es = Ratilla
+| fr = Raton
+| de = Rattenfratz
+| it = Topolino
+| pt-br = Ratinho
+| ru = Крыска
+| ko = 작은 쥐
+| ja = 子ネズミ
+| zh-cn = 小​老鼠
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Rat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight semi simple]]
+[[Category:Movement keep distance always move]]
+
+[[es:Ratilla]]

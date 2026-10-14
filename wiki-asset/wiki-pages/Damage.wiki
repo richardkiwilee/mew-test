@@ -1,0 +1,90 @@
+{{Navbox/Stats}}
+{{stat|Damage}} is the amount of {{stat|Health}} or {{stat|Shield}} an attack will remove when it lands.
+
+For enemies, the shown damage is the damage of their basic attack. 
+
+Damage can only ever remove 1 {{stat|Holy Shield}} or {{stat|Corpse Health}} at a time.
+
+== Damage Types ==
+; {{icon|Physical damage}}
+* Physical damage can be either melee or ranged.
+** Abilities default to the {{ActiveType|Melee}} and {{ActiveType|Ranged}} icon respectively, depending on which they are.
+** This has no bearing on the damage itself, but is relevant for some effects.
+* The damage is increased by {{st|Bruise}}.
+* The damage can randomly [[crit]].
+* Physical damage crits are affected by the units crit damage multiplier.
+* It is guaranteed to crit against units with {{st|Marked}} and will ignore their {{stat|Shield}}.
+* The damage can [[backstab]].
+* {{icon|Champions|link=y}} deal +1 physical damage.
+
+
+; {{icon|Magic damage}}
+* Abilities that deal Magic damage default to the {{activetype|Magic}} icon.
+* The damage is increased by {{st|Magic Damage Up}} and innate Magic damage increases.
+* It is guaranteed to crit against units with {{st|Magic Weakness}}.
+
+
+; {{icon|Physical Magic damage}}
+* Has both the properties of {{icon|physical}} and {{icon|Magic}} damage.
+
+
+; {{icon|Knockback damage}}
+* Knockback damage is a result of a unit being knocked back and colliding with something, or being thrown.
+* The damage is increased by {{st|Bruise}}, {{st|Bonus Knockback Damage}} and innate knockback damage increases.
+
+=== Misc damage types ===
+; Trample damage
+* Shown on the unit's movement action if their movement action doesn't innately deal damage.
+* Is increased by {{st|Bruise}}.
+
+
+; <code>Status Spell</code>
+* Used inconsistently for self-harm, buff and healing items.
+* The damage shows with the default {{icon|physical}} icon, but will crit with {{st|Magic Weakness}}.
+** Does not have any other physical or magical interactions.
+
+
+* Damage from {{st|Thorns}}, cannot be dodged, can be blocked.
+* Damage from {{st|Poison}}, {{st|Burn}}, {{st|Bleed}}, {{st|Leeches}}, cannot be dodged or blocked.
+* Damage from {{st|Exhaustion}} cannot be dodged, blocked or reduced by any effects.
+* Damage from tiles does not deal damage to {{stat|Corpse Health}}.
+
+== Damage Reduction ==
+Damage reducion happens before crit calculations.
+
+* {{st|Brace}} reduces damage by 1 per stack.
+* {{st|Petrify}} reduces all damage to 1.
+
+== Healing ==
+{{icon|Healing}} is largely identical to damage, increasing health instead of decreasing it.
+
+Healing effects also have a damage type which keeps some of the same interactions as damage.
+
+Wether healing is physical, magic or neither is not shown.<br>
+The {{icon|Physical Heal|nolabel=y}}{{icon|Magic Heal|nolabel=y}} icons only show that the abilitiy will heal allies and which damage it will deal to other units.
+
+; Physical Healing
+* Can randomly crit and crits on units with {{st|Marked}}.
+* Cannot backstab and will not be increased by {{st|Bruise}}.
+<!--Should we list examples?-->
+
+; Magic Healing
+* The damage is increased by {{st|Magic Damage Up}} and innate Magic damage increases.
+* It is guaranteed to crit against units with {{st|Magic Weakness}}.
+
+== Notes ==
+* Damage on enemies tooltip does not change to reflect if their basic attack is magic damage or healing.
+* Only physical damage being increased by crit damage increases may be a bug.
+* All player inflicted damage types can crit with specific passives or item effects.
+
+== Lists and interactions ==
+* [[List of effects that increase critical hit damage]]
+* [[List of effects that increase weapon damage]]
+* [[List of effects that increase knockback damage]]
+* [[List of effects that increase healing amount]]
+* Effects that grant ''innate'' magic damage up
+** {{p|Amplify}}
+** {{p|Long Cast|+}}
+** {{p|Perfect Technique}}
+** {{p|Dancing Lights|+}}
+** {{p|Unburdened Thoughts|+}}

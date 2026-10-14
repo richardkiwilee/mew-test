@@ -78,13 +78,25 @@ d:\mew-test\
 ## 4. 构建与运行
 
 ```
-build.bat            # 或 build.bat debug
+build.bat            # 或 build.bat debug（含 wiki 素材 → godot/assets 转换）
 godot godot/project.godot   # 打开 Demo（godot/bin/mew_battle.dll 由 build.bat 部署）
 godot --headless --path godot -s res://scripts/test_smoke.gd   # 无头冒烟
 godot --headless --path godot -s res://scripts/test_ui_flow.gd  # UI 流程测试
+AUTOSTART=1 godot godot/project.godot   # 跳过准备界面直接开战（调试用）
 ```
 
-## 5. 日志格式（验收要点）
+## 5. wiki 素材管线（wiki-asset/）
+
+- `wiki-asset/wiki-pages/*.wiki`：参考页存档（Stats/Battle/Status_Effects/Tiles/敌人页等 39 页）。
+- `wiki-asset/sprites/`：wiki 原始素材 9,099 个文件（379MB）：敌人动画 GIF（`ENEMY_<名>_{Idle,Attack,Death}.gif`，约 307 敌人存在全集）、猫职业动画（`CLASS_*`）、技能图标 1,316、状态图标 246、地形图标 32、物品/物件/地图图标等。`MANIFEST.md` + `sprite-manifest.csv` 为完整清单。
+- `tools/convert_sprites.py`：GIF/PNG → 帧序列 PNG + manifest.json（Pillow）。
+- `tools/prepare_godot_assets.py`：白名单转换（5 敌人×3 动画 + 13 职业×3 动画 + level-editor 兜底 + 5 技能/8 状态/14 地形图标），build.bat 第 5 步自动执行；godot/assets 为派生产物（gitignore）。
+- Godot 集成：玩家猫 = 职业动画；敌人 = 三态动画（idle/attack/death 自动切换）；地形 = wiki 图标贴片（像素风 NEAREST 过滤）；状态徽章 = wiki 图标 billboard + 层数；技能按钮 = SVG 图标。
+- demo 敌人 ↔ wiki 精灵映射：老鼠→Lil' Rat、蝙蝠→Bat、大块头→Lumpy、唤猫者→Cat Caller、玻璃喷吐者→Glass Spitter（`prepare_godot_assets.py` 的 ENEMY_ANIMS 表）。
+
+## 6. 日志格式（验收要点）
+
+## 6. 日志格式（验收要点）
 
 每条日志：`[序号] 轮次 行动者 [类别] message_key 字段...`；内部 key 稳定（测试不依赖中文文案）；
 含 TurnOrder（先攻排序）、StatsInitialized（属性快照）、TriggerMatched/ConditionPassed/Failed、

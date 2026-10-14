@@ -1,0 +1,56 @@
+{{See also| :Category:Cat type units}}
+[[File:UI Cat Icon.svg|thumb|150px|Ally Cat Icon]]
+'''Cats''' are the central characters in Mewgenics, with everything in the game involving them. 
+A cat's appearance is generated from a series of parts using the [[Catgen]] system. The parts are randomly generated on birth or appearance, although body parts can be passed down from the cat's parents.
+* An exception to that are the [[Special Strays]], which have predetermined appearances.
+* [[Mutations]] and various [[Afflictions]] can also alter a cat's appearance, aside from providing stat modifiers or extra abilities, such as having a 10% chance to reflect projectiles.
+
+The cats in the "[[party]]", known as [[Player Cat]]s, are distinct from other {{Type|Cat}} allies.
+
+For important information regarding cats:
+* [[Stats]]
+* Mid-Adventure
+** [[Abilities]]
+** [[Adventure]]
+** [[Battle]]
+** [[Classes]]
+** [[Disorders]]
+* Between-Adventures
+** [[Birth Defect]]
+** [[Breeding]]
+** [[Fighting]]
+** [[House]]
+** [[Mutations]]
+** [[Stray Cats]]
+* Other
+** [[Cats/Body Parts]]
+** [[Cats/Crowns]]
+** [[Cats/Name List]]
+** [[Cats/Quotes]]
+** [[Cats/Team Names]]
+** [[Cats/Voices]]
+** [[Special Strays]]
+
+
+== Gallery==
+<gallery>
+Cat Placeholder.svg|Placeholder cat used in the files
+MAP Cat Icon.gif|Map Icon
+Cat level editor.png|Level Editor Sprite
+</gallery>
+'''Tactical View'''
+<gallery>
+UI Allied Cat Icon.svg|Allied cat
+UI Allied Cat Icon Half.svg|Allied cat (Half Health)
+UI Allied Cat Icon Low.svg|Allied cat (Low Health)
+UI Allied Cat Icon Dead.svg|Allied cat (Downed)
+</gallery>
+[[Category:Mechanics]]
+
+== Trivia ==
+* [[Edmund McMillen]] has stated that the idea for the game came from his personal experience with cats and the oddity of cat breeding. <ref>[http://steamcommunity.com/games/686060/announcements/detail/3747614808353031497 Q&A community post]</ref>
+
+== References ==
+{{Reflist}}
+
+[[Category:Mewgenics]]

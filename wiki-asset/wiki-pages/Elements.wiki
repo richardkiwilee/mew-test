@@ -1,0 +1,542 @@
+Elements are a shared property of various [[Spells]], [[Basic Attacks]], [[Weapons]], and a few [[Weathers]], that determine certain interactions.
+{{TOC limit|2}}
+
+==Overview==
+Elements interact with [[Status Effects]], [[Tiles]], [[Passives]], [[Items]], [[Unit Types]], and [[Enemies]].
+
+Some tiles and types of [[Weather]] can apply persistent versions of the elements.<br>
+These persistent elements are constantly applying their effects instead of the usual one-off check.
+
+Some units or units with certain status effects apply the element to all tiles they make contact with. Internally referred to as "Innate Element"
+<!--Just look at the categories-->
+
+Immunity to an element not only blocks elemental damage but also prevents any [[status effects]] from being inflicted from the same effect.<br>
+Status effects that have an element cannot be applied to a unit with the matching immunity. 
+
+An item or ability may have any number of elements.<br>
+Elements are indicated in the top-left corner for abilities and middle-right for items, and are displayed following a priority order:<br>{{el|Electric}}, {{el|Fire}}, {{el|Ice}}, {{el|Water}}, {{el|Grass}}, {{el|Earth}}, {{el|Wind}}, {{el|Holy}}, {{el|Explosion}}, {{el|Gravity}}, {{el|Music}}.
+
+{{Clear}}
+
+== Electric ==
+[[File:Element Electric Icon.svg|right|border|80px]]
+
+=== Effects ===
+* {{el|Electric|nolink=y}} conducts through tiles with {{el|Water}} and units with {{st|Wet}} or {{st|Metal}}.
+** This causes the full effect of the action to be applied to all entities and tiles in the conduction area, potentially turning an ability targeting a single target into a large area of effect, depending on the conditions.
+* {{Type|Robot}} units are immune to Electric and will become {{st|Energized}} when affected by electric, which gives them an extra turn. <!-- this is not governed by the robot tag, but the Robot passive -->
+** Instead of an extra turn, electric damage applies a different buff to the following units and objects:
+*** {{en|Tesla Coil|Tesla Coils}} gain {{st|Magic Damage Up|#=1}} instead.
+*** {{obj|Decoy|Decoys}} and {{obj|Rubber Fist Bot|Rubber Fist Bots}} do not have any effects when energized.
+*** {{obj|Slot Machine|Slot Machines}} are guaranteed to have a jackpot.
+
+=== Notes ===
+* {{el|Electric|nolink=y}} is not directly tied to {{st|Stun}}.
+** Immunity to {{el|Electric}} does not grant immunity to Stun.
+Of the 18 abilities with {{el|Electric|nolink=y}} in the game, 9 are {{class|Mage}} abilities, 6 are {{class|Tinkerer}}, 2 are {{class|Collarless}}, and 1 is a {{class|Fighter}} ability. 13 have a chance to {{st|Stun|nolink=y}}.
+
+=== Sources ===
+* [[:Category:Electric element abilities]]
+* [[:Category:Electric element items]]
+* {{st|Elite Buff: Static|Static}} elites.
+
+* {{we|Thunderstorm}} and {{we|Blizzard}} have a 50% chance of a lightning strike occuring after each turn.
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Electric adds increasing {{st|Stun}} chance to the cat's basic attack.
+* {{p|Lightning Aspect}}: Grants Electric immunity and grants {{st|Charge|#=+1}} when dealing Electric damage.
+* {{p|Lightning Rod}}: Grants Electric immunity, grants {{st|Charge|#=+1|nolink=y}} when hit by Electric damage, and increases Electric damage by +1.
+** {{+}}: Grants {{st|Charge|#=+1|nolink=y}} for each point of damage blocked and increases Electric damage by +2 instead of +1.
+* {{p|Conductor}}: Increases Electric damage by +2 for each piece of {{st|Metal}} armor worn.
+* {{p|IT'S ALIVE!}}: Causes Electric damage to revive dead units with {{st|Charmed}} and {{st|Doomed|#=1}}. The doomed unit will not get injured.
+* {{i|Technology}}: Taking Electric damage refreshes use.
+* {{i|Conductor}}: Increases Electric damage by 1 and adds a 10% chance to {{st|Stun|nolink=y}}
+* {{i|Frank Bolts}}: Grants Electric immunity and revive if hit by Electric damage when [[downed]].
+* {{mut|Eyes.336}} Grants Electric to Basic Attacks and adds a 5% chance to {{st|Stun|nolink=y}}. 
+* {{mut|Ears.754}}: Increases Electric damage by 1.
+* {{mut|Ears.339}}: Grants Electric immunity.
+
+==== Negative ====
+* The following units are immune to {{el|Electric|nolink=y}}:
+** Nearly every single {{Type|Robot}} unit, with the exception of {{En|Rover|Rovers}}. Do not rely on electric damage if you plan to go to {{Chapter|The Future}}.
+
+==== Other ====
+* [[AI|AI-controlled]] units will prioritize hitting allied robots with Electric.
+* Conduction: Turns any {{el|Electric|nolink=y}} effect into an area of effect. Notable examples:
+** {{el|Ice}}: {{st|Freeze}} large {{el|Water}} areas.
+** {{el|Electric|nolink=y}} basic attack:
+*** {{cl|Cleric}} [[Basic Attacks]]: Heal all allies and damage all enemies. 
+*** {{i|Magic Seed}} / {{p|Thorn Arrows}}: Convert connected {{tile|Water|nolink=y}} to {{tile|Bramble}}.
+*** {{i|Glowing Seed}}: Convert connected {{tile|Water|nolink=y}} to {{tile|Tall Grass}}.
+* {{a|Number One}} / {{i|Rain Staff}}: Indirect synergy by creating areas of {{tile|Water|Water Tiles|nolink=y}}.
+
+{{Clear}}
+
+== Fire ==
+[[File:Element Fire Icon.svg|right|border|80px]]
+
+=== Effects ===
+==== Keywords ====
+* Removes {{st|Wet}}. 
+** This also prevents any {{st|Burn}} from being applied by the Fire element effect.
+* Removes {{st|Freeze}}
+** {{el|Fire}} damage can damage {{st|Freeze|Frozen}} units.
+* Converts all stacks of {{st|Tarred}} on a unit into {{st|Burn|nolink=y}}.
+* Removes all stacks of {{st|Entangled}} or {{st|Webbed}}.
+* Destroys {{st|Flammable}} items, inflicting {{st|Burn|#=+1|nolink=y}} per equipped Flammable item.
+
+==== Tiles ====
+* Converts various tiles into {{Tile|Fire|Fire Tiles}}.
+** Affected tiles: {{tile|Grass}} / {{tile|Tall Grass}} / {{tile|Flower}} / {{tile|Tall Flower}} / {{tile|Bramble}} / {{tile|Thick Bramble}} / {{tile|Web}} / {{tile|Tar}}.
+* Replaces {{Tile|Ice|Ice Tiles}} and its variants with {{Tile|Water|Water Tiles}}.
+
+==== Other ====
+* Cooks food-type [[pickups]]. e.g; {{obj|Food}} becomes {{obj|Cooked Food}}.
+* Burns {{obj|Catnip}}, making all adjacent units gain the full {{stat|Mana}} it would've otherwise provided to a unit.
+* Causes {{Type|Bomb}} units to immediately detonate. <!-- this is not governed by the bomb tag, but the BombBehavior passive -->
+* Causes {{Type|Plant}} units to be inflicted with {{st|Burn|#=+3|nolink=y}}. <!-- this is not governed by the plant tag, but the Plant passive -->
+
+=== Notes ===
+* {{el|Fire}} does not innately apply {{st|Burn}} or create {{tile|Fire}} on empty tiles.
+** But immunity to {{el|Fire}} does provide immunity to {{st|Burn}}. 
+* Units which are innately {{el|Fire}}, do not cook {{obj|Food}} or burn {{obj|Catnip}} which they walk over.
+
+Of the 26 {{el|Fire|nolink=y}} abilities in the game, 9 are {{class|Mage}}, 5 are {{class|Tinkerer}}, 4 are {{class|Butcher}}, 3 are {{class|Collarless}}, 2 are {{class|Fighter}}, and the remaining 3 belong to {{class|Psychic}}, {{class|Druid}}, and {{class|Hunter}}. 21 inflict {{st|Burn|nolink=y}}.
+
+=== Sources ===
+* [[:Category:Fire element abilities]]
+* [[:Category:Fire element items]]
+<!--Persistant-->
+* {{weather|Firestorm}} weather applies persistent {{el|Fire|nolink=y}}.
+<!--Innate-->
+* The following units apply {{el|Fire}} to tiles they contact.
+** Units with {{st|Burn}}
+** Elites with {{st|Elite Buff: Flaming|Flaming}}
+** {{obj|Hot Rock}}
+** {{obj|Hot Boulder}}
+** {{mb|Abandoned One (Head)}}
+** Cats with the {{set|Molten}}
+** Cats with {{p|Fire Aspect}}
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Fire adds an increasing amount of {{st|Burn|nolink=y}} to the cat's basic attack.
+* {{p|Fire Aspect}}: Grants Fire immunity; Fire element damage is increased by 1 and inflicts {{st|Burn|#=+1|nolink=y}}.
+** {{+}} Increases damage by 2 and inflicts {{st|Burn|#=+3|nolink=y}}.
+* {{i|Ember}}: Fire element damage is increased by 1 and inflicts {{st|Burn|#=+1|nolink=y}}.
+* {{i|Pyrophina's Toenail}}, {{Set|Molten}}: Grants Fire immunity.
+* {{i|Scorched Earth}}: Reduces the {{icon|Mana Cost}} of Fire element spells by 1.
+* {{el|Fire|nolink=y}} + {{st|Cleave}}: If a food pickup would spawn, cooked food is spawned instead.
+
+==== Negative ====
+* The following units are immune to {{el|Fire}}:
+** Elites with {{st|Elite Buff: Flaming|Flaming}}.
+** {{mb|Cerberubs}}
+** {{en|Brute}}
+** {{en|Belcher}}
+** {{en|Chain Demon}}
+** {{en|Cloaked Demon}}
+** {{en|Hot Poker}}
+** Notably, {{b|Tormentor}} is ''not'' immune. <!-- this is not governed by the demon tag, tormentor is not immune to fire -->
+
+{{Clear}}
+
+== Ice ==
+[[File:Element Ice Icon.svg|right|border|80px]]
+
+=== Effects ===
+* {{el|Ice|nolink=y}} inflicts {{st|Freeze}} on {{el|Water}} units / units with {{st|Wet}}.
+* Ice converts {{Tile|Water|Water tiles}} into {{Tile|Ice|Ice tiles}}. 
+** Units frozen in {{tile|Water|Water}} gain {{st|Freeze|#=+1|nolink=y}} for each water tile they occupy. 
+* Ice converts various plant-based tiles into {{Tile|Ice Spikes|Ice Spikes tiles}}.
+** Affected tiles: {{tile|Grass}} / {{tile|Tall Grass}} / {{tile|Flower}} / {{tile|Tall Flower}} / {{tile|Bramble}} / {{tile|Web}}
+
+=== Notes ===
+* {{element|Ice}} is not directly tied to {{st|Slow}}.
+** Immunity to {{element|Ice}} does not grant immunity to {{st|Slow}}.
+Of the 12 Ice abilities in the game, 9 are {{class|Mage}} abilities, and the remaining 3 belong to {{class|Collarless}}, {{class|Fighter}}, and {{class|Psychic}}. 3 apply both Freeze and Slow, 4 only apply Freeze, and 4 only apply Slow.
+
+=== Sources ===
+* [[:Category:Ice element abilities]]
+* [[:Category:Ice element items]]
+<!--Persistant-->
+* {{weather|Snow}} and {{weather|Blizzard}} apply {{el|Ice}} persistently.
+<!--Innate-->
+* The following units apply {{el|Ice}} to tiles they contact.
+** {{st|Freeze|Frozen}} units.
+** Cats with {{p|Ice Aspect}}.
+** Cats with {{i|Ring of Frost}}
+** {{obj|Ice Cube}}
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Ice adds an increasing amount of {{st|Slow}} to the cat's basic attack.
+* {{p|Ice Aspect}}: Grants the ability to damage frozen units and immunity to Ice.
+* {{i|Liquid Nitrogen}}: Increases ice damage by 2.
+* {{mut|Head.753}}, {{mut|Legs.315}}, {{mut|Mouth.755}}: Grants immunity to Ice.
+
+{{Clear}}
+
+== Water ==
+[[File:Element Water Icon.svg|right|border|80px]]
+
+=== Effects ===
+* Inflicts {{st|Wet}} on units.
+* Removes all {{st|Burn}} from the unit.
+** This still applies {{st|Wet}}.
+* Douses {{Tile|Fire|Fire}}.
+* Cools {{Tile|Lava|Lava tiles}} into {{tile|Basalt|Basalt tiles}}
+* Grows {{Tile|Grass|Grass}} and {{Tile|Flower|Flower}} to grow into their tall variants
+* Grows {{Tile|Bramble|Brambles}} into {{Tile|Thick Bramble|Thick Brambles}}.
+* Water damage heals {{Type|Plant}} units by an amount equal to the damage that would have been dealt.
+
+=== Notes ===
+Of the 13 {{el|Water}} abilities in the game, 7 are {{class|Collarless}} abilities, 3 are {{class|Mage}}, 2 are {{class|Druid}}, and 1 is {{class|Cleric}}.
+
+=== Sources ===
+* [[:Category:Water element abilities]]
+* [[:Category:Water element items]]
+
+* The following weathers apply {{el|Water}} persistently:
+** {{weather|Rain}}
+** {{weather|Heavy Rain}}
+** {{weather|Thunderstorm}}
+** {{weather|Flash Flood}}
+** {{weather|Hurricane!}}
+
+* The following units apply {{el|Water}} to tiles they contact.
+** {{mb|Flushmaster}}.
+** {{st|Wet}} units.
+
+=== Interactions ===
+==== Positive ====
+* Extinguishes {{obj|Coven Candle|Coven Candles}}.
+* Negates {{st|Heat Wave}}.
+* {{p|Elemental Attunement}}: Using a spell with Water adds an increasing area of water tiles to be spawned at the target of the cat's basic attack.
+* Water indirectly triggers the following effects by inflicting {{st|Wet}}:
+** {{p|Like a Fish}}: {{icon|Holy Shield|#=1}} at the end of turn if no holy shield is present.
+** {{Mut|Ears.325}}: {{st|Charge|#=1}} & {{icon|Shield|#=1}} at the end of turn.
+** {{i|Rain Hat}} {{Mut|Legs.758}}, {{Mut|Legs.759}}: {{st|All Stats Up|#=1}}.
+** {{mut|Ears.752}}: {{st|Damage Up|#=2}}
+** {{mut|Mouth.323}}: {{st|Health Regen|#=2}}
+** {{mut|Ears.302}}, {{mut|Texture.301}}: {{st|Health Regen|#=1}} & 1 Mana Regen.
+** {{mut|Eyes.339}}, {{mut|Mouth.319}}: {{st|Health Regen|#=1}}.
+** {{mut|Ears.318}}: {{st|Brace|#=1}}.
+** {{mut|Head.308}} {{mut|Legs.300}}: +1 movement range.
+
+==== Negative ====
+* {{en|Parasaurolophus}} always crits against units with {{st|Wet}}.
+* Certain Items become {{st|Brittle}} and/or {{st|Fragile}} while their equipped cat is {{st|Wet}}.
+
+==== Other ====
+* {{st|Wet}} units are {{st|Freeze|Frozen}} by {{el|Ice}}.
+* {{st|Wet}} units conduct {{el|Electric}} damage.
+
+{{Clear}}
+
+== Grass ==
+[[File:Element Grass Icon.svg|right|border|80px]]
+
+=== Effects ===
+* {{el|Grass}} grows {{tile|Grass|short Grass}} on {{tile|Empty|empty tiles}}.
+
+=== Notes ===
+Of the 7 {{el|Grass}} abilities in the game, 4 are {{class|Druid}} abilities, 2 are {{class|Hunter}}, and 1 is {{class|Collarless}}.
+
+=== Sources ===
+* [[:Category:Grass element abilities]]
+<!--* [[:Category:Grass element items]]-->
+* The following units apply {{el|Grass}} to tiles they contact.
+** {{type|Plant}} units
+
+* {{el|Grass}} is applied to units standing on one of the following tiles, though this has no effect:
+** {{tile|Grass}}, {{tile|Tall Grass}}
+** {{tile|Flower}}, {{tile|Tall Flower}}
+** {{tile|Bramble}}, {{tile|Thick Bramble}}
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Grass adds an increasing amount of {{st|Poison}} to the cat's basic attack.
+* {{a|Control Plants}}: Attacks all units on Grass element tiles.
+
+==== Negative ====
+* {{type|Plant}}: Immune to {{el|Grass}} attacks. <!--Damage and Healing-->
+
+{{Clear}}
+
+== Earth ==
+[[File:Element Earth Icon.svg|right|border|80px]]
+
+=== Effects ===
+* {{el|Earth}} replaces non-earth tiles with {{Tile|Dirt|Dirt Tiles}}.
+** {{tile|Stalagmite}}, {{tile|Basalt}}, and {{tile|Lava}} will not be replaced.
+
+=== Notes ===
+* Of the 9 {{el|Earth}} abilities, 8 are {{class|Tank}} abilities and 1 is a {{class|Jester}} ability. 6 create {{obj|Small Rock|Rocks}}, and 2 apply {{st|Petrify}}.
+* {{el|Earth}} does not innately create {{obj|Small Rock|Rocks}}.
+
+=== Sources ===
+* [[:Category:Earth element abilities]]
+* [[:Category:Earth element items]]
+* The following units apply {{el|Earth}} to tiles they contact.
+** {{en|Wooly Mammoth}}
+** {{mb|Bumblefoot}}
+** Cats with {{p|Mountain Form}}.
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Earth adds an increasing chance to {{st|Petrify}} to the cat's basic attack.
+* {{i|Scorched Earth}}: Reduces the mana cost of earth element spells by 1.
+
+==== Other ====
+* {{a|Aftershock|+}} makes all of a cat's spells have the earth element.
+
+{{Clear}}
+
+== Wind ==
+[[File:Element Wind Icon.svg|right|border|80px]]
+
+=== Effects ===
+* Effects with {{el|Wind}} are always directional. 
+* Pushes units in the winds direction.
+* Spread {{Tile|Fire|Fire tiles}} in the winds direction.
+* Applies {{st|Burn|#=+1}} to units with {{st|Burn}}
+* Turns {{tile|Water|Water tiles}} into {{tile|Water Current|Water Current tiles}}, with the current going in the winds direction.
+* Removes {{tile|Dirt|Dirt Tiles}}, inflicting {{st|Blind|#=1}} to units on top of them.
+* Cuts down Tall {{tile|Tall Grass|Grass}} / {{tile|Tall Flower|Flower}} tiles into their short version.
+
+=== Notes ===
+Of the 18 {{el|Wind}} abilities in the game, 4 are {{class|Druid}} abilities, 4 are {{class|Butcher}}, 3 are {{class|Mage}}, 2 are {{class|Collarless}}, 2 are {{class|Monk}}, and the remaining 3 belong to {{class|Fighter}}, {{class|Tank}}, and {{class|Thief}}.
+
+=== Sources ===
+* [[:Category:Wind element abilities]]
+* [[:Category:Wind element items]]
+* {{en|Twister|Twisters}} spawned by the {{Weather|Tornadoes}} weather apply {{el|Wind}}.
+* The following weathers apply {{el|Wind}} each round:
+** {{weather|Windy}}
+** {{weather|Thunderstorm}}
+** {{weather|Blizzard}}.
+** {{weather|Hurricane!}}.
+
+=== Interactions ===
+==== Positive ====
+* {{p|Elemental Attunement}}: Using a spell with Wind adds an increasing amount of knockback to the cat's basic attack.
+* Extinguishes {{obj|Coven Candle|Coven Candles}}.
+
+{{Clear}}
+
+== Holy ==
+[[File:Element Holy Icon.svg|right|border|80px]]
+
+=== Effects ===
+* Holy {{icon|healing}} will instead deal damage to {{Type|Zombie}} units, units with {{st|Zombie}}, or otherwise [[undead]] units. 
+* Holy effects are unable to damage {{Type|Angel}} units, instead applying {{st|All Stats Up|#=1}}. <!--Immunity to damage, but any effect gives them that-->
+* Converts {{obj|Poisoned Food}} and its variants into their {{obj|Purified Food}} counterparts.
+
+=== Notes ===
+Of the 42 {{el|Holy}} abilities in the game, 35 are {{class|Cleric}} abilities, 4 are {{class|Collarless}}, 2 are {{class|Mage}}, and 1 is a {{class|Druid}} ability.
+
+=== Sources ===
+* [[:Category:Holy element abilities]]
+* [[:Category:Holy element items]]
+* {{we|Blessed Day}} applies {{el|Holy}} persistently.
+
+=== Interactions ===
+==== Positive ====
+* {{p|Blessing of Holy Fire}}: Causes {{el|Holy}} to deal double damage and inflict {{st|Burn|#=2}}.
+** {{+}} Holy deals triple damage and inflicts 3 Burn.
+* {{p|Elemental Attunement}}: Using a spell with Holy adds an increasing amount of {{Icon|Heal|self-heal}} to the unit's basic attack.
+* {{p|Evil Patron|+}}: Causes Holy to deal double damage.
+* {{i|Spear of Destiny}}: Holy refreshes use.
+* {{i|Steven (Neck Armor 1)}}: reduces the {{icon|Mana Cost}} of holy element spells by 1.
+
+== Explosion ==
+[[File:Element Explosion Icon.svg|right|border|80px]]
+
+=== Effects ===
+{{el|Explosion}} has no effect on its own.
+
+=== Notes ===
+Of the 16 {{el|Explosion}} abilities in the game, 4 are {{class|Tinkerer}} abilities, 2 are {{class|Collarless}}, 2 are {{class|Druid}}, 2 are {{class|Psychic}}, and the remaining 6 belong to {{class|Hunter}}, {{class|Mage}}, {{class|Tank}}, {{class|Fighter}}, {{class|Butcher}}, and {{class|Monk}}.
+* {{cl|Necromancer|Necromancer's}} {{a|Death Bloom}} also deals Explosion, but it is not shown in game.
+
+=== Sources ===
+* [[:Category:Explosion element abilities]]
+* [[:Category:Explosion element items]]
+=== Interactions ===
+==== Positive ====
+* {{p|Mr. Mega}}: Increases explosion damage and area by 1.
+** {{+}} Immunity, increases damage by 2.
+* {{p|Napalm}}: Explosions inflict {{st|Burn|#=1}} and convert all tiles in the radius into {{tile|Fire|Fire Tiles}}.
+* {{p|EMP}}: Increases explosion damage by 1, grants explosions {{el|Electric}} and an X% chance to {{st|Stun|stun}}, and prevents explosions from applying knockback.
+** {{+}} Allies are immune to the cat's explosions.
+* {{i|Top Hat}}: Increases explosion area by 1.
+* {{i|Rad Glasses}}: Increases explosion damage and area by 1.
+* {{i|Steven (Head Armor 1)}}: Grants immunity to {{el|Explosion}}, increases explosion area by 7 and damage by 2.
+==== Other ====
+* {{p|Elemental Attunement}}: No interaction.
+{{Clear}}
+
+== Gravity ==
+[[File:Element Gravity Icon.svg|right|border|80px]]
+
+=== Effects ===
+* {{el|Gravity}} inflicts {{st|Immobile}} on {{st|Flying}} units.
+* Cuts down Tall {{tile|Tall Grass|Grass}} / {{tile|Tall Flower|Flower}} tiles into their short version.
+
+=== Notes ===
+Of the 16 {{el|Gravity}} abilities in the game, 13 are {{class|Psychic}} abilities, 2 are {{class|Fighter}}, and 1 is a {{class|Mage}} ability.
+
+=== Sources ===
+* [[:Category:Gravity element abilities]]
+* [[:Category:Gravity element items]]
+=== Interactions ===
+==== Positive ====
+* {{p|Antigravity}}: reduces the {{icon|Mana Cost}} of gravity element spells by 1.
+** {{+}} Reduces {{icon|Mana Cost}} by 2.
+* {{p|Elemental Attunement}}: Grants the cat's basic attack {{st|Weakness|#=+1}}.
+* {{p|Flourish}}: Gravity element abilities do not harm allies and apply a random positive status effect instead.
+* {{p|Reality Shatter}}: Causes gravity to spawn {{tile|Floating Glass|floating glass tiles}}.
+** {{+}} Gravity inflicts {{st|Bleed|#=1}}
+* {{p|Wither}}: Gravity applies a random negative status effect to enemies.
+
+{{Clear}}
+
+== Music ==
+[[File:Element Music Icon.svg|right|border|80px]]
+
+=== Effects ===
+{{el|Music}} has no effect on its own.
+
+=== Notes ===
+Of the 33 {{el|Music}} abilities in the game, 22 are {{class|Druid}} abilities, 3 are {{class|Collarless}}, 2 are {{class|Tank}}, 2 are {{class|Necromancer}}, and the remaining 4 belong to {{class|Cleric}}, {{class|Butcher}}, {{class|Monk}}, and {{class|Jester}}.
+
+* {{el|Music}} is internally ''not'' an element, but a tag.
+=== Sources ===
+* [[:Category:Music element abilities]]
+* [[:Category:Music element items]]
+=== Interactions ===
+==== Positive ====
+* {{p|Encore}}: Refreshes basic attack when casting a {{el|music}} spell.
+** {{+}} Reduces {{icon|Mana Cost}} of musical spells by 1.
+* {{p|Maestro}}: Reduces {{icon|Mana Cost}} of musical spells by 50% rounded down.
+** {{+}} {{icon|Heal|#=1}} and gain 1 random stat up when casting a musical spell.
+* {{i|Steven (Face Armor 1)}}: Double casts musical spells.
+
+==== Negative ====
+* Unable to be cast by cats with {{mut|Mouth.-2|noimage=y}} or {{mut|Mouth.328}}.
+
+==== Other ====
+* {{p|Elemental Attunement}}: No interaction.
+
+{{Clear}}
+
+== Other Elements ==
+These elements are hidden from the player but exist in the game's code.
+{| class="wikitable sortable"
+|-
+! Element !! Effect !! Sources
+|-
+!id="Bloom"| Bloom
+|
+Converts targeted tiles into {{tile|Flower|Flower tiles}}.
+|
+* {{a|Song of Spring}}
+* {{i|Flower Mix}}
+|-
+!id="Conducted"| Conducted
+| Only used to prevent {{el|Electric}} from conducting to nearby tiles.
+|
+* {{a|Shockwave}}
+|-
+!id="Creep Element"| Creep
+| Only used by units for immunity to {{tile|Creep}}.
+|
+* {{tile|Creep}}
+|-
+!id="Dark"| {{el|Dark}}
+|
+Known internally as ''Shadow'', Dark goes entirely unused for abilities and is likely tied to the unused {{tile|Shadow|Shadow}} Tile. <br>Code peeks suggest it was scrapped before passive abilities were given upgrades, and code for {{p|Elemental Attunement}} contains a comment expressing confusion if any abilities have it.
+|
+|-
+!id="Dust"| Dust
+| Only used by units for immunity to {{Weather|Sandstorm}}.
+|
+* {{mb|Dust Devil}}
+|-
+!id="Heat"| Heat
+| Intended to add {{st|Burn|#=3}} to cats with {{d|Albinism}}.<br>This interaction is bugged and does not function.
+|
+* {{we|Heat Wave}}
+|-
+! id="Mutate"| Mutate
+| 
+Mutates certain enemies:
+* {{en|Cultist Lackey}} and {{en|Cultist Zealot}} become {{en|Cultist Mutant}}.
+* {{en|Maggot}} and {{en|Leech}} become one of the following:
+** {{en|Burfer Maggot}}
+** {{en|Chargey Maggot}}
+** {{en|Diggy Maggot}}
+* {{en|Lil' Rat}} becomes one of the following:
+** {{en|Lumpy}}
+** {{en|Leaper}}
+* {{en|Jekyll}} becomes {{en|Hyde}}.
+|
+* {{tile|Toxic Waste}}
+* {{a|Trigger the Nuke}} - the {{i|Nuke}} bonus ability.
+* {{i|Mini Nuke}} (the item)
+* {{obj|Mini Nuke}} (the object)
+* {{i|Nuclear Gun}}
+* {{i|Uranium Rod}}
+* {{en|Atomic Kitten|Atomic Kitten's}} radiation
+* {{mb|Mama Maggot|Mama Maggot's}} mutate ability
+|-
+! id="Napalm" | Napalm
+| 
+Converts targeted empty tiles into {{tile|Fire|Fire tiles}}.
+|
+* {{tile|Lava}}
+* {{a|Asteroid}}
+* {{a|Fire Shot}} 
+* {{a|Forbidden Flame}} 
+* {{a|Wall of Fire}} 
+* {{b|Pyrophina|Pyrophina's}} volcano stomp
+* The {{obj|Mini Volcano|Mini Volcano's}} spurt
+* Several {{el|Fire}}-themed items (e.g. {{i|Lighter}})
+|-
+! id="Poison" | Poison
+|
+Unknown effect.
+
+Likely intended to convert {{obj|Food}} into their {{obj|Poisoned Food}} equivalents{{Citation needed}}, but this does not currently happen.
+|
+* {{a|Forbidden Fart}}
+* {{p|Indigestion}}
+* {{en|Gassy|Gassy's}} fart
+* {{mb|Bumblefoot|Bumblefoot's}} fart
+* {{i|Mini Nuke}} (the item)
+|-
+!id="Rock"| Rock
+|
+Unknown effect. 
+
+It is used on several abilities that can spawn rocks, but the Rock element isn't what causes the rocks to spawn.
+|
+* {{a|Rock Toss}}
+* {{i|Bricks}}
+* {{en|Brute|Brute's}} rock throw
+* {{b|Pebbles|Pebbles'}} rock toss
+* {{mb|Rocky Bobo}} has Rock element
+* {{mb|The Rocksnows|Frod Rocksnow's}} rock toss
+* {{b|Radical Rat|Radical Rat's}} bomb throw during rain
+* The {{obj|Mini Volcano|Mini Volcano's}} spurt
+|}
+
+==Trivia==
+* A hidden [[Types|enemy type]] known as “elementals” is listed for a few minibosses, implying that they may have been intended to embody one of these elements. 
+** {{mb|Flushmaster}} represents the {{el|Water}} element. 
+** {{mb| Frostbiter}} represents the {{el|Ice}} element.
+** {{mb|Zapphauser}} represents the {{el|Electric}} element.
+
+[[Category:Mechanics]]

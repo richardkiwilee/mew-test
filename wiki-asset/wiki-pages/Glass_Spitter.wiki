@@ -1,0 +1,78 @@
+{{Enemy
+| ID = GlassSpitter
+| Size = 1x1
+| Location = The Junkyard
+| Description = Its ranged attack spawns glass and inflicts Bleed.
+| Health = 5
+| Shield = 5
+| Damage = 2
+| Movement = 4
+| Luck = 5
+| Types = Cat
+}}
+
+'''Glass Spitter''' is a {{Type|Cat}} [[Enemies|enemy]] found in {{ch|The Junkyard}}.
+
+== Behavior ==
+Ranged attack that moves to maintain the max distance between it and the unit it intends to attack.  
+
+Its [[basic attack]], "Glass Spit", shoots two lobbed projectiles up to 5 tiles away, landing in a cross shape and applying 1 {{st|Bleed}} on any unit hit and creating {{tile|Glass}} on the tiles. {{RangeIndicatorWrapper
+|:Range: {{RangeIndicator|min_range=1|max_range=5}}
+: Area: {{RangeIndicator|is_aoe=true|max_range=1}}
+}}
+* The projectiles can land on any of the 5 tiles, and as such are not very accurate.
+
+=== Tips ===
+* They have as much {{st|Shield}} as they have health, effectively doubling their total hit points but making them more vulnerable to piercing and status effect damage.
+* They aren't too dangerous on their own, and if the player can get into melee with them they die pretty easily.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Glass Spitter_Icon.svg|Turn Order Icon
+ENEMY_Glass Spitter_Idle.gif|Idle
+ENEMY_Glass Spitter_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Glass Spitter_Icon_Champion.svg|Turn Order Icon
+ENEMY_Glass Spitter_Idle_Champion.gif|Idle
+ENEMY_Glass Spitter_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Glassspitter_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* They use a male8 [[voice]] for cats, voiced by Cody Glaiel.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Glass Spitter
+| es = Escupecristales
+| fr = Crache-verre
+| de = Scherbenspucker
+| it = Sputavetro
+| pt-br = Cospe-Vidro
+| ru = Стеклоплюй
+| ko = 글래스 스피터
+| ja = ガラスピット
+| zh-cn = 吐​玻璃​猫
+}}
+
+{{Navbox/Enemy}}
+[[es:Escupecristales]]
+
+[[Category:Cat type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement keep ranged distance]]
+[[Category:Units using Catgen]]

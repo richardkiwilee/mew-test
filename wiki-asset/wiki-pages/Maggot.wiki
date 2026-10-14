@@ -1,0 +1,80 @@
+{{Infobox/Enemy
+| ID = Maggot
+| Size = 1x1
+| Location = The Alley, The Boneyard, The Junkyard, The Throbbing Domain, The Desert, The Lab
+| Description = Melee attacker.
+| Health   = 1
+| Damage   = 2
+| Movement = 2
+| Types = Worm
+}}
+
+'''Maggot''' is a small {{type|Worm}} [[enemy]] found in several areas, and can be summoned through multiple ability and item effects.
+
+== Behavior ==
+Melee attacker, will move towards its enemies, and ignore traps and hazardus tiles. 
+
+Uses {{a|Melee Attack}} as its [[Basic Attack]].
+
+If a maggot is affected by {{el|Mutate}}, it will mutate into either a {{en|Chargey Maggot}}, {{en|Burfer Maggot}}, or {{en|Diggy Maggot}}.
+
+=== Tips ===
+* Placing {{tile|Bramble|Bramble Tiles}} and similar Tiles in their path will kill them without needs to use an action.
+* As familiars, they can be useful to trigger effects that require killing units, like {{a|Soul Reap}} and {{p|Hunter's Boon}}.
+
+== Notes ==
+* Does not leave a corpse.
+* {{en|Leech}} (and all other leech varieties) are considered a variant of Maggot and will similarly evolve with radiation.
+* {{a|Butt Scoot}}, {{a|Spawn Maggot Friend}} and {{i|Bag Of Chum}} summon a green maggot familiar that is identical to the enemy variant in all but color.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Maggot_Icon.svg|Turn Order Icon
+ENEMY_Maggot_Idle.gif|Idle
+ENEMY_Maggot_Death.gif|Death
+ENEMY_Maggot_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Maggot_Icon_Champion.svg|Turn Order Icon
+ENEMY_Maggot_Idle_Champion.gif|Idle
+ENEMY_Maggot_Death_Champion.gif|Death
+ENEMY_Maggot_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Maggot_level_editor.png|Level Editor Sprite
+Maggot_Placeholder.png| Maggot as placeholder in the animations for Extra [[small size]] unit.
+</gallery>
+</tabber>
+
+== Trivia ==
+* Maggots have a similar appearance to the [[tboi:Flat_Worm|Worm Trinkets]] found in The Binding of Isaac.
+* Despite being the larval form of {{en|Fly|Flies}}, Maggots aren't able to be spawned by them in any way, and don't have the same types.
+
+== Other languages ==
+{{Other languages
+| en = Maggot
+| es = Gusano
+| fr = Asticot
+| de = Made
+| it = Larva
+| pt-br = Verme
+| ru = Опарыш
+| ko = 구더기
+| ja = ウジムシ
+| zh-cn = 蛆
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Familiars]][[Category:Worm type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement stay close]]
+[[Category:Small Enemies]]
+[[es:Gusano]]

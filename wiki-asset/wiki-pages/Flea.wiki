@@ -1,0 +1,73 @@
+{{Distinguish|Louse}}
+{{Infobox/Enemy
+| ID = Flea
+| Size = 1x1
+| Location = The Alley, The Boneyard, The Desert
+| Description = Its melee attack damages itself.
+| Health = 2
+| Damage = 4
+| Movement = 4
+| Luck = 5
+| Type = Event Enemy
+| Types = Bug
+}}
+
+'''Flea''' is a small {{type|Bug}} [[enemy]] found in {{ch|The Alley}}, {{ch|The Boneyard}} and {{ch|The Desert}}, and can be spawned through multiple ability and item effects.
+
+== Behavior ==
+* On their turn, Fleas will attempt to move within melee range of a target and attack it, dealing 4 damage to both them '''and itself''', regardless of the Flea's actual {{Stat|STR}}. This self-damage typically kills the Flea.
+=== Tips ===
+* Fleas usually end up dying to their own attack. Be wary of Champion Fleas, however, as they can survive the self-damage from their attack.
+* The self-damage a Flea takes does not change with damage-boosters (such as {{st|Strength Up}} or {{st|Damage Up}}).
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Flea_Icon.svg|Turn Order Icon
+ENEMY_Flea_Idle.gif|Idle
+ENEMY_Flea_Death.gif|Death
+ENEMY_Flea_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Flea_Icon_Champion.svg|Turn Order Icon
+ENEMY_Flea_Idle_Champion.gif|Idle
+ENEMY_Flea_Death_Champion.gif|Death
+ENEMY_Flea_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Flea_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+*Fleas are among a small set of enemies that can be spawned as [[familiars]] directly.
+* Fleas spawned from Cat Abilities will be green.
+* Weirdly enough, the flea looks more like a {{Wikipedia|Antlion}} larve than a {{Wikipedia|Flea}}.
+
+== Other languages ==
+{{Other languages
+| en = Flea
+| es = Pulga
+| fr = Puce
+| de = Floh
+| it = Pulce
+| pt-br = Pulga
+| ru = Блоха
+| ko = 벼룩
+| ja = ノミ
+| zh-cn = 跳蚤
+}}
+
+{{Navbox/Enemy|uni}}
+
+[[Category:Bug type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement stay close]]
+[[Category:Small Enemies]]
+[[es:Pulga]]

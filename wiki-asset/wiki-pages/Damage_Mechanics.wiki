@@ -1,0 +1,106 @@
+== Knockback ==
+* See [[knockback]]
+<!-- just putting it here temporarily -->
+
+== Contact ==
+'''Contact''' or 'making contact' happens in the following exchanges:
+
+Activates the victims on contact effects:
+* Melee attacking a unit with physical damage while being adjacent, including diagonally.
+** Using reach to attack from further away will not trigger contact effects.
+* Throwing a unit. <!--Many many enemy abilities-->
+<details>
+<summary>Throw abilities</summary>
+* {{a|Antler Swipe}}
+* {{a|Gang Up}}
+* {{a|Hip Toss}}
+* {{a|Hurl}}
+* {{a|Monkey Toss}}
+* {{a|Rough Toss}}
+* {{a|Suplex}}
+* {{a|Toss}}
+* {{i|Big Spring}}
+</details>
+
+Activates both units on contact effects:
+* Units being knocked into each other.
+* Trampling a unit.
+* Jumping on a unit.
+
+==== Interactions ====
+For a list of which effects trigger on contact, see [[List of effects that trigger on contact]]
+
+== Backstab ==
+'''Backstabs''' are a damage mechanic, in which units with a back receive 25% more damage<sup>(rounded down)</sup> when hit into the back.
+* Minimum damage increase of 1.
+* Only {{icon|physical damage}} can backstab.
+* Downed units cannot be backstabbed.
+* Certain units do not have a back, such as most {{icon|object|objects}}.
+** For a full list, see: [[:Category:units that can't be backstabbed]]
+
+=== Interactions ===
+<div style="line-height: 2em;">
+* {{i|Frying Pan}}
+* {{i|Pack of Blades}}: {{st|Serrated Claws|#=+1}} on backstab.
+* {{i|Prowler's Cap}}
+* {{i|Prowler's Mask}}
+* {{i|Prowler's Vial}}
+
+* {{a|Quick Roll}}: Reload condition
+* {{a|Boost Backstab}}
+** {{st|Backstab Bonus}}
+
+* {{p|Serial Killer}}
+* {{p|Backstabber}}
+* {{p|Shank}}: Condition for {{a|Shank}} to become available.
+
+* {{d|Intestinal Prolapse}}
+
+* {{mut|eyes.311}}, {{mut|eyes.353}}: Backstabs against this cat no longer count as backstabs. <!--For other interactions-->
+* {{mut|head.703}}: Hits hitting this units front count as backstabs.
+</div>
+
+== Critical hit ==
+'''Critical hits''' or simply "Crits" are a mechanic where damage (or healing) is increased by the crit damage multiplier of that unit.
+
+The default crit damage is +100%, resulting in double, with some effects being able to increase it.<br>
+Any increases also increase the effectiveness of crit healing.
+
+The chance to perform a critical hit is determined by the [[Crit Chance|crit chance]] of the unit. <br>
+For enemies this is almost always 0.<br>
+
+Only {{icon|physical damage}} and physical healing can randomly crit and are affected by the crit damage multiplier.
+* Magic damage crits are always only 2x. This may be a bug.
+
+The damage is increased after all other calculations and damage reductions, allowing you to deal 2 damage in cases where damage is limited to 1.
+
+=== Interactions ===
+{{See also|List of effects that increase critical hit damage}}
+<div style="column-count:2;>
+* {{i|Human Scalp}}: Crits inflict {{st|Fear}}
+* {{i|Focus Band}}: Crits inflict Knockback 10.
+
+* {{a|Gamble}}
+* {{a|Path of the Thief}}
+* {{a|Sever Artery}}: Crits inflict {{st|Bleed|%=5}}
+* {{a|Steal Kidney}}
+* {{a|Steal Luck}}
+* {{a|Steal Time}}
+
+* {{p|Bullseye}}
+* {{p|Cripple}}
+* {{p|Critical}}
+* {{p|Furious}}
+* {{p|Hack}}: Crits cleanse buffs
+* {{p|Iron Skin Technique}}
+* {{p|Might of the Meek|+}}: Higher crit damage.
+* {{p|Mixup|+}}: Crits inflict {{st|Confusion}}
+* {{p|Pinpoint}}
+* {{p|Shake Down}}
+* {{p|Sniper}}
+* {{p|Unburdened Strikes}}
+
+* {{d|Distemper}}
+</div>
+	
+[[Category:Mechanics]]

@@ -1,0 +1,117 @@
+[[File:Equipping item.jpg|thumb|A fighter cat equipping a bottle in their weapon slot.]]
+Cats can equip '''Items''' to help them on their adventures. They can be acquired from [[shop|shops]], [[treasure nodes]], [[events]], or [[combat]].
+
+There are four types of items: ''Weapons'', ''Trinkets'', ''Consumables'', and ''Armor''.
+
+After a successful adventure, items are placed in storage, allowing them to be reused in future runs.<br>
+If a cat's body is destroyed, all of its equipped items are lost.
+
+After an adventure or a [[house boss]], any items which came from storage (i.e. weren't obtained mid-run) will become {{st|Worn}}.
+* Worn items have a 50% chance to break when returning home early, and a 100% chance to break when returning from Chapter 4 or a [[house boss]].
+
+An [[#Item Rarities|item's rarity]] determines how commonly it appears from various sources. A small minority of items have no rarity. 
+
+Most items are part of one or more [[Sets]]; equipping three or more items from the same set onto a single cat will grant them a bonus.
+
+[[Item Pools]] determine which items may be obtained from certain [[Event Rewards|events]], [[Boss Items|bosses]], or abilities. Some items are available from multiple pools and others are exclusive to a single source.
+
+* The cat-[[minibosses]] and some other [[catgen]] enemies have [[enemy exclusive items]], unobtainable by the player.
+
+== Item Types ==
+{| class="wikitable
+|-
+! Type !! Image !! Explanation
+|- id="Weapons"
+! Weapons
+| style="text-align:center" | [[File:UI Weapon Icon.svg|40x40px|class=mew-icon]] 
+| 
+{{icon|Weapons}} fit into a cat's weapon slot. 
+: Can be used once per turn {{flav|(unless specified otherwise)}}. 
+: Some weapons have a limited number of uses before breaking. 
+: Some items and abilities interact with weapons.
+|-"id=Armor"
+! Armor
+| style="text-align:center" | [[File:UI Head Armor Icon.svg|40x40px|class=mew-icon]] [[File:UI Neck Armor Icon.svg|40x40px|class=mew-icon]] [[File:UI Face Armor Icon.svg|40x40px|class=mew-icon]]
+| 
+{{icon|Head armor|Head}}, {{icon|Face armor|Face}}, and {{icon|Neck armor}} are equipped in the cat's head, face, and neck slot respectively.
+: They have a wide range of properties depending on the armor.
+: Some items and abilities interact with a specific armor slot, some with all 3 armor slots.
+|-id="Consumables" 
+! id="Trinkets" | Trinkets
+| style="text-align:center" | [[File:UI Trinket Icon.svg|40x40px|class=mew-icon]]
+| 
+{{icon|Trinkets}} go into the cat's trinket slot.
+;Passive Trinkets
+: Provide bonus passive effects.
+;Useable Trinkets
+: Can be used once a turn {{flav|(unless specified otherwise)}}.
+: Some usable trinkets have a limited number of uses before breaking.
+|-id="Consumables" 
+! id="Trinkets" | Consumables
+| style="text-align:center" | [[File:UI Consumable Icon.svg|40x40px|class=mew-icon]]
+| 
+{{icon|Consumables}} go into the cat's trinket slot.
+: Can be used once a turn.
+: Always have a limited amount of uses.
+:: Disappears when running out of uses, instead of breaking. <!--Important for some effects-->
+: Some items and abilities interact with consumables.
+:: Some only interact with certain [[Lists of consumables by tag|sub-categories]] of consumables.
+|}
+
+== Item Rarities == 
+
+{| class="wikitable" style="width:100%; text-align:left;"
+! style="width:100px;" | UI
+! style="width:160px;" | Icon
+! Description
+|- id="Common"
+! <div style="justify-self: center; padding: 3px">[[File:Blank.svg|60px]]</div>
+! Common
+| Symbol-less Items are '''Common'''<br>
+|- id="Uncommon"
+! <div style="justify-self: center; padding: 3px">[[File:UI Uncommon Icon.svg|60px]]</div>
+! Uncommon
+| Items with a gray circle are '''Uncommon'''<br>
+|- id="Rare"
+! <div style="justify-self: center; padding: 3px">[[File:UI Rare Icon.svg|60px]]</div>
+! Rare
+| Items with a yellow triangle are '''Rare'''<br>
+|- id="Very Rare"
+! <div style="justify-self: center; padding: 3px">[[File:UI Very Rare Icon.svg|60px]]</div>
+! Very Rare
+| Items with a red diamond are '''Very Rare'''
+* Cannot be obtained in post-combat loot of regular battles and regular treasure chests.
+|- id="Cursed"
+! <div style="justify-self: center; padding: 3px">[[File:UI Cursed Item Icon.svg|60px]]</div>
+! Cursed
+| Items with a purple splotch are '''Cursed'''
+* {{st|Cursed}} Items '''cannot be taken off''' or removed once equipped.
+** Cats with {{i|Black Candle}}, {{d|Blessing of Glorg}}, or {{mut|tail.329}} bypass this restriction, and can unequip cursed items.<small><sup>(other than Black Candle)</sup></small>
+*** Cats with {{p|Host}} can unequip any cursed items with the "Parasites" item tag, such as {{i|Tapeworm}} or {{i|Cordyceps}}.
+* Cursed items can have a rarity, but have their rarity icon overwritten by the cursed one.
+|- id="Side Quest"
+! <div style="justify-self: center; padding: 3px">[[File:UI Side Quest Icon.svg|60px]]</div>
+! Side Quest
+| Items with a blue square are '''Side Quest Items''', bestowed by {{npc|Dr. Beanies}}.
+* All Side Quest items brought onto an adventure must be equipped at all times.
+* Are stored separately from the main storage.
+* Get {{st|Worn}} and lost if a cat is killed in combat, like regular items.
+* The icon turns yellow when ready to turn in.
+|- id="Quest"
+! <div style="justify-self: center; padding: 3px">[[File:UI Quest Item Icon.svg|60px]]</div>
+! Quest
+| Items with a green square are main '''Quest Items''', acquired from [[House Bosses]] or story events.
+* All Quest items brought onto an adventure must be equipped at all times.
+* Are stored separately from the main storage.
+* Do not get {{st|Worn}}.
+* If lost, will either reappear in the backpack or be re-granted by the NPC that gave it originally.
+|-
+|}
+* Some items have no rarity defined, these will also have no rarity background like Common ones.
+* For more info on item attributes, see [[Keywords]].
+
+== All Items == 
+{{Shuffle Items}}
+[[Category:Mechanics]]
+
+[[es:Objetos]]

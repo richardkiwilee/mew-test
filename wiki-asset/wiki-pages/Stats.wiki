@@ -1,0 +1,718 @@
+'''Stats''' affect everything a [[cat]] does, and can be increased throughout a cat's life. For the purposes of [[breeding]], only the stats a cat started with can be passed down onto their children, with the room's {{HouseStat|Stimulation}} stat determining whether the higher stat or the lower stat is inherited. Stray cats arriving at the house have their stats determined by the {{HouseStat|Appeal}} stat, with higher Appeal giving them better stats.
+
+[[File:UI Cat stat sheet.png|thumb|Cat's stats as presented during battle]]
+
+__toc__
+== Main Stats ==
+* '''{{stat|Strength}}''' affects melee attack and melee ability damage.
+* '''{{stat|Dexterity}}''' affects ranged attack and ranged ability damage.
+* '''{{stat|Constitution}}''' affects max health and post-combat regen.
+* '''{{stat|Intelligence}}''' affects mana regen.
+* '''{{stat|Charisma}}''' affects max mana and starting mana.
+* '''{{stat|Speed}}''' affects turn order and movement range.
+* '''{{stat|Luck}}''' affects base crit chance and all randomness.
+<!--
+Order In-House:
+--Str,Dex,Con,Int,Spd,Cha,Lck
+Order In-Battle
+--Str,Dex,Con,Spd,Int,Cha,Lck
+Order On-Item
+--Str,Dex,Con,Int,Spd,Cha,Lck
+Order In-Menu
+--Str,Dex,Con,Int,Spd,Cha,Lck
+
+* '''{{HouseStat|Comfort}}''': Affects how often cats will breed or fight.
+* '''{{HouseStat|Stimulation}}''': Affects the quality of newborn kittens.
+* '''{{HouseStat|Appeal}}''': Affects the quality of the stray cats that show up each day 
+* '''{{HouseStat|Mutation}}''': Adds a chance for cats to receive random mutations each night.
+* '''{{HouseStat|Health}}''': Affects lifespan and chance to develop or cure disorders each night
+-->
+{| class="wikitable"
+|-
+! Stat Name  !! Icon !! Explanation
+|-
+! id="Strength" | Strength<br><small>(Str)</small>
+| [[File:Stat Strength.svg|100x100px|center]] || Determines how much damage a unit deals with melee attacks. Abilities that scale with strength are usually indicated with a {{ActiveType|Melee}} icon.
+
+5 Strength is neutral. Every additional point adds 1 damage to most melee basic attacks, and every 2 additional points add 1 damage to most melee abilities, and the reverse is true with reduced points. The formula of damage to most melee basic attacks is: {{math|{\str -5} |display=inline}} {{icon|Physical Damage|nolabel=y}} and to most melee abilities is: {{math|\frac{\str -5}{2} |display=inline}} {{icon|Physical Damage|nolabel=y}}.
+
+Affects the Strength option in events. 
+|-
+! id="Dexterity" | Dexterity<br><small>(Dex)</small>
+| [[File:Stat Dexterity.svg|100x100px|center]] || Determines how much damage a unit will deal with ranged attacks. Abilities that scale with dexterity are usually indicated with a {{ActiveType|Ranged}} icon.
+
+5 Dexterity is neutral. Every 2 additional points add 1 damage to ''most'' ranged attacks/abilities, and the reverse is true with reduced points. The formula of damage is: {{math| \frac{\dex - 5}{2} |display=inline}} {{icon|Physical Damage|nolabel=y}}.
+
+Affects the Dexterity option in events. 
+|-
+! id="Constitution" | Constitution <br><small>(Con)</small>
+| [[File:Stat_Constitution.svg|100x100px|center]] 
+| Determines Max HP and post-battle health regeneration. 
+
+<math>\text{HP}_\text{max} = \text{CON}\cdot4 </math>, with the lowest possible value being 1 at 0 CON or lower.
+
+Post-battle health regen increases by 1 for every 2 Constitution, ( {{math|5 + \frac{\con - 5}{2} |display=inline}} ), but below 5 is equal to Constitution.
+
+Affects the Constitution option in events (e.g. surviving poison, eating a really big poop).
+|-
+! id="Intelligence" | Intelligence<br><small>(Int)</small>
+| [[File:Stat Intelligence.svg|100x100px|center]] || How much mana an allied unit regenerates at the end of its turn. An intelligence of 0 or less will result in no mana regeneration. Negative intelligence has no unique effect in battle outside of certain skills that involve the stat in their calculation. Some skills become more powerful with low intelligence, such as [[1D Chess]].
+Affects the Intelligence option in events.
+If a cat has 0 intelligence or less, the event text gets transformed into meaningless gibberish, making it harder to weigh associated risks appropriately.
+|-
+! id="Speed" | Speed<br><small>(Spd)</small>
+| [[File:Stat Speed.svg|100x100px|center]]
+|
+Determines how many tiles a unit can move on a turn, as well as turn order placement. See [[Stats#Movement Range|Movement Range]] & [[Stats#Turn Order|Turn Order]] for details.
+
+Affects the Speed option in events.
+
+For non-cat units, displayed Speed is actually their Movement Range.
+|-
+! id="Charisma" | Charisma<br><small>(Cha)</small>
+| [[File:Stat Charisma.svg|100x100px|center]] || How much max mana an allied unit can have, how much mana they start battle with, and how skilled they are at pairing. Maximum mana is calculated as <math>\text{Mana}_\text{max}=\text{CHA}\cdot3</math>.
+
+Affects [[House]] interactions:
+* Increases the chances a cat initiates [[breeding]]. It's slightly more impactful on straight {{icon|Male|Males}}/{{icon|Neutral|Neutrals}} paired with straight {{icon|Female|Females}}.
+* Reduces the chances a cat initiates [[fighting]].
+
+Affects the Charisma option in events.
+|-
+! id="Luck" | Luck<br><small>(Lck)</small>
+| [[File:Stat Luck.svg|100x100px|center]] || The primary modifier of much of the randomness within Mewgenics, as well as the main determinant behind an attack’s critical hit chance.
+
+All displayed odds in the game assume a neutral luck stat of 5. Each point away from the baseline adds a 10% chance for the game to roll an extra die when it calculates for an outcome. Extra rolls from high luck take the best result of what was rolled for that outcome, and low luck takes the worst. Additional dice stack at higher magnitudes (i.e. +1 roll at -5 and 15 luck, +2 at -15 and 25, etc).
+
+Critical hit chance is excluded from this formula. Instead, each point of luck raises or lowers a flat 2% to the chances of scoring a critical hit.
+* See [[#Crit Chance|Crit Chance]] for more details.
+
+Affects quality of items in shops and post-battle rewards.
+
+Affects the Luck option in events. Also affects the outcome of events even if luck is not directly tested.
+----
+;{{anchor|Luck Formula}}
+For a cat with {{stat|Luck}} <math>L</math>, the chance of success <math>S</math> is given by the following formula:
+
+:<math>S = \begin{cases}
+L \geq 5: & 1 - f^n (1 - as)\\
+L < 5: & s^n (1 - af)
+\end{cases}</math>
+
+where:
+* <math>s</math> is the base probability of success before {{stat|Luck}} is factored in.
+* <math>f = 1 - s</math> is the corresponding base probability of failure.
+* <math>n = 1 + \lfloor k \rfloor</math> is the number of dice that the game rolls to determine the true outcome.
+* <math>a = k - \lfloor k \rfloor</math>, where <math>k = \left\vert \frac{L-5}{10} \right\vert</math>, is the probability that an additional dice is cast.
+----
+;{{anchor|Luck calculator}}
+{{calculator|type=hidden|id=f|default=0.9|formula=1-(Chance/100)}}
+{{calculator|type=hidden|id=a|default=0  |formula=k-floor(k)}}
+{{calculator|type=hidden|id=n|default=1  |formula=1+floor(k)}}
+{{calculator|type=hidden|id=k|default=0  |formula=abs((Luck-5)/10)}}
+{{stat|Luck}} {{calculator|type=number  |id=Luck      |default=5|size=8}}<br> <!-- Luck stat -->
+Chance% {{      calculator|type=number  |id=Chance    |default=10|size=8|step=any|min=0|max=100}}<br> <!-- Raw chance -->
+Bad outcome? {{ calculator|type=checkbox|id=Bad       |default=0}}<br> <!-- chance% break item -->
+
+True chance: {{ calculator|type=plain  |id=TrueChance|default=10|precision=3|formula=
+      ifgreaterorequal((1-Bad* 2)* Luck, 5* (1-Bad* 2) )* ((1-pow(f,n)* (1-a* (Chance/100)))* 100)+ <!-- Luck >= 5 -->
+	  ifless((1-Bad* 2)* Luck, 5* (1-Bad* 2) )* ((pow(Chance/100,n)* (1-a* f))* 100)                <!-- Luck < 5  -->}}%
+|}
+
+Each of a cat's base stats will be between 3 and 7. [[Stray cats]] with a 3 or 7 stat will be less common if the [[House]] has low {{HouseStat|Appeal}}.
+
+A stat of 5 is considered the baseline for most [[Events|skill checks]], with a 50/50 chance of a good or bad outcome. There is a separate base 15% chance of getting a more extreme result.
+* There may be other factors at play (i.e. Luck or [[Difficulty]]). See [[Events#Outcomes|Events § Outcomes]] for more information.
+* Value of a stat can never exceed the integer overflow mark of a 32-bit integer at 2.147 Billion.
+
+=== Derived Stats ===
+* '''{{stat|Damage}}'''
+* '''{{stat|Health}}'''
+* '''{{stat|Mana}}'''
+* '''{{stat|Movement Range}}'''
+* '''{{stat|Crit Chance}}'''
+
+{| class="wikitable"
+|-
+! Stat Name !! Icon !! Explanation
+|-
+! id="Health" | Health<br><small>(HP)</small>
+| [[File:Stat Health.svg|100x100px|center]]<br>[[File:Stat Health Gain.svg|100x100px|center]] 
+|
+Health is a measure of how much damage a unit or object can receive until it is downed or destroyed.
+* When a unit drops to 0% of their maximum Health, they are downed.
+** Enemies with 0 maximum Health will use {{stat|Shield}} instead of Health.
+** Being downed removes the vast majority of [[status effects]] from the unit. <!--Not the place to make a list--> 
+** A downed unit cannot regain Health from {{icon|Heal|healing}} (nor {{icon|Shield}} and {{icon|Holy Shield}}) until revived. 
+* Health is replaced by {{stat|Corpse Health}} on downed units.
+
+* There are certain exceptions to a unit or object being downed:
+** If they have {{stat|Corpse Health|0}}, their body is destroyed upon spawning. <!--(or activate their unique on-death ability)--><!--What did this mean?-->
+*** This applies to many [[Objects]], [[Enemies]] and [[Familiars]], and cats with certain items.
+** Downing a non-allied cat with a hit that reduces them to -100% of their maximum health causes them to not leave a body.
+*** Units that transform or perform an ability upon death (internally known as <code>DeathRattle</code>/<code>DeathRattleRevive</code>/<code>TransformOnDeath</code>/<code>TransformOnDeathImmediately</code>) are immune to this effect, and will always have the same death behavior regardless of overkill damage.
+**** Units possessing multiple states, one of which with a <code>DeathRattle</code>, are immune to this effect even when not on the state who has the <code>DeathRattle</code> (e.g. {{En|Gamete}}).<!-- Only exception: Cultist Zealot -->
+***{{hm}} This has a 1 in 1,000,000 chance of exploding the unit into thousands of giblets.<ref>https://x.com/TylerGlaiel/status/2077818808157491483</ref><ref>https://x.com/TylerGlaiel/status/1788347841502662858</ref>
+** Certain enemies, abilities and items can cause the unit to be vaporized, sometimes bypassing Health entirely.
+** Downing a unit that is {{st|Infested}} causes them to be destroyed (and spawns a unit responsible for the infestation in its place).
+
+* Battles end when all enemy units are downed or destroyed.<br>
+* Downed allied cats will gain a reviving {{Icon|Heal}} equal to their "Post-battle health regen".
+** Post-battle health regen starts at 5 and increases by 1 for every 2 Constitution above 5, ( {{math|5 + \frac{\con - 5}{2} |display=inline}} ), but below 5 is equal to Constitution.
+** Some other effects can also modify it.
+
+* Damage received during [[events]] can never reduce a cat's health below 1.
+* Units gain Health equal to their {{stat|Health Regen}}, at the end of each of their turns.
+|-
+! id="Mana" | Mana
+| [[File:Stat Mana.svg|100x100px|center]]<br>[[File:Stat Mana Gain.svg|100x100px|center]] 
+| 
+Mana is required for using most active abilities, also known as ''spells''.<br>
+It is never necessary for any unit's ''basic attack'', rarely also known as ''basic action''.
+
+* Units that use mana start each battle with mana equal to their "starting mana".
+** Usually this is identical to their {{stat|Cha}}, but certain effects can add to to this stat.
+
+* Units gain Mana equal to their {{stat|Mana Regen}}, at the end of each of their turns.
+** Often this is identical to their {{stat|Int}}, but certain effects modify the amount.
+
+* Downed cats still have and gain Mana; but most of them don't have abilities that can be used while downed, so they skip their turns automatically.
+|-
+! id="Damage" | Damage
+| [[File:Stat Damage.svg|100px|center]] 
+| Damage dealt by a unit.
+
+The damage value shown in enemy tooltips represents the damage dealt by their basic attack, including all stat and damage modifiers. The displayed icon will not reflect whether the attack deals magic damage nor heals.
+
+For player-controlled units, damage value is shown under ability icons rather than in tooltips. The displayed icon will change depending on the type of damage it deals:
+
+* '''{{anchor|Physical Damage}}''': {{icon|Physical Damage|nolabel=y}} {{icon|Physical Magic Damage|nolabel=y}} {{icon|Physical Heal|nolabel=y}} 
+** Affected by {{st|Bruise}}, {{st|Marked}}.
+** Can crit.
+** Can backstab.
+
+* '''{{anchor|Magic Damage}}''': {{icon|Magic Damage|nolabel=y}} {{icon|Physical Magic Damage|nolabel=y}} {{icon|Magic Heal|nolabel=y}}
+** Affected by {{st|Magic Weakness}}, {{st|Magic Damage Up}}.
+<!--Cannot crit by omission-->
+<!--Cannot backstab by omission-->
+** {{icon|Physical Magic Damage}} gains the benefits of both, physical and magic damage.
+
+* '''{{anchor|Heal}}''': {{icon|Heal|nolabel=y}} {{icon|Physical Heal|nolabel=y}} {{icon|Magic Heal|nolabel=y}}
+** Healing can be Physical or Magical, but this is ''not'' shown in its icon.
+*** The combo icons {{icon|Physical Heal|nolabel=y}} {{icon|Magic Heal|nolabel=y}} do not represent their heal type, instead indicating the damage type it deals to enemies.
+*** Physical healing, e.g. {{a|Slop the Pigs}} can crit naturally or with {{st|Marked}}.
+*** Magical healing, e.g. {{a|Melee Attack / Heal}} is increased by both magic status effects.
+** Backstabs and {{st|Bruise}} do not increase healing.
+** Decreased by 1 while affected by {{st|Poison}} and {{st|Heat Wave}}.
+** {{Element|Holy}}-element healing on an {{type|Undead}} unit instead damages it for an equal amount, with the same damage type.
+
+* '''Misc. Damage''': 
+** {{st|Trample}}, {{icon|Knockback Damage|link=y}} are increased by Bruise, but cannot crit randomly or with Marked.
+** Weapons, Trinkets and consumables which deal self-damage or heal usually crit with Magic Weakness but aren't increased by magic damage increases. <!--Razor blade-->
+** {{st|Thorns}}, Damage-over-time debuffs and [[tile]] damage isn't physical or magical.
+<!--Thorns and Kinetic Spikes act similarly to environmental damage (not from a character), e.g. can't be blocked by Adrenaline. -->
+
+|-
+! id="Movement Range" | Movement Range
+| [[File:Stat Movement Range.svg|100x100px|center]] 
+| 
+Range in tiles that a unit can move. Typically equal to a unit's speed, with a minimum of 1.
+* Formula: {{math|max[1, base\_movement + trunc(\frac{\spd -5}{2})] + Bonus Movement}}.
+** For every 2 {{stat|Speed}} away from 5, gain / lose 1 movement range.
+** <code>base_movement</code> for cats is 4.
+* Movement range can be modified with abilities and effects like {{a|One With the Wind}} and {{we|Low Gravity}}.
+* Many enemies have set Movement range.
+* Can be shown when right clicking on enemies or when clicking the move action on cats.
+|-
+! id="Initiative" | Initiative<br><small>a.k.a.</small><br>Turn Order
+| id="Turn Order" | <small>No Icon</small>
+| Equal to twice the {{stat|Speed}} in most cases. Determines turn order in [[Battle]].
+* Many enemies have set initiative to guarantee they'll go at the beginning or the end of the round.
+* Exact formula: <code>Initiative = base_initiative + {{math|2\times\spd}} </code>
+
+|-
+! id="Crit Chance" | <center>Crit Chance
+| <small>No Icon</small>
+| Determines the odds that an attack will inflict [[Critical Hit|critical]] damage.
+
+Crit chance derived from items, passives & disorder will always appear as a status effect.
+
+Certain attacks have a innate crit chance, in which case it is added additively to the units crit chance, instead of being a separate roll. <!--Ie 50% crit chance + 50% crit attack = 100%-->
+
+Critical strike chance is calculated as follows:<br>
+<code>{{math|max[0, base\_crit\_chance + 2\times\lck] + }}{{st|Crit Chance Up}}</code><br>
+: Negative luck will not reduce a cat's crit chance below 0% for other calculations.
+: Only Player cats <small>(or derived from Player Cats)</small>, {{en|Druid's Crow}}, {{mb|Arthur}} & {{mb|Trampy}} can randomly crit.
+: <small><code>base_crit_chance</code> is 0 for units that are allowed to randomly crit and -999 for others.</small>
+|- id="Health Regen" 
+! <center>Health Regen
+| [[File:Stat Health Regen.svg|100x100px|center]] 
+| The amount of {{stat|Health}} gained at the end of each turn.
+
+Mainly used by different forms of {{st|Health Regen}} and {{tile|Flower}}.
+|- id="Mana Regen" 
+! <center>Mana Regen
+| [[File:Stat Mana Regen.svg|100x100px|center]] 
+| The amount of {{stat|Mana}} gained at the end of each turn.
+
+The combination of:
+: {{math|max(\int Intelligence, 0)}}
+: Mana regen increasing effects, such as items, passives and tiles.
+|-
+|}
+Derived stats use a 32-bit integer for values and can reach integer overflow unlike base stats due to their appropriate multipliers, such as vitality or charisma. In that case, max HP or max mana will be 1 or 0.
+
+=== Others ===
+{| class="wikitable"
+|-
+! Stat Name!! Icon !! Explanation
+|-
+! id="Shield" | Shield 
+| [[File:Stat Shield.svg|100x100px|center]]<br>[[File:Stat Shield Gain.svg|100x100px|center]]
+| '''Shield''' functions as temporary {{stat|Health}} attached to the front of one's "health bar". Unused Shield goes away at the end of each battle.
+
+Most damage affects Shield before Health, allowing it to block damage that would otherwise transition between fights.<br>
+Notable exceptions are:
+* {{st|Bleed}}
+* {{st|Poison}}
+
+Any passive effect that provides Shield does so at the start of each battle.
+|-
+! id="Holy Shield" | Holy Shield
+| [[File:Stat Holy Shield.svg|100x100px|center]]<br>[[File:Stat Holy Shield Gain.svg|100x100px|center]]
+| '''Holy Shield''' functions as protection against hits, blocking full instances of damage. Unused Holy Shields go away at the end of each battle. 
+
+Attacks that bypass Shield also bypass Holy Shield.
+
+Any passive effect that provides Holy Shield does so at the start of each battle.
+|-
+! id="Corpse Health" | Corpse Health<br><small>a.k.a.</small><br>Corpse HP
+| [[File:Stat Corpse Health.svg|100x100px|center]]
+|
+'''Corpse Health''' is the amount of hits a downed unit takes before their body is destroyed and killed ''permanently''.
+
+Each instance of added {{icon|Heal|healing}}, {{icon|Shield}} or {{icon|Holy Shield}} increases Corpse Health by 1, regardless of amount of healing.
+
+Allied cats have a base value of 3, while enemies can range from 0 to 5.
+
+If a unit's Corpse Health is reduced to 0, their body will be destroyed.
+
+* Corpse Health cannot be decreased until the unit's death animation is over.
+** Cats' death animation are considered to last until the end of the action which downed them.
+
+Non-Player units will not leave a corpse, or play their death animation, if dealing damage equal to or higher than their current health + max health.
+<!--30 damage against 15 hp tomtom, he explodes.-->
+
+* Cats who innately have 100+ Corpse Health, can take infinite hits while downed, and revive from '''any''' healing.
+* Units who have <= 0 Corpse Health, do not leave a body.
+** They do, however, still have a death animation, and are still considered as having a corpse for as long as the animation is still playing.
+|-
+! id="Level Up Reroll" | Level Up Reroll
+| [[File:UI Level Up Reroll Icon.svg|100x100px|center]]
+|  
+'''Level Up Rerolls''' allow a cat to reroll its level up options, regardless of Stats, Passives or Active abilities.
+|-
+|}
+
+Units still require {{stat|Health}} (at least more than 0% of their max HP) to avoid death or being downed. This is relevant because {{st|Poison}}, {{st|Bleed}}, {{st|Burn}}, and piercing attacks bypass both types of Shields.
+
+
+==== No Icons ====
+{| class="wikitable"
+|-
+! Stat Name !! Explanation
+|- id="Dodge Chance"
+| <center>Dodge Chance
+| 
+Chance for incoming attacks that deal damage to miss.<br>
+
+{{st|Dodge Chance}}, the status effect represent 1 chance to dodge.
+
+Items, passives, mutations that grant "hidden" dodge chance, are independent chances.<br>
+They are not summed up together with each other or the status effect.
+
+4 25% dodge chances result in ~68.4% final dodge chance, not 100%.<br> <!--4x LiquidMetal-->
+But {{st|Dodge Chance|#=100%}} status, will dodge all attacks that can miss. <!--Dead Hummingbird-->
+|- id="Reach" 
+| <center>Reach
+| 
+Increases the area of effect of melee basic attacks.
+: Attacks that don't pierce do not gain piercing from this.
+|- id="Range" 
+| <center>Range
+| 
+Increases how far away ''some'' of a unit's ranged attacks can be cast.
+|- id="Area" 
+| <center>Area
+| 
+Increases how many tiles are targeted by area-of-effect actions.
+|}
+
+== In-House Stats ==
+Stats that are more prominent or exclusively used in the [[House]] part of the game.
+=== Room Stats ===
+* Stats affected by [[Furniture]], Overcrowding & Dead Bodies.
+{{:Stats/House Stats}}
+
+=== Breeding & Living ===
+The following are primarily important in the [[House]] section of the game.
+
+{| class="wikitable"
+|-
+! colspan="2" | Stat !! Explanation
+|- id=Age
+! colspan="2" | Age
+| Each new in-game Day, all living cats age by 1.
+
+* All [[strays]] encountered start at an age of 2.
+* Cats with an age of 1 are Kittens.
+* Cats above age 2 are young adults and can be used for [[breeding]], [[fighting]] other cats, [[adventures]], and defending against [[House Bosses]].
+* Cats above age 5 can be sent to {{NPC|Tracy}}.
+
+Cats can have their age reverted to 1 by the {{Event|Fountain}}, or triggering {{i|Cat Rib}}, or permanently while having {{d|Eternal Youth}} [[disorder]] (until the disorder is cured).
+* This does not reset their hidden aging progress, meaning they may directly become adults and grow old again sooner than expected.
+
+A low {{icon|Health}} stat causes cats become old sooner, while high {{icon|Health}} increases their average lifespan.
+* Young adults must become adults before they can become [[File:UI Old Icon.svg|24px]] Old. This occurs at a {{icon|Health}}-based age threshold, as early as age 5 ({{icon|Health|≤-568}}) and as late as age 35.<!--Mathematically impossible, but computers are inaccurate-->
+* Adult cats have a further chance of becoming [[File:UI Old Icon.svg|24px]] Old each night, between <code>6%</code> to <code>16%</code>.
+* Cats cannot become old the same night they become an adult.
+* Aging benefits are effectively maximized at 55 {{icon|Health}}.
+
+----
+Aging calculator:<br>
+{{calculator|type=hidden|id=AdultAgeFx    |default=18 |formula=18+(Health* 0.5)}}
+{{calculator|type=hidden|id=AdultAge   |default=18.0118 |formula=15* tanh((AdultAgeFx-20)/15)+20}}
+{{calculator|type=hidden|id=AgingChanceFx |default=0  |formula=Health* -0.005}}
+{{calculator|type=hidden|id=AgingChance|default=1  |formula=0.05* tanh(AgingChanceFx/0.05)}}
+
+{{icon|Health}} {{calculator|type=number|id=Health|default=0|size=8|step=any}}<br>
+
+{{calculator|type=hidden|id=AdultAgeRounded|default=18.0118|formula=round(AdultAge,4)}}
+Adult age threshold: <code>{{calculator|type=plain|id=AdultAgeClamp|default=18.0118|formula=ifgreaterorequal(Health,552,35,iflessorequal(Health,-568,5,min(34.9999,max(5.0001,AdultAgeRounded))))}} ({{calculator|type=plain|id=AdultAgeCeil|default=19|formula=
+   ceil(AdultAgeClamp)
+}})</code>
+<small>{{math|20+15\tanh((\health-4)/30)}}</small>
+
+Chance to become Old: <code>{{calculator|type=plain|id=OldChance|default=11|formula=
+   round((0.11+AgingChance)* 100,4)
+}}%</code>
+<small>{{math|11-5\tanh(\health/10)}}</small>
+
+Chance to die of old age: <code>{{calculator|type=plain|id=OldDeathChance|default=16.5|formula=
+   round((0.165+AgingChance)* 100,4)
+}}%</code>
+<small>{{math|16.5-5\tanh(\health/10)}}</small>
+
+|-id="Kitten" 
+| Kitten
+|
+<div style="text-align: center;">
+<div class="mew-icon" style="display: inline-block; text-align: left;">
+[[File:UI Kitten Icon.svg|40x40px]]
+</div>
+</div>
+| Cats with an Age of 1 are Kittens.
+
+Kittens cannot be used to go on [[adventure]]s or defend against [[House Boss]]es.
+
+Kittens can be sent to {{npc|Tink}}.
+
+Kittens become adults if their age is increased to 2, which usually happens after 1 in-game day.
+
+Kittens have -2 to each stat while they are on adventures, cannot level up, and will not become retired upon returning home.
+|-
+! id="Old" | Old
+|
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+[[File:UI Old Icon.svg]]
+</div>
+</div>
+| An old cat's lifespan varies depending on which room they live in and random chance.
+
+Old cats have a chance to die of old age as an overnight event, which cannot happen on the same night they get old.<br>
+Depending on the room's {{icon|Health}} stat, this chance can be as low as <code>11.5%</code> and as high as <code>21.5%</code>.
+
+Old cats become {{st|Exhaustion|exhausted}} starting at Round 5, instead of Round 10.<br>
+This ''can'' be beneficial due to {{st|Adrenaline}}
+|- id="Starving" id="Hunger" 
+| [[Hunger|Starving]]
+|
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+[[File:UI Hungry Icon.svg|50px]]
+</div>
+</div>
+| When passing the day, each cat will consume 1 unit of food, unless the cat is {{d|Vegan}}, has the {{mut|mouth.-2|noimage=y}} or {{mut|mouth.328}}.
+If the player has less food available than there are cats, some of the cats will start starving. 
+
+Starving cats: 
+* Suffer -1 to all stats
+* Have a chance to cannibalize corpses, eat poop or die if left without food for another night. 
+* Will be more aggressive and have a higher chance of [[Fighting#Hostility|fighting]].
+
+Once fed, stats, chance of death and behavior return to normal.
+|-id="Retired" 
+| Retired
+|
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+<span class="mew-icon">[[File:UI Retired.svg|40x40px]]</span>
+
+[[File:UI Super Retired.svg|40x40px]]
+</div>
+</div>
+| Cats become Retired upon finishing an [[adventure]], as long as they did not turn into a Kitten during it.<br>
+Retired cats cannot be used to go onto another adventure, and can be sent to {{npc|Frank}}.<br> 
+Depending on the adventure, {{npc|Butch}} will also accept them.<br>
+Retired Cats wear a Crown, with the size depending Chapter and color on Act beaten.<br>
+
+Cats become "Super Retired" upon defeating a [[House Boss]], regardless of if they were "regular" retired.<br>
+Super Retired cats cannot be used for another House Boss or adventure, and gain a red flame effect over their crown.
+If the cat was not Retired before becoming Super Retired, it will wear a small bronze crown (normally gained from beating [[The Alley]]) as a fallback.
+|- id="Gender" id="Sex" 
+|Sex<br><small>a.k.a.</small><br>Gender
+|
+<div style="text-align: center;">
+<div class="mew-icon" style="display: inline-block;">
+[[File:UI Male Icon.svg|40x40px]]<br>Male<br>
+
+[[File:UI Female Icon.svg|40x40px]]<br>Female<br>
+
+[[File:UI Neutral Gender Icon.svg|40x40px]]<br>Neutral
+</div>
+</div>
+| Gender determines which partners a cat wants to [[breed]] with, and whether offspring can be produced.
+
+Any cat can initiate breeding regardless of their gender. In male-female pairings, the male is treated as the initiator when determining the outcome. In other pairings, such as those with {{icon|Neutral Gender}} cats, either one is equally likely to be the initiator.
+
+Male-male and female-female pairings will not produce offspring.
+{{icon|Neutral Gender}} cats can produce offspring with both {{icon|Male}} and {{icon|Female}} cats.
+
+Only 10% of cats are born as {{icon|Neutral Gender}}.
+
+<small>({{icon|Neutral Gender}} is referred to as Neutral in files & has been ''inconsistently'' referred to as Non-Binary & Ditto Gender by the developers)</small>
+|-
+|}
+
+=== Personality ===
+The following determine the outcomes of end-day events, and affect the animations between cats while idling in the [[House]]. <!-- ref: Wookash podcast, 02:05:06 -->
+
+{| class="wikitable"
+|-
+! colspan="2" | Stat !! Explanation
+|-
+! id="Gayness" | [[Breeding#Sexuality|Sexuality]]<br>(Gayness)
+|
+<div style="text-align: center;">
+<div style="display: inline-block;">
+[[File:UI Gay Icon.svg]]<br>Gay<br>
+
+[[File:UI Bi Icon.svg]]<br>Bi
+</div>
+</div>
+| A cat's Gayness is a percentage that affects how [[Breeding#Compatibility|compatible]] it is for breeding/rejecting fighting with other cats based on their genders.
+* {{icon|Neutral Gender}} cats ignore gayness entirely regardless if they're the initiator or target, making them highly compatible with all cats.
+* In general, gayness affects how likely a male or female cat will ''reject'' breeding with a cat of the opposite sex (male or female).
+* Ending a day with multiple cats having same-sex breeding increases the chances of [[Gay Stray]]s appearing.
+
+Besides gay strays, all other cats' sexuality follows a distribution:
+* <code>81.9%</code> are Straight.
+* <code> 7.2%</code> are Bisexual.
+* <code>10.9%</code> are Gay.
+
+[https://en.wikipedia.org/wiki/Pride_flag Pride flags] are used as indicators.
+
+The "Gaydar" (Gayness indicator) is unlocked by getting {{npc|Tink|Mr. Tinkles}} to Favor level 4.
+|-
+! id="Inbredness" | [[Breeding#Inbreeding|Inbredness]]
+|
+<div style="text-align: center;">
+[[File:UI Not Inbred Icon.svg|class="mew-icon"]]<br>Normal<br>
+
+[[File:UI Slightly Inbred Icon.svg]] <br>>10%<br>
+
+[[File:UI Moderately Inbred Icon.svg]] <br>>25%<br>
+
+[[File:UI Highly Inbred Icon.svg]] <br>>50%<br>
+
+[[File:UI Extremely Inbred Icon.svg]] <br>>80%
+</div>
+| When a cat is born, their Inbredness determines if they develop Birth Defects.
+* A cat has to be ''at least'' 5% Inbred to develop [[Birth Defect]]s, which function similar to [[Mutations]] with mostly-negative effects.
+* All cats have a base 2% chance to be born with not-inherited birth defect [[disorder]]s, such as {{D|Autism}}. However, the chance increases linearly up to 32% for cats who are 100% Inbred, at a rate of 0.4% per inbredness.
+<!-- Inbredness indicators are entirely useless since its shown 'after' birth. Parents' indicators are slightly useful as a guide but inconsistent without manual ancestry tracing -->
+
+Inbreeding between relatives compounds on both parents' inbred scores, along with any shared ancestry. 
+
+Strays are never inbred, and always have kittens who are [[File:UI Not Inbred Icon.svg]] not Inbred due to not sharing ancestry with any other cats.
+
+Inbredness indicators are unlocked by getting {{npc|Tink|Mr. Tinkles}} to Favor level 3.<br>
+This comes with a Family Tree option, which displays a cat's five previous generations. This is useful for manually calculating inbreeding, as distant relatives effect to a kitten's inbreeding score decrease exponentially the further the relationship is.
+|-
+! id="Libido" | [[Breeding#Libido|Libido]]
+|
+<div style="text-align: center;">
+[[File:UI High Libido Icon.svg]] <br>>70%<br>
+
+[[File:UI Average Libido Icon.svg]]<br>Normal<br>
+
+[[File:UI Low Libido Icon.svg]] <br><30%
+</div>
+| Libido impacts how likely a cat is to '''accept''' [[breeding]] and '''skip out on''' [[fighting]].
+It scales from 0% to 100%, and acts as a multiplier of '''the other cat's''' {{stat|Charisma}}.<br>
+It's slightly more impactful on straight {{icon|Female|Females}} than on straight {{icon|Male|Males}}, at least with regards to breeding.
+
+Libido indicators are unlocked by getting {{npc|Tink|Mr. Tinkles}} to Favor level 4.
+|-
+! id="Aggression" | [[Fighting#Hostility|Aggression]]
+|
+<div style="text-align: center;">
+[[File:UI Low Aggression Icon.svg]] <br><30%<br>
+
+[[File:UI Average Aggression Icon.svg]]<br>Normal<br>
+
+[[File:UI High Aggression Icon.svg]] <br>>70%
+</div>
+| Aggression impacts the chance for a cat to initiate [[fighting|cat-fights]].
+
+It's not the only factor in if a fight occurs; virtually every stat that encourages breeding will discourage fighting, and vice-versa.<br>
+It has no effect on the ''outcome'' of the fight. Victory depends on {{stat|STR}} and {{stat|LCK}}; survival depends on {{stat|CON}}, though {{stat|STR}} and {{stat|LCK}} also help.
+
+Aggression indicator is unlocked by getting {{npc|Tink|Mr. Tinkles}} to Favor level 6.
+|-
+! colspan="2" | {{Anchor|Relationships}}
+|
+Cats can form one "love" relationship, and one "hate" relationship. Their "love" never changes, but their "hate" can.
+* If a cat is chosen to breed, they will more likely try to breed with the cat they love.
+** When a cat is propositioned, they will be less likely to accept breeding with a cat they ''don't'' love.
+* If a cat is chosen to fight, they will more likely try to fight with the cat they hate.
+** {{icon|Comfort}} over 13 has no extra effect on stopping fights between haters.
+** Cats with rivals are less likely to fight cats who ''aren't'' their rivals, even if those rivals aren't present.
+
+
+Love/hate relationships don't necessarily have to be reciprocated. In fact, a cat may love another cat that hates it.<br>
+They are values that build up through repeated breeding/fighting (or just breeding for love), up to a maximum of 1.
+
+
+Relationship indicators are unlocked by getting {{npc|Tink|Mr. Tinkles}} to Favor level 7.
+|-
+|}
+
+== Injuries ==
+Injuries are permanent stat decreases applied to a cat whenever they are downed or from other unique events such as [[Fighting|Cat Fights]] in the [[House]].  Some effects can also heal injuries, provide immunity to some or all injuries, force all injuries to convert to a specific type, or trigger unique bonuses based on possessed injuries.
+
+At the end of each day, the chance to cure injuries (if any) is equal to the room's total {{HouseStat|Health}}%.
+
+Injuries also have a visual effect on the cat, corresponing with the injury (i.e broken paw will add a bandage around the cat's leg).
+
+=== Basic Injuries ===
+These injuries are applied by any event that chooses a "random" injury, such as death, but can also be chosen non-randomly from certain events.
+{| class="wikitable"
+|-
+! Icon !! Name !! Stats !! Notes
+|-
+| [[File:UI Broken Paw Icon.svg|center]]
+| id="Broken Paw" | Broken Paw
+|{{Stat|STR|-1}} 
+| Inflicted by {{a|Paw Breaker}}.
+|-
+| [[File:UI Torn Tendon Icon.svg|center]]
+| id="Torn Tendon" | Torn Tendon
+| {{Stat|DEX|-1}} 
+| 
+|-
+| [[File:UI Broken Rib Icon.svg|center]]
+| id="Broken Rib" | Broken Rib
+| {{Stat|CON|-1}} 
+| 
+|-
+| [[File:UI Concussion Icon.svg|center]]
+| id="Concussion" |Concussion
+| {{Stat|INT|-1}} 
+| Replaces all injuries on cats with the {{p|Thick Skull}} passive.<br>Inflicted by {{b|Lord Bunga}}.<br>
+|-
+| [[File:UI Disfigured Icon.svg|center]]
+| id="Disfigured" | Disfigured
+| {{Stat|CHA|-1}} 
+| Replaces all injuries on cats with the {{p|Mad Visage}} passive.<br>
+|-
+| [[File:UI Broken Leg Icon.svg|center]]
+| id="Broken Leg" | Broken Leg
+| {{Stat|SPD|-1}} 
+|  Replaces all injuries on cats with the {{p|My Leg!}} passive.<br>
+|-
+| [[File:UI Jinxed Icon.svg|center]]
+| id="Jinxed" | Jinxed
+| {{Stat|LCK|-1}} 
+| Replaces all injuries on cats with the {{p|Eternal Health}} passive.<br>
+|}
+* Cats with multiple of the above <code>ForceInjury</code>-type passives will instead gain a random one of the forced injuries.
+
+=== Special Injuries ===
+These injuries can only be obtained from specific events, and not as a "random" injury.
+{| class="wikitable"
+|-
+! Icon!!Name !! Stats !! Notes
+|-
+| [[File:UI Immolated Icon.svg|center]]
+| id="Immolated" | Immolated
+| 
+{{Stat|CHA|-1}}
+{{Stat|LCK|-1}}
+| Replaces injury when downed by {{st|Burn}} damage.
+|-
+| [[File:UI Exsanguinated Icon.svg|center]]
+| id="Exsanguinated" | Exsanguinated
+| 
+{{Stat|STR|-1}}
+{{Stat|DEX|-1}}
+| Replaces injury when downed by {{st|Bleed}} damage.
+|-
+| [[File:UI Poisoned Icon.svg|center]]
+| id="Poisoned" | Poisoned
+| 
+{{Stat|CON|-1}}
+{{Stat|INT|-1}}
+| Replaces injury when downed by {{st|Poison}} damage.
+|-
+| [[File:UI Cursed Icon.svg|center]]
+| id="Cursed (Injury)" | Cursed
+| {{Stat|LCK|-2}} 
+| Sometimes inflicted by certain events.
+|-
+| [[File:UI Radiated Icon.svg|center]]
+| id="Radiated" | Radiated
+| {{Stat|CON|-1}}
+| Sometimes inflicted by the {{Event|Elephant's Foot}}.
+|-
+|}
+<!--
+* Fade appears like a injury on certain shade copies. This is just a purely cosmetic effect.
+
+
+
+; Unimplemented Injuries
+These injuries are referred to as "todo" injuries in 1 data comment in 1 event, but do not actually exist as distinct injuries.  
+{| class="wikitable"
+|-
+! Name !! Stats !! Notes
+|-
+| '''Cracked Tooth''' || -1 melee damage || Instead just gives {{Stat|STR|-1}}, but not as the "Broken Paw" injury
+|-
+| '''Broken Jaw''' || -1 damage <br> Can't eat food || Instead just gives the "Disfigured" injury
+|}
+-->
+
+== Notes ==
+* Dodge Chance internally is made up multiple different values:
+** <code>DodgeChance</code> primarily from passive effects.
+** <code>ArmorDodgeChance</code> primarily from items.
+*** These 2 values don't appear to behave differently from each other.
+** <code>DodgeChance_Status</code> the {{st|Dodge Chance}} status effect.
+*** {{p|Protect the Weak}} / {{a|Guardian Angel}}. Show up and stacks with the status, but are actually independent rolls, due to being their own thing in code.
+**** <code>LowHealthAllyDodgeChanceAura</code> / <code>AlphaDodgeChance</code>
+
+== References ==
+{{Reflist}}
+
+[[Category:Stats]][[Category:Mechanics]]

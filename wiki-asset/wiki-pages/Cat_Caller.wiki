@@ -1,0 +1,79 @@
+{{Catgen}}
+{{Infobox/Enemy
+| ID = CatCaller
+| Size = 1x1
+| Location = The Alley, The Sewers
+| Description = Slows units.<br>Counterattacks when hit.
+| Health   = 7
+| Damage   = 4
+| Movement = 4
+| Luck     = 5
+| Types = Cat
+}}
+
+'''Cat Caller''' is a {{type|Cat}} enemy.
+
+== Behavior ==
+Melee attacker that keeps distance and casts Cat Call. Counter attacks melee attackers. If there are no damage-dealing allies left, it will run.
+
+=== Abilities ===
+; Basic attack - {{a|Melee Attack}}
+: Deals {{icon|Physical Damage}}, scales with {{stat|STR}}.
+
+; Cat Call
+: Inflicts {{st|Slow|#=2}} on a unit up to 6 tiles away.
+
+=== Tips ===
+* Cat Caller should usually be a low priority target, as it does not deal damage and the player can work around the {{st|Slow}} debuff without any long-term consequences, unlike enemies that deal damage.
+** Additionally, they will run away once other enemies are killed.
+* Cat Callers usually spawn alone or in pairs, at the edges of the map. Prioritizing movement spells can help reach them even with the slows.
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Cat Caller_Icon.svg|Turn Order Icon
+ENEMY_Cat Caller_Idle.gif|Idle
+ENEMY_Cat Caller_Attack.gif|Attack
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Cat Caller_Icon_Champion.svg|Turn Order Icon
+ENEMY_Cat Caller_Idle_Champion.gif|Idle
+ENEMY_Cat Caller_Attack_Champion.gif|Attack
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Catcaller_level_editor.png|Level Editor Sprite
+</gallery>
+</tabber>
+
+== Trivia ==
+* Its design seems to be similar to the concept of a human cat caller, that is, someone who makes inappropriate comments about others, often sexual in nature.
+* [[Cat Caller]] look and behave similar to [[Siren]].
+* They use a female4 [[voice]] for cats, voiced by Lisa Kuras.
+
+== Other languages ==
+{{Other languages
+| en = Cat Caller
+| es = Llamagatos
+| fr = Coquette
+| de = Katzenjammerer
+| it = Adesgattrice
+| pt-br = Cantado
+| ru = Приставала
+| ko = 캣 콜러
+| ja = ヤジール
+| zh-cn = 叫猫
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Cat type units]]
+[[Category:Brain PatternBrain]]
+[[Category:Decision weight default]]
+[[Category:Movement keep far distance]][[Category:Units using Catgen]]
+
+[[es:Llamagatos]]

@@ -1,0 +1,600 @@
+{{WIP|
+* Individual enemy pages need:
+** Body Text: Behaviour, Trivia
+** Images: Animations, Cat sprites from catgen 
+}}
+[[File:UI Enemy Icon.svg|thumb|150px|Enemy Icon]]
+'''Enemies''' are hostile units found throughout the many [[battle|battles]] that make up the majority of ''Mewgenics' ''gameplay. Excluding [[Mini-Bosses]] and [[Bosses]], enemies are the main threat to the player's party during [[adventures]].
+
+Every [[Chapter]] has a unique "pool" of enemies that can only be encountered within said chapter (e.g. {{en|Peashy}} is usually only found in the {{Chapter|Desert}}), alongside a handful of enemies that can be found anywhere.
+
+The hard path of each Chapter contains 'hard' battle nodes, which will have {{icon|Champion|link=y}} enemies in them. These are stronger versions of each enemy, with increased stats and alternate visual designs. Additionally, some Champion enemies may be {{icon|Elite|Elites|link=y}}, champions with special [[Elite Buff|Elite Buffs]] that make them even more challenging opponents. Both Champions and Elites become more common on higher [[difficulty|difficulties]].
+
+;{{anchor|Size}}
+Enemies can come in three distinct sizes that always occupy a square of tiles: 1x1, 2x2 or 3x3.
+* Some of the 1x1 enemies are classified as {{anchor|small enemies}}, which gives them a unique icon in Tactical view and prevents them from attacking units with the {{p|Daunt}} passive. For a full list, see: [[:Category:Small Enemies]].
+* 2x2 and 3x3 enemies are considered {{anchor|large enemies}}.
+** Large enemies can't be {{st|Trample|trampled}} and {{a|Trip}} has a lower chance of working against them.
+
+{{TOC limit|3}}
+
+== Summons ==
+{{Main|Familiars}}
+Can be spawned through an [[ability]], [[item]], or [[event]].  For a complete list, see [[Familiars]].
+<gallery mode="nolines" widths="80" heights="80" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+<!--Universals-->
+File:ENEMY_Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+File:ENEMY_Flea.png|link=Flea|'''[[Flea]]'''
+File:ENEMY_Maggot.png|link=Maggot|'''[[Maggot]]'''
+File:ENEMY Rot Fly.png|link=Rot Fly|'''[[Rot Fly]]'''
+
+<!--Items-->
+File:ENEMY Steel Fly.png|link=Steel Fly|'''[[Steel Fly]]'''
+File:ENEMY Tiny Tumor.png|link=Tiny Tumor|'''[[Tiny Tumor]]'''
+
+<!--Collarless-->
+File:ENEMY Bounty Hunter.png|link=Bounty Hunter (Enemy)|'''[[Bounty Hunter (Enemy)|Bounty Hunter]]'''
+
+<!--Hunter-->
+File:ENEMY_Pooter.png|link=Pooter|'''[[Pooter]]'''
+File:ENEMY_Tom_Tom.svg|link=Tom Tom|'''[[Tom Tom]]'''
+
+<!--Tank-->
+File:ENEMY Pet Boulder.png|link=Pet Boulder|'''[[Pet Boulder]]'''
+File:ENEMY Pet Rock.png|link=Pet Rock (Summon)|'''[[Pet Rock (Summon)|Pet Rock]]'''
+
+<!--Necro-->
+File:ENEMY Leech (Familiar).svg|link=Leech (Familiar)|'''[[Leech (Familiar)|Leech]]'''<!--
+File:ENEMY Beefy Leech.svg|link=Beefy Leech|'''[[Beefy Leech]]'''
+File:ENEMY Flesh Golem.png|link=Flesh Golem (Familiar)|'''[[Flesh Golem (Familiar)|Flesh Golem]]'''
+File:ENEMY Demon_Kitten.png|link=Demon Kitten|'''[[Demon Kitten]]'''
+File:ENEMY Zombie Kitten.png|link=Zombie Kitten|'''[[Zombie Kitten]]'''
+
+
+<!--Druid-->
+File:ENEMY Bear.png|link=Bear|'''[[Bear]]'''
+File:ENEMY Caterpillar.png|link=Caterpillar|'''[[Caterpillar]]'''
+File:ENEMY Druid's Crow.svg|link=Druid's Crow|'''[[Druid's Crow]]'''
+File:ENEMY Frog.png|link=Frog|'''[[Frog]]'''
+File:ENEMY Moth.png|link=Moth|'''[[Moth]]'''
+File:ENEMY Snake.png|link=Snake|'''[[Snake]]'''
+File:ENEMY Squirrel.png|link=Squirrel|'''[[Squirrel]]'''
+File:ENEMY_Turtle.png|link=Turtle|'''[[Turtle]]'''
+
+<!--Tinkerer-->
+File:ENEMY_Bombchu (Familiar).png|link=Bombchu (Familiar)|'''[[Bombchu (Familiar)|Bombchu]]'''
+File:ENEMY_Mech Suit (Familiar).png|link=Mech Suit (Familiar)|'''[[Mech Suit (Familiar)|Mech Suit]]'''
+File:ENEMY_Catbot (Familiar).png|link=Catbot (Familiar)|'''[[Catbot (Familiar)|Catbot]]'''
+File:ENEMY_Turret.png|link=Turret|'''[[Turret]]'''
+File:ENEMY Love Bot.png|link=Nurse Bot (Familiar)|'''[[Nurse Bot (Familiar)|Nurse Bot]]'''
+File:OBJECT Rubber Fist Bot.png|link=Rubber Fist Bot |'''[[Rubber Fist Bot]]'''
+File:ENEMY_Robo-Vac (Familiar).png|link=Robo-Vac (Familiar)|'''[[Robo-Vac (Familiar)|Robo-Vac]]'''
+
+</gallery>
+
+== Events ==
+Enemies unique events [[events]] & [[weathers]]. 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Event Bounty Hunter.png|link=Bounty Hunter (Event Enemy)|'''[[Bounty Hunter (Event Enemy)|Bounty Hunter]]'''
+ENEMY Reaper.png|link=Death!|'''[[Death!]]'''
+ENEMY Twister.png|link=Twister|'''[[Twister]]'''
+</gallery>
+
+== All ==
+Enemies that spawn in all chapters naturally.
+
+=== Bonus Birds === 
+Bonus Birds come in 3 sizes and 4 rarities.
+
+* Small birds run away after 1 turn.
+* Medium birds run away after 2 turns.
+* Large birds run away after 3 turns.
+
+All birds try to counterattack and relocate after being hit.
+
+When downed, Bonus Birds grant an {{St|All Stats Up}} to the unit that dealt the killing blow. If downed by the player, Bonus Birds drop a specific [[item]] or items from the chapter item pool. A dead Bonus Bird can be resurrected and downed again for repeated stat bonuses, but will only drop an item the first time it is downed.
+
+Note that which entity earns the stat bonus when a bird is downed can be unintuitive, especially in situations involving knockback damage, thorns, and damage over time.
+
+{| class="wikitable" style="text-align: center;" 
+! Size / Rarity
+! Common <br> (70%)
+! Uncommon <br> (23%)
+! Rare <br> (7%)
+! Ultra Rare <br> (0.023%)
+|-
+! scope="row" | Small
+| style="vertical-align: bottom;" |
+[[File:ENEMY Black Bird.png|100px|link=Black Bird|center]]
+'''[[Black Bird]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY Dove.png|100px|link=Dove|center]]
+'''[[Dove]]'''
+| style="vertical-align: bottom;" |
+
+[[File:ENEMY Hummingbird.png|100px|link=Hummingbird|center]]
+'''[[Hummingbird]]'''
+| style="vertical-align: bottom;" |
+
+[[File:ENEMY Cherub.png|100px|link=Cherub|center]]
+'''[[Cherub]]'''
+|-
+! scope="row" | Medium
+| style="vertical-align: bottom;" |
+[[File:ENEMY Pigeon.png|100px|link=Pigeon|center]]
+'''[[Pigeon]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY Seagull.png|100px|link=Seagull|center]]
+'''[[Seagull]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY Raven.png|100px|link=Raven|center]]
+'''[[Raven]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY MUTANT.png|100px|link=Mutant|center]]
+'''[[Mutant]]'''
+|-
+! scope="row" | Large
+| style="vertical-align: bottom;" |
+[[File:ENEMY Chicken.png|100px|link=Chicken|center]]
+'''[[Chicken]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY Turkey.png|100px|link=Turkey|center]]
+'''[[Turkey]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY Eagle.png|100px|link=Eagle|center]]
+'''[[Eagle]]'''
+| style="vertical-align: bottom;" |
+[[File:ENEMY_Harpy.png|100px|link=Harpy|center]]
+'''[[Harpy]]'''
+|}
+
+== Act 1 ==
+=== Chapter 1 ===
+==== {{ch|Alley}} ====
+<section begin="Enemies_Alley" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Cat Caller.png|link=Cat Caller|'''[[Cat Caller]]'''
+ENEMY Flea.png|link=Flea|'''[[Flea]]'''
+ENEMY Fly.png|link=Fly|'''[[Fly]]'''
+ENEMY Kitten.png|link=Kitten|'''[[Kitten]]'''
+ENEMY Leaper.png|link=Leaper|'''[[Leaper]]'''
+ENEMY Lil Rat.png|link=Lil' Rat|'''[[Lil' Rat]]'''
+ENEMY Lumpy.png|link=Lumpy|'''[[Lumpy]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Mangey.png|link=Mangy|'''[[Mangy]]'''
+ENEMY Pinky.png|link=Pinky|'''[[Pinky]]'''
+ENEMY Pooter.png|link=Pooter|'''[[Pooter]]'''
+ENEMY Tom Tom.svg|link=Tom Tom|'''[[Tom Tom]]'''
+ENEMY Water Kitten.png|link=Water Kitten|'''[[Water Kitten]]'''
+</gallery>
+<section end="Enemies_Alley" />
+
+
+=== Chapter 2 ===
+==== [[Sewers]] ====
+<section begin="Enemies_Sewers" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Baby Shark.png|link=Baby Shark|'''[[Baby Shark]]'''
+ENEMY Boomer.png|link=Boomer|'''[[Boomer]]'''
+ENEMY Cat Caller.png|link=Cat Caller|'''[[Cat Caller]]'''
+ENEMY Daddy Shark.png|link=Daddy Shark|'''[[Daddy Shark]]'''
+ENEMY Dip.png|link=Dip|'''[[Dip]]'''
+ENEMY Fetus.png|link=Fetus|'''[[Fetus]]'''
+ENEMY Fetus Gusher.png|link=Fetus Gusher|'''[[Fetus Gusher]]'''
+ENEMY Floater.png|link=Floater|'''[[Floater]]'''
+ENEMY Gassy.png|link=Gassy (Enemy)|'''[[Gassy_(Enemy)|Gassy]]'''
+ENEMY Kitten.png|link=Kitten|'''[[Kitten]]'''
+ENEMY Pile.png|link=Pile|'''[[Pile]]'''
+ENEMY Pinky.png|link=Pinky|'''[[Pinky]]'''
+ENEMY Sharky.png|link=Sharky|'''[[Sharky]]'''
+ENEMY Water Kitten.png|link=Water Kitten|'''[[Water Kitten]]'''
+ENEMY Water Leech.png|link=Water Leech|'''[[Water Leech]]'''
+
+</gallery>
+<section end="Enemies_Sewers" />
+
+==== [[Junkyard]] ====
+<section begin="Enemies_Junkyard" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Chum Bag.png|link=Chum Bag|'''[[Chum Bag]]'''
+ENEMY Chummy.png|link=Chummy|'''[[Chummy]]'''
+ENEMY Fly.png|link=Fly|'''[[Fly]]'''
+ENEMY Glass Spitter.png|link=Glass Spitter|'''[[Glass Spitter]]'''
+ENEMY Host.png|link=Host (enemy)|'''[[Host (enemy)|Host]]'''
+ENEMY Hyde.png|link=Hyde|'''[[Hyde]]'''
+ENEMY Jekyll.png|link=Jekyll|'''[[Jekyll]]'''
+ENEMY Kitten.png|link=Kitten|'''[[Kitten]]'''
+ENEMY Lumpy.png|link=Lumpy|'''[[Lumpy]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Popeye.png|link=Popeye|'''[[Popeye]]'''
+ENEMY Siren.png|link=Siren|'''[[Siren]]'''
+ENEMY Spiked Cat.png|link=Spiked Cat|'''[[Spiked Cat]]'''
+</gallery>
+<section end="Enemies_Junkyard" />
+
+
+=== Chapter 3 ===
+==== [[Caves]] ====
+<section begin="Enemies_Caves" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Albino Tom Tom.png|link=Albino Tom Tom|'''[[Albino Tom Tom]]'''
+ENEMY Bat.png|link=Bat|'''[[Bat]]'''
+ENEMY Brain Drain.png|link=Brain Drain|'''[[Brain Drain]]'''
+ENEMY Fetus.png|link=Fetus|'''[[Fetus]]'''
+ENEMY Korbee.png|link=Korbee|'''[[Korbee]]'''
+ENEMY Mega Fetus.png|link=Mega Fetus|'''[[Mega Fetus]]'''
+ENEMY Skull Ooze.png|link=Skull Ooze|'''[[Skull Ooze]]'''
+ENEMY Spider Cat.png|link=Spider Cat|'''[[Spider Cat]]'''
+ENEMY Spider Kitten.png|link=Spider Kitten|'''[[Spider Kitten]]'''
+ENEMY Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+ENEMY Ten Tickles.png|link=Ten Tickles|'''[[Ten Tickles]]'''
+ENEMY Toadie.png|link=Toadie|'''[[Toadie]]'''
+</gallery>
+<section end="Enemies_Caves" />
+
+==== [[Boneyard]] ====
+<section begin="Enemies_Boneyard" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Butt Zombie.png|link=Butt Zombie|'''[[Butt Zombie]]'''
+ENEMY Flea.png|link=Flea|'''[[Flea]]'''
+ENEMY Fly.png|link=Fly|'''[[Fly]]'''
+ENEMY Grave Worm.png|link=Grave Worm|'''[[Grave Worm]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Reaper.png|link=Reaper|'''[[Reaper]]'''
+ENEMY Robes.png|link=Robes|'''[[Robes]]'''
+ENEMY Scary.png|link=Scary|'''[[Scary]]'''
+ENEMY Shambler.png|link=Shambler|'''[[Shambler]]'''
+ENEMY Skeleton Cat.png|link=Skeleton Cat|'''[[Skeleton Cat]]'''
+ENEMY Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+ENEMY Spookie.png|link=Spookie|'''[[Spookie]]'''
+ENEMY Tall Skeleton Cat.png|link=Tall Skeleton Cat|'''[[Tall Skeleton Cat]]'''
+ENEMY Tatters.png|link=Tatters|'''[[Tatters]]'''
+ENEMY Werecat.png|link=Werecat|'''[[Werecat]]'''
+ENEMY Wisp.png|link=Wisp|'''[[Wisp]]'''
+ENEMY Zombie.png|link=Zombie Cat|'''[[Zombie Cat]]'''
+</gallery>
+<section end="Enemies_Boneyard" />
+
+=== Chapter 4 ===
+==== [[Throbbing Domain]] ====
+<section begin="Enemies_Throbbing_Domain" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Burfer Maggot.png|link=Burfer Maggot|'''[[Burfer Maggot]]'''
+ENEMY Chargey Maggot.png|link=Chargey Maggot|'''[[Chargey Maggot]]'''
+ENEMY Clot.png|link=Clot|'''[[Clot]]'''
+ENEMY Diggy Maggot.png|link=Diggy Maggot|'''[[Diggy Maggot]]'''
+ENEMY Flesh Lad.png|link=Flesh Lad|'''[[Flesh Lad]]'''
+ENEMY Fleshy Mind.png|link=Fleshy Mind|'''[[Fleshy Mind]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Meat Slime.png|link=Meat Slime|'''[[Meat Slime]]'''
+ENEMY Skinned.png|link=Skinned|'''[[Skinned]]'''
+ENEMY Stem Cat.png|link=Stem Cat|'''[[Stem Cat]]'''
+ENEMY Throbbing Servant.png|link=Throbbing Servant|'''[[Throbbing Servant]]'''
+ENEMY Throbbing Turret.png|link=Throbbing Turret|'''[[Throbbing Turret]]'''
+</gallery>
+<section end="Enemies_Throbbing_Domain" /> 
+
+
+== Act 2 ==
+=== Chapter 1 ===
+==== [[Desert]] ====
+<section begin="Enemies_Desert" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Baby Death Worm.png|link=Baby Deathworm|'''[[Baby Deathworm]]'''
+ENEMY Bone Worm.png|link=Bone Worm|'''[[Bone Worm]]'''
+ENEMY Bounty Hunter.png|link=Bounty Hunter (Enemy)|'''[[Bounty Hunter (Enemy)|Bounty Hunter]]'''
+ENEMY Burfer Maggot.png|link=Burfer Maggot|'''[[Burfer Maggot]]'''
+ENEMY Carcass.png|link=Carcass|'''[[Carcass]]'''
+ENEMY Chargey Maggot.png|link=Chargey Maggot|'''[[Chargey Maggot]]'''
+ENEMY Death Worm.png|link=Death Worm|'''[[Death Worm]]'''
+ENEMY Fly Swarm.png|link=Fly Swarm|'''[[Fly Swarm]]'''
+ENEMY Horny Cat.png|link=Horny Cat|'''[[Horny Cat]]'''
+ENEMY Mummified Mangy.png|link=Mummified Mangy|'''[[Mummified Mangy]]'''
+ENEMY Peashy.png|link=Peashy|'''[[Peashy]]'''
+ENEMY Rattlesnek.png|link=Rattlesnek|'''[[Rattlesnek]]'''
+ENEMY Scorpion.png|link=Scorpion Cat|'''[[Scorpion Cat]]'''
+ENEMY Skeleton Shambler.png|link=Skeleton Shambler|'''[[Skeleton Shambler]]'''
+ENEMY Thump.png|link=Thump|'''[[Thump]]'''
+</gallery>
+<section end="Enemies_Desert" />
+===== Recurrent =====
+<section begin="Enemies_Desert_Recurrent" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Flea.png|link=Flea|'''[[Flea]]'''
+ENEMY Fly.png|link=Fly|'''[[Fly]]'''
+ENEMY Host.png|link=Host (enemy)|'''[[Host (enemy)|Host]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Mangy.png|link=Mangy|'''[[Mangy]]'''
+ENEMY Popeye.png|link=Popeye|'''[[Popeye]]'''
+ENEMY Skeleton Cat.png|link=Skeleton Cat|'''[[Skeleton Cat]]'''
+ENEMY Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+ENEMY Tall Skeleton Cat.png|link=Tall Skeleton Cat|'''[[Tall Skeleton Cat]]'''
+ENEMY Tom Tom.svg|link=Tom Tom|'''[[Tom Tom]]'''
+</gallery>
+<section end="Enemies_Desert_Recurrent" />
+
+=== Chapter 2 ===
+==== [[Bunker]] ====
+<section begin="Enemies_Bunker" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Atomic Kitten.png|link=Atomic Kitten|'''[[Atomic Kitten]]'''
+ENEMY Bishop Hat.png|link=Bishop Hat|'''[[Bishop Hat]]'''
+ENEMY Blorb.png|link=Blorb|'''[[Blorb]]'''
+ENEMY Cat Cultist.png|link=Cat Cultist|'''[[Cat Cultist]]'''
+ENEMY Cultist Bishop.png|link=Cultist Bishop|'''[[Cultist Bishop]]'''
+ENEMY Cultist Lackey.png|link=Cultist Lackey|'''[[Cultist Lackey]]'''
+ENEMY Cultist Mutant.png|link=Cultist Mutant|'''[[Cultist Mutant]]'''
+ENEMY Cultist Zealot.png|link=Cultist Zealot|'''[[Cultist Zealot]]'''
+ENEMY Florb.png|link=Florb|'''[[Florb]]'''
+ENEMY Killdozer.png|link=Killdozer|'''[[Killdozer]]'''
+ENEMY Love Bot.png|link=Love Bot|'''[[Love Bot]]'''
+ENEMY Robo-Cat.png|link=Robo-Cat|'''[[Robo-Cat]]'''
+ENEMY Security Bot.png|link=Security Bot|'''[[Security Bot]]'''
+ENEMY Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+</gallery>
+<section end="Enemies_Bunker" />
+
+==== [[The Crater]] ====
+<section begin="Enemies_Crater" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Amoeba.png|link=Amoeba|'''[[Amoeba]]'''
+ENEMY Birthwort.png|link=Birthwort|'''[[Birthwort]]'''
+ENEMY Bramble Baby.png|link=Bramble Baby|'''[[Bramble Baby]]'''
+ENEMY Carnibulb.png|link=Carnibulb|'''[[Carnibulb]]'''
+ENEMY Crater Creeper.png|link=Crater Creeper|'''[[Crater Creeper]]'''
+ENEMY GeoLad.png|link=GeoLad|'''[[GeoLad]]'''
+ENEMY Headless.png|link=Headless|'''[[Headless]]'''
+ENEMY Hemlock.png|link=Hemlock|'''[[Hemlock]]'''
+ENEMY Infested Kitten.png|link=Infested Kitten|'''[[Infested Kitten]]'''
+ENEMY Nettle.png|link=Nettle|'''[[Nettle]]'''
+ENEMY Rock Head.png|link=Rock Head|'''[[Rock Head]]'''
+ENEMY Sprout Icon.svg|link=Sprout|'''[[Sprout]]'''
+ENEMY Tremblo.png|link=Tremblo|'''[[Tremblo]]'''
+</gallery>
+<section end="Enemies_Crater" />
+
+=== Chapter 3 ===
+==== [[The Core]] ====
+<section begin="Enemies_Core" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Belcher.png|link=Belcher|'''[[Belcher]]'''
+ENEMY Brute.png|link=Brute|'''[[Brute]]'''
+ENEMY Chain Demon.png|link=Chain Demon|'''[[Chain Demon]]'''
+ENEMY Cloaked Demon.png|link=Cloaked Demon|'''[[Cloaked Demon]]'''
+ENEMY Core Freak.png|link=Core Freak|'''[[Core Freak]]'''
+ENEMY Poker Demon.png|link=Hot Poker|'''[[Hot Poker]]'''
+ENEMY Mega Tumor.png|link=Mega Tumor|'''[[Mega Tumor]]'''
+ENEMY Tall Tumor.png|link=Tall Tumor|'''[[Tall Tumor]]'''
+ENEMY Tumor Cat.png|link=Tumor Cat|'''[[Tumor Cat]]'''
+ENEMY Tumorhead.png|link=Tumorhead|'''[[Tumorhead]]'''
+ENEMY Whisperer.png|link=Whisperer|'''[[Whisperer]]'''
+</gallery>
+<section end="Enemies_Core" />
+
+==== [[The Moon]] ====
+<section begin="Enemies_Moon" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Astronaut.png|link=Astronaut|'''[[Astronaut]]'''
+ENEMY Green Prober.png|link=B-Prober|'''[[B-Prober]]'''
+ENEMY Big Asteroid.png|link=Big Asteroid|'''[[Big Asteroid]]'''
+ENEMY Grey Alien.png|link=G-Alien|'''[[G-Alien]]'''
+ENEMY Megasaucer.png|link=Megasaucer|'''[[Megasaucer]]'''
+ENEMY Moon Worm.png|link=Moon Worm|'''[[Moon Worm]]'''
+ENEMY Rover.png|link=Rover|'''[[Rover]]'''
+ENEMY Saucie.png|link=Saucie|'''[[Saucie]]'''
+ENEMY Small Asteroid.png|link=Small Asteroid|'''[[Small Asteroid]]'''
+ENEMY Waggle.png|link=Waggle|'''[[Waggle]]'''
+ENEMY Yellow Blaster.png|link=Y-Blaster|'''[[Y-Blaster]]'''
+</gallery>
+<section end="Enemies_Moon" />
+
+
+=== Chapter 4 ===
+==== [[The Rift]] ====
+<section begin="Enemies_Rift" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Butch & Tink.png|link=Butch & Tink|'''[[Butch & Tink]]'''
+ENEMY Chaos Stacy.png|link=Chaos Stacy|'''[[Chaos Stacy]]'''
+ENEMY Dr. Beanies.png|link=Dr. Beanies (Enemy)|'''[[Dr. Beanies (Enemy)|Dr. Beanies]]'''
+ENEMY Frank.png|link=Frank (Enemy)|'''[[Frank (Enemy)|Frank]]'''
+ENEMY Franks Bean.png|link=Frank's Bean|'''[[Frank's Bean]]'''
+ENEMY Jack.png|link=Jack|'''[[Jack]]'''
+ENEMY Tracy.png|link=Tracy (Enemy)|'''[[Tracy (Enemy)|Tracy]]'''
+</gallery>
+<section end="Enemies_Rift" />
+===== Recurrent =====
+<section begin="Enemies_Rift_Recurrent" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Astronaut.png|link=Astronaut|'''[[Astronaut]]'''
+ENEMY Big Asteroid.png|link=Big Asteroid|'''[[Big Asteroid]]'''
+ENEMY Birthwort.png|link=Birthwort|'''[[Birthwort]]'''
+ENEMY Bramble Baby.png|link=Bramble Baby|'''[[Bramble Baby]]'''
+ENEMY Brute.png|link=Brute|'''[[Brute]]'''
+ENEMY Carcass.png|link=Carcass|'''[[Carcass]]'''
+ENEMY Chain Demon.png|link=Chain Demon|'''[[Chain Demon]]'''
+ENEMY Chum Bag.png|link=Chum Bag|'''[[Chum Bag]]'''
+ENEMY Cloaked Demon.png|link=Cloaked Demon|'''[[Cloaked Demon]]'''
+ENEMY Crater Creeper.png|link=Crater Creeper|'''[[Crater Creeper]]'''
+ENEMY Cultist Lackey.png|link=Cultist Lackey|'''[[Cultist Lackey]]'''
+ENEMY Daddy Shark.png|link=Daddy Shark|'''[[Daddy Shark]]'''
+ENEMY Dip.png|link=Dip|'''[[Dip]]'''
+ENEMY Floater.png|link=Floater|'''[[Floater]]'''
+ENEMY Fly.png|link=Fly|'''[[Fly]]'''
+ENEMY Fly Swarm.png|link=Fly Swarm|'''[[Fly Swarm]]'''
+ENEMY GeoLad.png|link=GeoLad|'''[[GeoLad]]'''
+ENEMY Poker Demon.png|link=Hot Poker|'''[[Hot Poker]]'''
+ENEMY Pile.png|link=Pile|'''[[Pile]]'''
+ENEMY Small Asteroid.png|link=Small Asteroid|'''[[Small Asteroid]]'''
+ENEMY Tall Tumor.png|link=Tall Tumor|'''[[Tall Tumor]]'''
+ENEMY Tremblo.png|link=Tremblo|'''[[Tremblo]]'''
+ENEMY Water Leech.png|link=Water Leech|'''[[Water Leech]]'''
+</gallery>
+<section end="Enemies_Rift_Recurrent" />
+
+== Act 3 ==
+=== Chapter 1 ===
+==== [[The Lab]] ====
+<section begin="Enemies_Lab" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Cop Bot.png|link=Cop Bot|'''[[Cop Bot]]'''
+ENEMY Dr. Cat.png|link=Dr. Cat|'''[[Dr. Cat]]'''
+ENEMY Dr. Ditto.png|link=Dr. Ditto|'''[[Dr. Ditto]]'''
+ENEMY Gamete.png|link=Gamete|'''[[Gamete]]'''
+ENEMY Half-Dog.png|link=Half-Dog|'''[[Half-Dog]]'''
+ENEMY Half-Human δ.png|link=Half-Human δ|'''[[Half-Human δ]]'''
+ENEMY Half-Human λ.png|link=Half-Human λ|'''[[Half-Human λ]]'''
+ENEMY Half-Rat.png|link=Half-Rat|'''[[Half-Rat]]'''
+ENEMY Infested (Enemy).png|link=Infested (Enemy)|'''[[Infested (Enemy)|Infested]]'''
+ENEMY Mega Mutant.png|link=Mega Mutant|'''[[Mega Mutant]]'''
+ENEMY Spun Cat.png|link=Spun Cat|'''[[Spun Cat]]'''
+ENEMY Stacy №.png|link=Stacy №|'''[[Stacy №]]'''
+</gallery>
+<section end="Enemies_Lab" />
+===== Recurrent =====
+<section begin="Enemies_Lab_Recurrent" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Albino Tom Tom.png|link=Albino Tom Tom|'''[[Albino Tom Tom]]'''
+ENEMY Boomer.png|link=Boomer|'''[[Boomer]]'''
+ENEMY Cultist Lackey.png|link=Cultist Lackey|'''[[Cultist Lackey]]'''
+ENEMY Cultist Zealot.png|link=Cultist Zealot|'''[[Cultist Zealot]]'''
+ENEMY Kitten.png|link=Kitten|'''[[Kitten]]'''
+ENEMY Leaper.png|link=Leaper|'''[[Leaper]]'''
+ENEMY Lil Rat.png|link=Lil' Rat|'''[[Lil' Rat]]'''
+ENEMY Lumpy.png|link=Lumpy|'''[[Lumpy]]'''
+ENEMY Maggot.png|link=Maggot|'''[[Maggot]]'''
+ENEMY Mangey.png|link=Mangy|'''[[Mangy]]'''
+ENEMY Pinky.png|link=Pinky|'''[[Pinky]]'''
+ENEMY Popeye.png|link=Popeye|'''[[Popeye]]'''
+ENEMY Robo-Cat.png|link=Robo-Cat|'''[[Robo-Cat]]'''
+ENEMY Security Bot.png|link=Security Bot|'''[[Security Bot]]'''
+ENEMY Tom Tom.svg|link=Tom Tom|'''[[Tom Tom]]'''
+</gallery>
+<section end="Enemies_Lab_Recurrent" />
+
+
+=== Chapter 2 ===
+==== [[Ice Age]] ====
+<section begin="Enemies_Ice_Age" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Caveman Baby.png|link=Caveman Baby|'''[[Caveman Baby]]'''
+ENEMY Caveman Chief.png|link=Caveman Chief|'''[[Caveman Chief]]'''
+ENEMY Caveman Man.png|link=Caveman Man|'''[[Caveman Man]]'''
+ENEMY Caveman Woman.png|link=Caveman Woman|'''[[Caveman Woman]]'''
+ENEMY Fuzzer.png|link=Fuzzer|'''[[Fuzzer]]'''
+ENEMY Mammoth Kitten.png|link=Mammoth Kitten|'''[[Mammoth Kitten]]'''
+ENEMY Sabertooth Cat.png|link=Sabertooth Cat|'''[[Sabertooth Cat]]'''
+ENEMY Sabertooth Kitten.png|link=Sabertooth Kitten|'''[[Sabertooth Kitten]]'''
+ENEMY Wereman.png|link=Wereman|'''[[Wereman]]'''
+ENEMY Wooly Mammoth.png|link=Wooly Mammoth|'''[[Wooly Mammoth]]'''
+ENEMY Yeti.png|link=Yeti|'''[[Yeti]]'''
+ENEMY Yeti Cat.png|link=Yeti Cat|'''[[Yeti Cat]]'''
+</gallery>
+<section end="Enemies_Ice_Age" />
+
+==== [[The Future]] ====
+<section begin="Enemies_Future" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Der Fötus.png|link=Der Fötus|'''[[Der Fötus]]'''
+ENEMY Doktorbot.png|link=Doktorbot|'''[[Doktorbot]]'''
+ENEMY Fernsehbot.png|link=Fernsehbot|'''[[Fernsehbot]]'''
+ENEMY Fötusjar.png|link=Fötusjar|'''[[Fötusjar]]'''
+ENEMY Großerbot.png|link=Großerbot|'''[[Großerbot]]'''
+ENEMY Hängenbot.png|link=Hängenbot|'''[[Hängenbot]]'''
+ENEMY Katzebot.png|link=Katzebot|'''[[Katzebot]]'''
+ENEMY Krughead.png|link=Krughead|'''[[Krughead]]'''
+ENEMY Schpidenbot.png|link=Schpidenbot|'''[[Schpidenbot]]'''
+ENEMY Schutzbot.png|link=Schutzbot|'''[[Schutzbot]]'''
+ENEMY Übercat.png|link=Übercat|'''[[Übercat]]'''
+ENEMY Überman.png|link=Überman|'''[[Überman]]'''
+ENEMY Überwoman.png|link=Überwoman|'''[[Überwoman]]'''
+</gallery>
+<section end="Enemies_Future" />
+
+
+=== Chapter 3 ===
+==== [[Jurassic]] ====
+<section begin="Enemies_Jurassic" /> 
+<gallery mode="nolines" widths="110" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Ankylosaurus.png|link=Ankylosaurus|'''[[Ankylosaurus]]'''
+ENEMY Dino Nest.png|link=Dino Nest|'''[[Dino Nest]]'''
+ENEMY Maelestes.png|link=Maelestes|'''[[Maelestes]]'''
+ENEMY Parasaurolophus.png|link=Parasaurolophus|'''[[Parasaurolophus]]'''
+ENEMY Prehistoric Pooter.png|link=Prehistoric Pooter|'''[[Prehistoric Pooter]]'''
+ENEMY Pterodactyl.png|link=Pterodactyl|'''[[Pterodactyl]]'''
+ENEMY Raptor.png|link=Raptor|'''[[Raptor]]'''
+ENEMY Raptor Kitten.png|link=Raptor Kitten|'''[[Raptor Kitten]]'''
+ENEMY Stegosaurus.png|link=Stegosaurus|'''[[Stegosaurus]]'''
+ENEMY_Tar Baby.png|link=Tar Baby|'''[[Tar Baby]]'''
+ENEMY T-Rex.png|link=T-Rex|'''[[T-Rex]]'''
+ENEMY Triceratops.png|link=Triceratops|'''[[Triceratops]]'''
+ENEMY Poop Cat.png|link=Poop Cat| '''[[Poop Cat]]'''
+</gallery>
+<section end="Enemies_Jurassic" />
+
+==== [[The End]] ====
+<section begin="Enemies_End" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Cancer Cat.png|link=Cancer Cat|'''[[Cancer Cat]]'''
+ENEMY Conjoined Husk.png|link=Conjoined Husk|'''[[Conjoined Husk]]'''
+ENEMY Edema.png|link=Edema|'''[[Edema]]'''
+ENEMY Floast.png|link=Floast|'''[[Floast]]'''
+ENEMY Fly Swarm.png|link=Fly Swarm|'''[[Fly Swarm]]'''
+ENEMY Gasper.png|link=Gasper|'''[[Gasper]]'''
+ENEMY Gorger.png|link=Gorger|'''[[Gorger]]'''
+ENEMY Herald.png|link=Herald|'''[[Herald]]'''
+ENEMY Heraldess.png|link=Heraldess|'''[[Heraldess]]'''
+ENEMY Husk.png|link=Husk|'''[[Husk]]'''
+ENEMY Shade Cat.png|link=Shade Cat|'''[[Shade Cat]]'''
+ENEMY Slag.png|link=Slag|'''[[Slag]]'''
+ENEMY Spiderling.png|link=Spiderling|'''[[Spiderling]]'''
+ENEMY The Collective.png|link=The Collective|'''[[The Collective]]'''
+</gallery>
+<section end="Enemies_End" />
+
+
+=== Chapter 4 ===
+==== [[The Infinite]] ====
+<section begin="Enemies_Infinite" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Angelic Cat.png|link=Angelic Cat|'''[[Angelic Cat]]'''
+ENEMY Angelic Kitten.png|link=Angelic Kitten|'''[[Angelic Kitten]]'''
+ENEMY Cherubim.png|link=Cherubim|'''[[Cherubim]]'''
+ENEMY Gatekeeper.png|link=Gatekeeper|'''[[Gatekeeper]]'''
+ENEMY Seraphim.png|link=Seraphim|'''[[Seraphim]]'''
+</gallery>
+<section end="Enemies_Infinite" />
+===== Recurrent =====
+<section begin="Enemies_Infinite_Recurrent" /> 
+<gallery mode="nolines" widths="100" heights="100" perrow="12" style="display:flex;align-items: end;flex-wrap:wrap;">
+ENEMY Bone Worm.png|link=Bone Worm|'''[[Bone Worm]]'''
+ENEMY Chaos Stacy.png|link=Chaos Stacy|'''[[Chaos Stacy]]'''
+ENEMY Reaper.png|link=Reaper|'''[[Reaper]]'''
+ENEMY Skeleton Shambler.png|link=Skeleton Shambler|'''[[Skeleton Shambler]]'''
+ENEMY Spookie.png|link=Spookie|'''[[Spookie]]'''
+ENEMY Stacy №.png|link=Stacy №|'''[[Stacy №]]'''
+ENEMY Tall Skeleton Cat.png|link=Tall Skeleton Cat|'''[[Tall Skeleton Cat]]'''
+</gallery>
+<section end="Enemies_Infinite_Recurrent" />
+
+
+== Gallery ==
+'''Tactical View Icons'''
+<gallery>
+UI Small Enemy Unit Icon.svg|Small Enemy
+UI Small Enemy Unit Dead Icon.svg|Small Enemy (Downed)
+UI Enemy Unit Icon.svg|Enemy
+UI Enemy Unit Dead Icon.svg|Enemy (Downed)
+UI 2x2 Enemy Unit Icon.svg|2x2 Enemy
+UI 2x2 Enemy Unit Dead Icon.svg|2x2 Enemy (Downed)
+UI 3x3 Enemy Unit Icon.svg|3x3 Enemy
+UI 3x3 Enemy Unit Dead Icon.svg|3x3 Enemy (Downed)
+</gallery>
+<gallery>
+UI Small Neutral Unit Icon.svg|Small Neutral unit
+UI Neutral Unit Icon.svg|Neutral unit
+UI 2x2 Neutral Unit Icon.svg|2x2 Neutral unit
+UI 3x3 Neutral Unit Icon.svg|3x3 Neutral unit
+</gallery>
+
+
+[[es:Enemigos]]

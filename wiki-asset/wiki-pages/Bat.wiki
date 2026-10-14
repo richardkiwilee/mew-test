@@ -1,0 +1,91 @@
+{{Enemy
+| ID = Bat
+| Size = 1x1
+| Location = The Caves
+| Description = Its melee flurry inflicts Confusion.<br>50% Dodge Chance.<br>Flying.
+| Health   = 5
+| Damage   = 1x4
+| Champion_Damage   = 2x4
+| Movement = 6
+| Luck = 8
+| Types = Fetus
+}}
+
+The Bat is an [[enemy]] found exclusively in {{chapter|The Caves}}.
+
+== Behavior ==
+The Bat is a weak but agile enemy with permanent {{st|Flying|Flight}}, a {{st|Dodge Chance|#=50%}}, and is notably one of very few enemies to have a non-standard {{stat|Luck}} stat, boasting 8 Luck instead of the usual 5, further improving its ability to dodge attacks.
+
+On its turn, the Bat will move towards a target and use a multi-hitting melee attack, dealing 1 damage 4 times. Each hit has a 57.5% (base 50%, improved by luck) chance to inflict {{st|Confusion}}. 
+
+If a Bat is targeted by an attack, regardless of if it got hit or dodged it, it will immediately retreat from the attacker.
+
+=== Tips ===
+* Inflicting {{st|Marked}} or using an ability that can’t miss bypasses its ability to dodge.
+* {{element|Gravity}} element abilities will {{st|Immobile|Immobilize}} the Bat if they connect, disabling its ability to run away. 
+* [[Edmund]] himself recommends using {{st|Thorns}} and/or having a good {{stat|Luck}} stat.<ref>https://x.com/edmundmcmillen/status/2034018139542065183</ref>
+
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Bat_Icon.svg|Turn Order Icon
+ENEMY_Bat_Idle.gif|Idle
+ENEMY_Bat_Low_Health.gif|Low Health
+ENEMY_Bat_Death.gif|Death
+ENEMY_Bat_Attack.gif|Attack
+ENEMY_Bat_Dodge.gif|Dodge
+
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Bat_Icon_Champion.svg|Turn Order Icon
+ENEMY_Bat_Idle_Champion.gif|Idle
+ENEMY_Bat_Low_Health_Champion.gif|Low Health
+ENEMY_Bat_Death_Champion.gif|Death
+ENEMY_Bat_Attack_Champion.gif|Attack
+ENEMY_Bat_Dodge_Champion.gif|Dodge
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Bat_level_editor.png|Level Editor Sprite
+ENEMY_Bat_Bite.gif|Unused Bite Attack
+ENEMY_Bat_Bite_Champion.gif|Unused Bite Attack (Champion)
+ENEMY_Bat_Single_Attack.gif|Unused Single Attack
+ENEMY_Bat_Single_Attack_Champion.gif|Unused Single Attack (Champion)
+</gallery>
+</tabber>
+
+== Trivia ==
+* According to Edmund, Bats were intentionally made to to be annoying<ref>[https://youtu.be/bxFG2xZvSOM "It's kind of a rule ... in a video game, when you make a bat, it needs to be really fucking annoying"] </ref>.
+** They may be inspired by [[bulba:Zubat|Zubat]] as both are bats without legs or eyes, and inflict confusion.
+* The level editor sprite resembles {{Wikipedia|Batman|Batman’s}} symbol.
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Bat
+| es = Murciélago
+| fr = Chauve-souris
+| de = Fledermaus
+| it = Pipistrello
+| pt-br = Morcego
+| ru = Летучая мышь
+| ko = 박쥐
+| ja = コウモリ
+| zh-cn = 蝙蝠
+}}
+
+{{Navbox Enemy}}
+
+[[es:Murciélago]]
+
+[[Category:Fetus type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight simple]]
+[[Category:Movement keep distance always move]]
+[[Category:Flying units]]

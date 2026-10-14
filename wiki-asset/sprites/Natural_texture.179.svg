@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="150"
+   height="150"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="Natural texture.179.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <clipPath
+     transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)"
+     id="_23397618beb1-582a-43c2-927b-1c7b5fde8b0b">
+    <path
+       d="M -75,-75 H 75 V 75 H -75 V -75"
+       fill="#000000"
+       fill-rule="evenodd"
+       stroke="none"
+       id="path1" />
+  </clipPath>
+  <g
+     clip-path="url(#_23397618beb1-582a-43c2-927b-1c7b5fde8b0b)"
+     id="g3"
+     transform="translate(75,75)">
+    <g
+       transform="matrix(2.1876984,0,0,1.9898224,-122.45,-107.6)"
+       id="g2">
+      <g
+         id="DefineShape_589">
+        <path
+           d="M 0,0 H 112.15 V 108.15 H 0 V 0"
+           fill="#e0e0dd"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path2" />
+      </g>
+    </g>
+  </g>
+  <g
+     clip-path="url(#_23397618beb1-582a-43c2-927b-1c7b5fde8b0b)"
+     id="g5"
+     transform="translate(75,75)">
+    <g
+       id="g4">
+      <g
+         id="DefineShape_2501">
+        <path
+           d="m -10.6,-45.05 q 5.3,0.3 10.3,2.6 4.9,2.25 8.6,6.1 2.75,2.85 5.4,7.25 2.75,4.75 3.7,8.4 1.7,6.7 -0.75,15 -1.7,6 -4.85,10.3 -4.7,6.35 -13,9.8 -8.75,3.6 -18.5,2.35 -9.75,-1.2 -17.35,-6.85 -4.05,-3 -5.75,-6.25 -2.2,-4.05 -2,-10.75 0.2,-7.25 2.35,-13.5 2.4,-6.9 6.85,-11.65 2.4,-2.5 7.8,-6.5 5.5,-4.15 9,-5.35 3.7,-1.3 8.2,-0.95"
+           fill="url(#gradient0)"
+           fill-rule="evenodd"
+           stroke="none"
+           id="path3"
+           style="fill:url(#gradient0)" />
+      </g>
+      <defs
+         id="defs4">
+        <radialGradient
+           cx="0"
+           cy="0"
+           gradientTransform="matrix(0.0431,0,0,0.0431,-12.4,-14.4)"
+           gradientUnits="userSpaceOnUse"
+           id="gradient0"
+           r="819.20001"
+           spreadMethod="pad">
+          <stop
+             offset="0.21568627450980393"
+             stop-color="#b9ae93"
+             id="stop3" />
+          <stop
+             offset="1.0"
+             stop-color="#b9ae93"
+             stop-opacity="0.0"
+             id="stop4" />
+        </radialGradient>
+      </defs>
+    </g>
+  </g>
+</svg>

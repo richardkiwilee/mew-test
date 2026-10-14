@@ -1,0 +1,103 @@
+{{Infobox/Enemy
+| ID = Leaper
+| Size = 1x1
+| Location = The Alley, The Lab
+| Description = Its leap attack damages and knocks back all adjacent units.
+| Health   = 9
+| Damage   = 5
+| Movement = 2
+| Luck     = 5
+| Types = Rat, Blob
+}}
+
+'''Leaper''' is a [[enemy]] found in the {{ch|Alley}} and {{ch|Lab}}. It is a big rat that jumps high into the air and slams down onto its foes.
+
+== Behavior ==
+Attempts to move within a moderate distance of the player's units, performing a leap attack that deals its damage to all ''adjacent'' (cardinal) units and inflicting knockback, sometimes not necessarily in that order<ref>[https://youtu.be/-IDcSlsHStg?si=J_u1ZPux2CAHRBaq&t=637 Druid's Moth - Analyzing ALL Enemies in THE ALLEY]</ref>. They will priorize attacking multiple units if they are standing each order. This attack cannot target a space occupied by a unit, unlike other similar abilities.
+
+=== Tips ===
+* The player should refrain from positioning their units too close to each other, as Leapers will prioritize hitting multiple units at once if they can.
+* Its leap attack counts as contact for effects such as {{st|Thorns}}, {{st|Counter Attack}}, etc.
+==Ways to obtain==
+*Spawned sometimes by {{en|Gamete}} or by destroying pillars in The Lab.
+*{{en|Lil' Rat|Lil' Rats}} have a chance to become Leapers if exposed to radiation.
+*[[Events]]: {{Event|Dead Rat}} (Bad common options with 'Destroy' or 'Loot', Enemy) and {{Event|Mouse nest}} (Good rare option with 'Charm', Ally).
+== Gallery ==
+<tabber>
+Regular=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY_Leaper_Icon.svg|Turn Order Icon
+ENEMY_Leaper_Idle.gif|Idle
+ENEMY_Leaper_Moving.gif|Moving
+ENEMY_Leaper_Hurt.gif|Hurt
+ENEMY_Leaper_Low_Health.gif|Low Health
+ENEMY_Leaper_Death.gif|Death
+ENEMY_Leaper_Attack1.gif|Taking off
+ENEMY_Leaper_Attack2.gif|Jumping up
+ENEMY_Leaper_Attack3.gif|Preparing to jump down
+ENEMY_Leaper_Attack4.gif|Jumping down
+ENEMY_Leaper_Attack5.gif|Landing
+</gallery>
+|-|
+Champion=
+<gallery perrow=6 widths=150 heights=150>
+ENEMY Leaper_Icon_Champion.svg|Turn Order Icon
+ENEMY_Leaper_Idle_Champion.gif|Idle
+ENEMY_Leaper_Moving_Champion.gif|Moving
+ENEMY_Leaper_Hurt_Champion.gif|Hurt
+ENEMY_Leaper_Low_Health_Champion.gif|Low Health
+ENEMY_Leaper_Death_Champion.gif|Death
+ENEMY_Leaper_Attack1_Champion.gif|Taking off
+ENEMY_Leaper_Attack2_Champion.gif|Jumping up
+ENEMY_Leaper_Attack3_Champion.gif|Preparing to jump down
+ENEMY_Leaper_Attack4_Champion.gif|Jumping down
+ENEMY_Leaper_Attack5_Champion.gif|Landing
+</gallery>
+|-|
+Misc.=
+<gallery perrow=6 widths=150px heights=150px>
+Leaper_level_editor.png|Level Editor Sprite
+File:Enemy Leaper PreviousBuild.mp4|Lil' rats and Leapers in a previous build of Mewgenics. Notice how the Leaper crouches before jumping.
+</gallery>
+
+|-|
+Sounds=
+
+{| class="wikitable"
+! Action !! Sound(s) !! Action !! Sound(s)
+|-
+| Moving || <ab preload="none">Fatrat walk 01.wav</ab> <ab preload="none">Fatrat walk 02.wav</ab> <ab preload="none">Fatrat walk 03.wav</ab> <ab preload="none">Fatrat walk 04.wav</ab>||  Jumping and landing || <ab preload="none">Fatrat jump.wav</ab> <ab preload="none">Fatrat land.wav</ab>
+|- 
+| Hurt|| <ab preload="none">Fatrat hit 01.wav</ab> <ab preload="none">Fatrat hit 02.wav</ab> <ab preload="none">Fatrat hit 03.wav</ab> <ab preload="none">Fatrat hit 04.wav</ab>||  Dying || <ab preload="none">Fatrat dying 01.wav</ab> <ab preload="none">Fatrat dying 02.wav</ab> <ab preload="none">Fatrat dying 03.wav</ab>
+|}
+
+</tabber>
+
+== Trivia ==
+* Leapers, along with Lil' Rats, were one of the very first enemies created, appearing in very early footage of development when the team was still experimenting with the game's playstyle.<ref>https://x.com/TylerGlaiel/status/1172215055401644032</ref>
+
+== References ==
+<references/>
+
+== Other languages ==
+{{Other languages
+| en = Leaper
+| es = Saltarino
+| fr = Bondisseur
+| de = Springer
+| it = Salterino
+| pt-br = Saltador
+| ru = Прыгунец
+| ko = 리퍼
+| ja = ジャンパー
+| zh-cn = 跳​跳
+}}
+
+{{Navbox/Enemy}}
+
+[[Category:Rat type units]][[Category:Blob type units]]
+[[Category:Brain GenericBrain]]
+[[Category:Decision weight semi simple]]
+[[Category:Movement keep ranged distance]]
+
+[[es:Saltarino]]

@@ -53,9 +53,13 @@ echo [STEP 3/4] Unit tests...
 "%CMAKE%" --build cpp\build --target test
 if errorlevel 1 goto :fail
 
-echo [STEP 4/4] Deploy GDExtension DLL to godot\bin...
+echo [STEP 4/5] Deploy GDExtension DLL to godot\bin...
 if not exist godot\bin mkdir godot\bin
 copy /Y cpp\build\gdext-build\mew_battle.dll godot\bin\ >nul
+if errorlevel 1 goto :fail
+
+echo [STEP 5/5] Prepare Godot assets (wiki-asset -^> godot\assets)...
+python tools\prepare_godot_assets.py
 if errorlevel 1 goto :fail
 
 echo [OK] build completed (%BUILD_TYPE%).

@@ -1,0 +1,22 @@
+Stats
+Battle
+Speed
+Damage
+Damage Mechanics
+Status Effects
+Abilities
+Items
+Tiles
+Traps
+Knockback
+Range and Area
+Keywords
+Health
+Mana
+Round
+Passive
+Enemies
+Cats
+Classes
+Equipment
+Elements

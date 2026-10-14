@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   ffdec:objectType="frame"
+   height="19.861765"
+   width="18.232143"
+   version="1.1"
+   id="svg2"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:ffdec="https://www.free-decompiler.com/flash">
+  <g
+     transform="translate(9.2,8.4)"
+     id="g1">
+    <use
+       ffdec:characterId="5922"
+       height="20.15"
+       width="18.25"
+       xlink:href="#shape0"
+       id="use1" />
+  </g>
+  <defs
+     id="defs2">
+    <g
+       id="shape0">
+      <path
+         d="m -7.95,-3.85 q 1.15,-2.3 3.15,-3.45 1.25,-0.75 2.9,-1.1 l 5.95,0.25 q 3.2,1.2 4.2,4.05 L 8.75,-1.95 9,0.4 q 0.15,2.5 -0.4,5 L 7.95,7.2 q -1,1.95 -4.5,3.7 L 2.5,11.3 1.3,11.45 q -3.9,0.1 -5.65,-0.65 L -6.45,9.55 -8.5,7.65 q -0.65,-1 -0.7,-2.6 L -9.1,2.2 -9.05,-0.15 Q -8.9,-2 -7.95,-3.85 M 3.8,-2.05 Q 3.3,-3.15 2.1,-3.6 l 0.65,1.85 q 0.4,2.2 -0.75,4.3 -1.15,2.1 -3.25,2.9 l -1.85,0.4 h 0.05 q 1.8,1 3.4,0.95 Q 2.4,6.65 3.45,5.2 4.4,4 4.4,2 L 4.2,-0.25 3.8,-2.05"
+         fill="#000000"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path1" />
+      <path
+         d="M 3.8,-2.05 4.2,-0.25 4.4,2 Q 4.4,4 3.45,5.2 2.4,6.65 0.35,6.8 -1.25,6.85 -3.05,5.85 H -3.1 l 1.85,-0.4 Q 0.85,4.65 2,2.55 3.15,0.45 2.75,-1.75 L 2.1,-3.6 q 1.2,0.45 1.7,1.55"
+         fill="#2f2a2a"
+         fill-rule="evenodd"
+         stroke="none"
+         id="path2" />
+    </g>
+  </defs>
+</svg>
